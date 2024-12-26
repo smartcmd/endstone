@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -857,6 +857,8 @@ For latest updates join the chat on
       
         
       
+        
+      
     
     
       
@@ -944,6 +946,27 @@ For latest updates join the chat on
   
   <span class="md-ellipsis">
     Actor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/ban/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ban
   </span>
   
 
@@ -2252,7 +2275,7 @@ For latest updates join the chat on
 </tr>
 <tr>
 <td style="text-align: right;">virtual Result&lt; std::unique_ptr&lt; <a href="./"><strong>Block</strong></a> &gt; &gt;</td>
-<td style="text-align: left;"><a href="#function-getrelative-13"><strong>getRelative</strong></a> (int offset_x, int offset_y, int offset_z) = 0<br><em>Gets the block at the given offsets.</em></td>
+<td style="text-align: left;"><a href="#function-getrelative-13"><strong>getRelative</strong></a> (<a href="../classendstone_1_1Vector/"><strong>int</strong></a> offset_x, <a href="../classendstone_1_1Vector/"><strong>int</strong></a> offset_y, <a href="../classendstone_1_1Vector/"><strong>int</strong></a> offset_z) = 0<br><em>Gets the block at the given offsets.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual Result&lt; std::unique_ptr&lt; <a href="./"><strong>Block</strong></a> &gt; &gt;</td>
@@ -2260,43 +2283,43 @@ For latest updates join the chat on
 </tr>
 <tr>
 <td style="text-align: right;">virtual Result&lt; std::unique_ptr&lt; <a href="./"><strong>Block</strong></a> &gt; &gt;</td>
-<td style="text-align: left;"><a href="#function-getrelative-33"><strong>getRelative</strong></a> (BlockFace face, int distance) = 0<br><em>Gets the block at the given distance of the given face.</em></td>
+<td style="text-align: left;"><a href="#function-getrelative-33"><strong>getRelative</strong></a> (BlockFace face, <a href="../classendstone_1_1Vector/"><strong>int</strong></a> distance) = 0<br><em>Gets the block at the given distance of the given face.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual Result&lt; std::string &gt;</td>
 <td style="text-align: left;"><a href="#function-gettype"><strong>getType</strong></a> () const = 0<br><em>Get the type of the block.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual int</td>
+<td style="text-align: right;">virtual <a href="../classendstone_1_1Vector/"><strong>int</strong></a></td>
 <td style="text-align: left;"><a href="#function-getx"><strong>getX</strong></a> () const = 0<br><em>Gets the x-coordinate of this block.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual int</td>
+<td style="text-align: right;">virtual <a href="../classendstone_1_1Vector/"><strong>int</strong></a></td>
 <td style="text-align: left;"><a href="#function-gety"><strong>getY</strong></a> () const = 0<br><em>Gets the y-coordinate of this block.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual int</td>
+<td style="text-align: right;">virtual <a href="../classendstone_1_1Vector/"><strong>int</strong></a></td>
 <td style="text-align: left;"><a href="#function-getz"><strong>getZ</strong></a> () const = 0<br><em>Gets the z-coordinate of this block.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual bool</td>
+<td style="text-align: right;">virtual <a href="../classendstone_1_1Vector/"><strong>bool</strong></a></td>
 <td style="text-align: left;"><a href="#function-isvalid"><strong>isValid</strong></a> () const = 0<br><em>Checks if the block is valid.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual Result&lt; void &gt;</td>
+<td style="text-align: right;">virtual Result&lt; <a href="../classendstone_1_1Vector/"><strong>void</strong></a> &gt;</td>
 <td style="text-align: left;"><a href="#function-setdata-12"><strong>setData</strong></a> (std::shared_ptr&lt; <a href="../classendstone_1_1BlockData/"><strong>BlockData</strong></a> &gt; data) = 0<br><em>Sets the complete data for this block.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual Result&lt; void &gt;</td>
-<td style="text-align: left;"><a href="#function-setdata-22"><strong>setData</strong></a> (std::shared_ptr&lt; <a href="../classendstone_1_1BlockData/"><strong>BlockData</strong></a> &gt; data, bool apply_physics) = 0<br><em>Sets the complete data for this block.</em></td>
+<td style="text-align: right;">virtual Result&lt; <a href="../classendstone_1_1Vector/"><strong>void</strong></a> &gt;</td>
+<td style="text-align: left;"><a href="#function-setdata-22"><strong>setData</strong></a> (std::shared_ptr&lt; <a href="../classendstone_1_1BlockData/"><strong>BlockData</strong></a> &gt; data, <a href="../classendstone_1_1Vector/"><strong>bool</strong></a> apply_physics) = 0<br><em>Sets the complete data for this block.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual Result&lt; void &gt;</td>
+<td style="text-align: right;">virtual Result&lt; <a href="../classendstone_1_1Vector/"><strong>void</strong></a> &gt;</td>
 <td style="text-align: left;"><a href="#function-settype-12"><strong>setType</strong></a> (std::string type) = 0<br><em>Sets the type of this block.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual Result&lt; void &gt;</td>
-<td style="text-align: left;"><a href="#function-settype-22"><strong>setType</strong></a> (std::string type, bool apply_physics) = 0<br><em>Sets the type of this block.</em></td>
+<td style="text-align: right;">virtual Result&lt; <a href="../classendstone_1_1Vector/"><strong>void</strong></a> &gt;</td>
+<td style="text-align: left;"><a href="#function-settype-22"><strong>setType</strong></a> (std::string type, <a href="../classendstone_1_1Vector/"><strong>bool</strong></a> apply_physics) = 0<br><em>Sets the type of this block.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
@@ -2612,7 +2635,7 @@ For latest updates join the chat on
     <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

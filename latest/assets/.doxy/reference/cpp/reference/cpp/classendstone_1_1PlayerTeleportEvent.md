@@ -51,7 +51,7 @@ Inherits the following classes: [endstone::PlayerEvent](classendstone_1_1PlayerE
 
 | Type | Name |
 | ---: | :--- |
-|  const std::string | [**NAME**](#variable-name)   = = "PlayerTeleportEvent"<br> |
+|  [**const**](classendstone_1_1Vector.md) std::string | [**NAME**](#variable-name)   = = "PlayerTeleportEvent"<br> |
 
 
 
@@ -100,11 +100,11 @@ Inherits the following classes: [endstone::PlayerEvent](classendstone_1_1PlayerE
 | ---: | :--- |
 |   | [**PlayerTeleportEvent**](#function-playerteleportevent) ([**Player**](classendstone_1_1Player.md) & player, [**Location**](classendstone_1_1Location.md) from, [**Location**](classendstone_1_1Location.md) to) <br> |
 | virtual std::string | [**getEventName**](#function-geteventname) () override const<br> |
-|  const [**Location**](classendstone_1_1Location.md) & | [**getFrom**](#function-getfrom) () const<br>_Gets the location that this player moved from._  |
-|  const [**Location**](classendstone_1_1Location.md) & | [**getTo**](#function-getto) () const<br>_Gets the location that this player moved to._  |
-| virtual bool | [**isCancellable**](#function-iscancellable) () override const<br> |
-|  void | [**setFrom**](#function-setfrom) (const [**Location**](classendstone_1_1Location.md) & from) <br>_Sets the location that this player moved from._  |
-|  void | [**setTo**](#function-setto) (const [**Location**](classendstone_1_1Location.md) & to) <br>_Sets the location that this player moved to._  |
+|  [**const**](classendstone_1_1Vector.md) [**Location**](classendstone_1_1Location.md) & | [**getFrom**](#function-getfrom) () const<br>_Gets the location that this player moved from._  |
+|  [**const**](classendstone_1_1Vector.md) [**Location**](classendstone_1_1Location.md) & | [**getTo**](#function-getto) () const<br>_Gets the location that this player moved to._  |
+| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](#function-iscancellable) () override const<br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setFrom**](#function-setfrom) ([**const**](classendstone_1_1Vector.md) [**Location**](classendstone_1_1Location.md) & from) <br>_Sets the location that this player moved from._  |
+|  [**void**](classendstone_1_1Vector.md) | [**setTo**](#function-setto) ([**const**](classendstone_1_1Vector.md) [**Location**](classendstone_1_1Location.md) & to) <br>_Sets the location that this player moved to._  |
 |   | [**~PlayerTeleportEvent**](#function-playerteleportevent) () override<br> |
 
 
@@ -125,14 +125,14 @@ See [endstone::Event](classendstone_1_1Event.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Event**](classendstone_1_1Event.md#function-event-12) (bool async=false) <br> |
-|   | [**Event**](classendstone_1_1Event.md#function-event-22) (const [**Event**](classendstone_1_1Event.md) &) = delete<br> |
+|   | [**Event**](classendstone_1_1Event.md#function-event-12) ([**bool**](classendstone_1_1Vector.md) async=[**false**](classendstone_1_1Vector.md)) <br> |
+|   | [**Event**](classendstone_1_1Event.md#function-event-22) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
 | virtual std::string | [**getEventName**](classendstone_1_1Event.md#function-geteventname) () const = 0<br> |
-|  bool | [**isAsynchronous**](classendstone_1_1Event.md#function-isasynchronous) () const<br> |
-| virtual bool | [**isCancellable**](classendstone_1_1Event.md#function-iscancellable) () const = 0<br> |
-|  bool | [**isCancelled**](classendstone_1_1Event.md#function-iscancelled) () const<br> |
-|  [**Event**](classendstone_1_1Event.md) & | [**operator=**](classendstone_1_1Event.md#function-operator) (const [**Event**](classendstone_1_1Event.md) &) = delete<br> |
-|  void | [**setCancelled**](classendstone_1_1Event.md#function-setcancelled) (bool cancel) <br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**isAsynchronous**](classendstone_1_1Event.md#function-isasynchronous) () const<br> |
+| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](classendstone_1_1Event.md#function-iscancellable) () const = 0<br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**isCancelled**](classendstone_1_1Event.md#function-iscancelled) () const<br> |
+|  [**Event**](classendstone_1_1Event.md) & | [**operator=**](classendstone_1_1Event.md#function-operator) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setCancelled**](classendstone_1_1Event.md#function-setcancelled) ([**bool**](classendstone_1_1Vector.md) cancel) <br> |
 | virtual  | [**~Event**](classendstone_1_1Event.md#function-event) () = default<br> |
 
 
@@ -284,7 +284,7 @@ Implements [*endstone::Event::getEventName*](classendstone_1_1Event.md#function-
 
 _Gets the location that this player moved from._ 
 ```C++
-inline const Location & endstone::PlayerTeleportEvent::getFrom () const
+inline const  Location & endstone::PlayerTeleportEvent::getFrom () const
 ```
 
 
@@ -309,7 +309,7 @@ inline const Location & endstone::PlayerTeleportEvent::getFrom () const
 
 _Gets the location that this player moved to._ 
 ```C++
-inline const Location & endstone::PlayerTeleportEvent::getTo () const
+inline const  Location & endstone::PlayerTeleportEvent::getTo () const
 ```
 
 
@@ -364,7 +364,7 @@ Implements [*endstone::Event::isCancellable*](classendstone_1_1Event.md#function
 _Sets the location that this player moved from._ 
 ```C++
 inline void endstone::PlayerTeleportEvent::setFrom (
-    const Location & from
+    const  Location & from
 ) 
 ```
 
@@ -391,7 +391,7 @@ inline void endstone::PlayerTeleportEvent::setFrom (
 _Sets the location that this player moved to._ 
 ```C++
 inline void endstone::PlayerTeleportEvent::setTo (
-    const Location & to
+    const  Location & to
 ) 
 ```
 

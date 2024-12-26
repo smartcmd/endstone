@@ -51,7 +51,7 @@ Inherits the following classes: [endstone::ServerEvent](classendstone_1_1ServerE
 
 | Type | Name |
 | ---: | :--- |
-|  const std::string | [**NAME**](#variable-name)   = = "ServerListPingEvent"<br> |
+|  [**const**](classendstone_1_1Vector.md) std::string | [**NAME**](#variable-name)   = = "ServerListPingEvent"<br> |
 
 
 
@@ -98,29 +98,32 @@ Inherits the following classes: [endstone::ServerEvent](classendstone_1_1ServerE
 
 | Type | Name |
 | ---: | :--- |
-|   | [**ServerListPingEvent**](#function-serverlistpingevent) (std::string remote\_host, int remote\_port, std::string ping\_response) <br> |
-|  bool | [**deserialize**](#function-deserialize) () <br> |
+|   | [**ServerListPingEvent**](#function-serverlistpingevent) (std::string remote\_host, [**int**](classendstone_1_1Vector.md) remote\_port, std::string ping\_response) <br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**deserialize**](#function-deserialize) () <br> |
 | virtual std::string | [**getEventName**](#function-geteventname) () override const<br> |
 |  GameMode | [**getGameMode**](#function-getgamemode) () const<br> |
 |  std::string | [**getLevelName**](#function-getlevelname) () const<br> |
-|  int | [**getLocalPort**](#function-getlocalport) () const<br> |
-|  int | [**getLocalPortV6**](#function-getlocalportv6) () const<br> |
-|  int | [**getMaxPlayers**](#function-getmaxplayers) () const<br> |
+|  [**int**](classendstone_1_1Vector.md) | [**getLocalPort**](#function-getlocalport) () const<br> |
+|  [**int**](classendstone_1_1Vector.md) | [**getLocalPortV6**](#function-getlocalportv6) () const<br> |
+|  [**int**](classendstone_1_1Vector.md) | [**getMaxPlayers**](#function-getmaxplayers) () const<br> |
 |  std::string | [**getMinecraftVersionNetwork**](#function-getminecraftversionnetwork) () const<br> |
 |  std::string | [**getMotd**](#function-getmotd) () const<br> |
-|  int | [**getNetworkProtocolVersion**](#function-getnetworkprotocolversion) () const<br> |
-|  int | [**getNumPlayers**](#function-getnumplayers) () const<br> |
+|  [**int**](classendstone_1_1Vector.md) | [**getNetworkProtocolVersion**](#function-getnetworkprotocolversion) () const<br> |
+|  [**int**](classendstone_1_1Vector.md) | [**getNumPlayers**](#function-getnumplayers) () const<br> |
 |  std::string | [**getRemoteHost**](#function-getremotehost) () const<br> |
-|  int | [**getRemotePort**](#function-getremoteport) () const<br> |
+|  [**int**](classendstone_1_1Vector.md) | [**getRemotePort**](#function-getremoteport) () const<br> |
 |  std::string | [**getServerGuid**](#function-getserverguid) () const<br> |
-| virtual bool | [**isCancellable**](#function-iscancellable) () override const<br> |
+| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](#function-iscancellable) () override const<br> |
 |  std::string | [**serialize**](#function-serialize) () <br> |
-|  void | [**setGameMode**](#function-setgamemode) (GameMode game\_mode) <br> |
-|  void | [**setLevelName**](#function-setlevelname) (std::string level\_name) <br> |
-|  void | [**setMaxPlayers**](#function-setmaxplayers) (int max\_players) <br> |
-|  void | [**setMinecraftVersionNetwork**](#function-setminecraftversionnetwork) (std::string minecraft\_version\_network) <br> |
-|  void | [**setMotd**](#function-setmotd) (std::string motd) <br> |
-|  void | [**setNumPlayers**](#function-setnumplayers) (int num\_players) <br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setGameMode**](#function-setgamemode) (GameMode game\_mode) <br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setLevelName**](#function-setlevelname) (std::string level\_name) <br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setLocalPort**](#function-setlocalport) ([**int**](classendstone_1_1Vector.md) port) <br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setLocalPortV6**](#function-setlocalportv6) ([**int**](classendstone_1_1Vector.md) port) <br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setMaxPlayers**](#function-setmaxplayers) ([**int**](classendstone_1_1Vector.md) max\_players) <br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setMinecraftVersionNetwork**](#function-setminecraftversionnetwork) (std::string minecraft\_version\_network) <br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setMotd**](#function-setmotd) (std::string motd) <br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setNumPlayers**](#function-setnumplayers) ([**int**](classendstone_1_1Vector.md) num\_players) <br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setServerGuid**](#function-setserverguid) (std::string guid) <br> |
 
 
 ## Public Functions inherited from endstone::ServerEvent
@@ -129,8 +132,8 @@ See [endstone::ServerEvent](classendstone_1_1ServerEvent.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Event**](classendstone_1_1ServerEvent.md#function-event-12) (bool async=false) <br> |
-|   | [**Event**](classendstone_1_1ServerEvent.md#function-event-22) (const [**Event**](classendstone_1_1Event.md) &) = delete<br> |
+|   | [**Event**](classendstone_1_1ServerEvent.md#function-event-12) ([**bool**](classendstone_1_1Vector.md) async=[**false**](classendstone_1_1Vector.md)) <br> |
+|   | [**Event**](classendstone_1_1ServerEvent.md#function-event-22) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
 
 
 ## Public Functions inherited from endstone::Event
@@ -139,14 +142,14 @@ See [endstone::Event](classendstone_1_1Event.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Event**](classendstone_1_1Event.md#function-event-12) (bool async=false) <br> |
-|   | [**Event**](classendstone_1_1Event.md#function-event-22) (const [**Event**](classendstone_1_1Event.md) &) = delete<br> |
+|   | [**Event**](classendstone_1_1Event.md#function-event-12) ([**bool**](classendstone_1_1Vector.md) async=[**false**](classendstone_1_1Vector.md)) <br> |
+|   | [**Event**](classendstone_1_1Event.md#function-event-22) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
 | virtual std::string | [**getEventName**](classendstone_1_1Event.md#function-geteventname) () const = 0<br> |
-|  bool | [**isAsynchronous**](classendstone_1_1Event.md#function-isasynchronous) () const<br> |
-| virtual bool | [**isCancellable**](classendstone_1_1Event.md#function-iscancellable) () const = 0<br> |
-|  bool | [**isCancelled**](classendstone_1_1Event.md#function-iscancelled) () const<br> |
-|  [**Event**](classendstone_1_1Event.md) & | [**operator=**](classendstone_1_1Event.md#function-operator) (const [**Event**](classendstone_1_1Event.md) &) = delete<br> |
-|  void | [**setCancelled**](classendstone_1_1Event.md#function-setcancelled) (bool cancel) <br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**isAsynchronous**](classendstone_1_1Event.md#function-isasynchronous) () const<br> |
+| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](classendstone_1_1Event.md#function-iscancellable) () const = 0<br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**isCancelled**](classendstone_1_1Event.md#function-iscancelled) () const<br> |
+|  [**Event**](classendstone_1_1Event.md) & | [**operator=**](classendstone_1_1Event.md#function-operator) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setCancelled**](classendstone_1_1Event.md#function-setcancelled) ([**bool**](classendstone_1_1Vector.md) cancel) <br> |
 | virtual  | [**~Event**](classendstone_1_1Event.md#function-event) () = default<br> |
 
 
@@ -731,6 +734,64 @@ Set the level name.
 
 
 
+### function setLocalPort 
+
+```C++
+inline void endstone::ServerListPingEvent::setLocalPort (
+    int port
+) 
+```
+
+
+
+Set the local port of the server.
+
+
+
+
+**Parameters:**
+
+
+* `port` the local port 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setLocalPortV6 
+
+```C++
+inline void endstone::ServerListPingEvent::setLocalPortV6 (
+    int port
+) 
+```
+
+
+
+Set the local port of the server for IPv6 support.
+
+
+
+
+**Parameters:**
+
+
+* `port` the local port for IPv6 
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function setMaxPlayers 
 
 ```C++
@@ -837,6 +898,35 @@ Set the number of players online.
 
 
 * `num_players` the number of players 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setServerGuid 
+
+```C++
+inline void endstone::ServerListPingEvent::setServerGuid (
+    std::string guid
+) 
+```
+
+
+
+Set the unique identifier of the server.
+
+
+
+
+**Parameters:**
+
+
+* `guid` the server guid 
 
 
 

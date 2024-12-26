@@ -26,6 +26,8 @@
 
 * [**BanEntry**](classendstone_1_1BanEntry.md)
 ([**endstone**](namespaceendstone.md))
+* [**BanList**](classendstone_1_1BanList.md)
+([**endstone**](namespaceendstone.md))
 * [**Block**](classendstone_1_1Block.md)
 ([**endstone**](namespaceendstone.md))
 * [**BlockBreakEvent**](classendstone_1_1BlockBreakEvent.md)
@@ -101,7 +103,6 @@
 * [**formatter&lt; endstone::BlockStates::value\_type &gt;**](structfmt_1_1formatter_3_01endstone_1_1BlockStates_1_1value__type_01_4.md)
 ([**fmt**](namespacefmt.md))
 * [**formatter&lt; endstone::ItemStack &gt;**](structfmt_1_1formatter_3_01endstone_1_1ItemStack_01_4.md)
-([**fmt**](namespacefmt.md))
 
 
 ## h
@@ -117,6 +118,10 @@
 * [**ImageData**](structendstone_1_1Skin_1_1ImageData.md)
 ([**endstone::Skin**](classendstone_1_1Skin.md))
 * [**Inventory**](classendstone_1_1Inventory.md)
+([**endstone**](namespaceendstone.md))
+* [**IpBanEntry**](classendstone_1_1IpBanEntry.md)
+([**endstone**](namespaceendstone.md))
+* [**IpBanList**](classendstone_1_1IpBanList.md)
 ([**endstone**](namespaceendstone.md))
 * [**ItemStack**](classendstone_1_1ItemStack.md)
 ([**endstone**](namespaceendstone.md))

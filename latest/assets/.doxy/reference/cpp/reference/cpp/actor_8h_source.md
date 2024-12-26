@@ -38,6 +38,8 @@ public:
         return const_cast<Actor *>(this);
     }
 
+    [[nodiscard]] virtual std::string getType() const = 0;
+
     [[nodiscard]] virtual std::uint64_t getRuntimeId() const = 0;
 
     [[nodiscard]] virtual Location getLocation() const = 0;
@@ -75,6 +77,22 @@ public:
     [[nodiscard]] virtual bool addScoreboardTag(std::string tag) const = 0;
 
     [[nodiscard]] virtual bool removeScoreboardTag(std::string tag) const = 0;
+
+    [[nodiscard]] virtual bool isNameTagVisible() const = 0;
+
+    virtual void setNameTagVisible(bool visible) = 0;
+
+    [[nodiscard]] virtual bool isNameTagAlwaysVisible() const = 0;
+
+    virtual void setNameTagAlwaysVisible(bool visible) = 0;
+
+    [[nodiscard]] virtual std::string getNameTag() const = 0;
+
+    virtual void setNameTag(std::string name) = 0;
+
+    [[nodiscard]] virtual std::string getScoreTag() const = 0;
+
+    virtual void setScoreTag(std::string score) = 0;
 };
 
 }  // namespace endstone

@@ -43,6 +43,7 @@
 | class | [**ActorSpawnEvent**](classendstone_1_1ActorSpawnEvent.md) <br>_Called when an_ [_**Actor**_](classendstone_1_1Actor.md) _is spawned into a world._ |
 | class | [**ActorTeleportEvent**](classendstone_1_1ActorTeleportEvent.md) <br>_Called when a non-player entity is teleported from one location to another._  |
 | class | [**BanEntry**](classendstone_1_1BanEntry.md) <br>_A single entry from a ban list._  |
+| class | [**BanList**](classendstone_1_1BanList.md) &lt;[**typename**](classendstone_1_1Vector.md) [**T**](classendstone_1_1Vector.md)&gt;<br>_Represents a ban list, containing bans._  |
 | class | [**Block**](classendstone_1_1Block.md) <br>_Represents a block._  |
 | class | [**BlockBreakEvent**](classendstone_1_1BlockBreakEvent.md) <br>_Called when a block is broken by a player._  |
 | class | [**BlockData**](classendstone_1_1BlockData.md) <br>_Represents the data related to a live block._  |
@@ -64,9 +65,11 @@
 | class | [**Error**](classendstone_1_1Error.md) <br>_Represents an error with a message and the stack trace._  |
 | class | [**Event**](classendstone_1_1Event.md) <br>_Represents an event._  |
 | class | [**EventHandler**](classendstone_1_1EventHandler.md) <br>_Represents a registered_ [_**EventHandler**_](classendstone_1_1EventHandler.md) _which associates with a_[_**Plugin**_](classendstone_1_1Plugin.md) _._ |
-| class | [**Form**](classendstone_1_1Form.md) &lt;typename T&gt;<br>_Represents a generic form._  |
+| class | [**Form**](classendstone_1_1Form.md) &lt;[**typename**](classendstone_1_1Vector.md) [**T**](classendstone_1_1Vector.md)&gt;<br>_Represents a generic form._  |
 | class | [**HandlerList**](classendstone_1_1HandlerList.md) <br>_A list of event handlers. Should be instantiated on a per-event basis._  |
 | class | [**Inventory**](classendstone_1_1Inventory.md) <br>_Interface to the various inventories._  |
+| class | [**IpBanEntry**](classendstone_1_1IpBanEntry.md) <br> |
+| class | [**IpBanList**](classendstone_1_1IpBanList.md) <br>_Represents a ban list, containing banned IP addresses._  |
 | class | [**ItemStack**](classendstone_1_1ItemStack.md) <br>_Represents a stack of items._  |
 | class | [**Label**](classendstone_1_1Label.md) <br>_Represents a text label._  |
 | class | [**Language**](classendstone_1_1Language.md) <br>_Represents the interface for translating text into different languages._  |
@@ -126,7 +129,7 @@
 | class | [**Toggle**](classendstone_1_1Toggle.md) <br>_Represents a toggle button with a label._  |
 | class | [**Translatable**](classendstone_1_1Translatable.md) <br>_Represents an object with a text representation that can be translated by the Minecraft client._  |
 | class | [**UUID**](classendstone_1_1UUID.md) <br>_Implementation of Universally Unique Identifier (_ [_**UUID**_](classendstone_1_1UUID.md) _)_ |
-| class | [**Vector**](classendstone_1_1Vector.md) &lt;typename T&gt;<br>_Represents a 3-dimensional vector._  |
+| class | [**Vector**](classendstone_1_1Vector.md) &lt;[**typename**](classendstone_1_1Vector.md) [**T**](classendstone_1_1Vector.md)&gt;<br>_Represents a 3-dimensional vector._  |
 | class | [**WeatherChangeEvent**](classendstone_1_1WeatherChangeEvent.md) <br>_Called when the weather (rain) state in a world is changing._  |
 | class | [**WeatherEvent**](classendstone_1_1WeatherEvent.md) <br>_Represents a Weather-related event._  |
 | struct | [**overloaded**](structendstone_1_1overloaded.md) &lt;Func&gt;<br>_Helper type for visitors._  |
@@ -140,7 +143,7 @@
 | enum  | [**BarFlag**](#enum-barflag)  <br> |
 | enum  | [**BarStyle**](#enum-barstyle)  <br> |
 | enum  | [**BlockFace**](#enum-blockface)  <br> |
-| typedef std::unordered\_map&lt; std::string, std::variant&lt; bool, std::string, int &gt; &gt; | [**BlockStates**](#typedef-blockstates)  <br> |
+| typedef std::unordered\_map&lt; std::string, std::variant&lt; [**bool**](classendstone_1_1Vector.md), std::string, [**int**](classendstone_1_1Vector.md) &gt; &gt; | [**BlockStates**](#typedef-blockstates)  <br> |
 | enum  | [**DisplaySlot**](#enum-displayslot)  <br>_Locations for displaying objectives to the player._  |
 | enum  | [**EventPriority**](#enum-eventpriority)  <br>_Represents an event's priority in execution._  |
 | enum  | [**GameMode**](#enum-gamemode)  <br>_Represents the various type of game modes that Players may have._  |
@@ -148,10 +151,10 @@
 | enum  | [**ObjectiveSortOrder**](#enum-objectivesortorder)  <br>_Represents the sort order of objectives on a DisplaySlot._  |
 | enum  | [**PacketType**](#enum-packettype)  <br>_Represents the types of packets._  |
 | enum  | [**PermissionDefault**](#enum-permissiondefault)  <br>_Represents the possible default values for permissions._  |
-| typedef std::function&lt; void(const [**PermissionAttachment**](classendstone_1_1PermissionAttachment.md) &)&gt; | [**PermissionRemovedExecutor**](#typedef-permissionremovedexecutor)  <br> |
+| typedef std::function&lt; [**void**](classendstone_1_1Vector.md)([**const**](classendstone_1_1Vector.md) [**PermissionAttachment**](classendstone_1_1PermissionAttachment.md) &)&gt; | [**PermissionRemovedExecutor**](#typedef-permissionremovedexecutor)  <br> |
 | enum  | [**PluginLoadOrder**](#enum-pluginloadorder)  <br>_Represents the order in which a plugin should be initialized and enabled._  |
 | enum std::uint8\_t | [**RenderType**](#enum-rendertype)  <br>_Controls the way in which an_ [_**Objective**_](classendstone_1_1Objective.md) _is rendered on the client side._ |
-| typedef nonstd::expected&lt; T, [**Error**](classendstone_1_1Error.md) &gt; | [**Result**](#typedef-result)  <br> |
+| typedef nonstd::expected&lt; [**T**](classendstone_1_1Vector.md), [**Error**](classendstone_1_1Error.md) &gt; | [**Result**](#typedef-result)  <br> |
 | typedef std::variant&lt; [**Player**](classendstone_1_1Player.md) \*, [**Actor**](classendstone_1_1Actor.md) \*, std::string &gt; | [**ScoreEntry**](#typedef-scoreentry)  <br> |
 | typedef std::uint32\_t | [**TaskId**](#typedef-taskid)  <br> |
 
@@ -178,15 +181,15 @@
 
 | Type | Name |
 | ---: | :--- |
-|  std::size\_t | [**hash\_value**](#function-hash_value) ([**UUID**](classendstone_1_1UUID.md) const & u) noexcept<br> |
-|  bool | [**operator!=**](#function-operator) ([**UUID**](classendstone_1_1UUID.md) const & lhs, [**UUID**](classendstone_1_1UUID.md) const & rhs) noexcept<br> |
-|  bool | [**operator&lt;**](#function-operator_1) ([**UUID**](classendstone_1_1UUID.md) const & lhs, [**UUID**](classendstone_1_1UUID.md) const & rhs) noexcept<br> |
-|  bool | [**operator&lt;=**](#function-operator_2) ([**UUID**](classendstone_1_1UUID.md) const & lhs, [**UUID**](classendstone_1_1UUID.md) const & rhs) noexcept<br> |
-|  bool | [**operator==**](#function-operator_3) ([**UUID**](classendstone_1_1UUID.md) const & lhs, [**UUID**](classendstone_1_1UUID.md) const & rhs) noexcept<br> |
-|  bool | [**operator&gt;**](#function-operator_4) ([**UUID**](classendstone_1_1UUID.md) const & lhs, [**UUID**](classendstone_1_1UUID.md) const & rhs) noexcept<br> |
-|  bool | [**operator&gt;=**](#function-operator_5) ([**UUID**](classendstone_1_1UUID.md) const & lhs, [**UUID**](classendstone_1_1UUID.md) const & rhs) noexcept<br> |
+|  std::size\_t | [**hash\_value**](#function-hash_value) ([**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & u) noexcept<br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**operator!=**](#function-operator) ([**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & lhs, [**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & rhs) noexcept<br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**operator&lt;**](#function-operator_1) ([**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & lhs, [**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & rhs) noexcept<br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**operator&lt;=**](#function-operator_2) ([**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & lhs, [**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & rhs) noexcept<br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**operator==**](#function-operator_3) ([**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & lhs, [**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & rhs) noexcept<br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**operator&gt;**](#function-operator_4) ([**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & lhs, [**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & rhs) noexcept<br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**operator&gt;=**](#function-operator_5) ([**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & lhs, [**UUID**](classendstone_1_1UUID.md) [**const**](classendstone_1_1Vector.md) & rhs) noexcept<br> |
 |   | [**overloaded**](#function-overloaded) (Func...) <br>_Deduction guide._  |
-|  void | [**swap**](#function-swap) ([**UUID**](classendstone_1_1UUID.md) & lhs, [**UUID**](classendstone_1_1UUID.md) & rhs) noexcept<br> |
+|  [**void**](classendstone_1_1Vector.md) | [**swap**](#function-swap) ([**UUID**](classendstone_1_1UUID.md) & lhs, [**UUID**](classendstone_1_1UUID.md) & rhs) noexcept<br> |
 
 
 
@@ -532,7 +535,7 @@ using endstone::TaskId = typedef std::uint32_t;
 
 ```C++
 inline std::size_t endstone::hash_value (
-    UUID const & u
+    UUID  const & u
 ) noexcept
 ```
 
@@ -547,8 +550,8 @@ inline std::size_t endstone::hash_value (
 
 ```C++
 inline bool endstone::operator!= (
-    UUID const & lhs,
-    UUID const & rhs
+    UUID  const & lhs,
+    UUID  const & rhs
 ) noexcept
 ```
 
@@ -563,8 +566,8 @@ inline bool endstone::operator!= (
 
 ```C++
 inline bool endstone::operator< (
-    UUID const & lhs,
-    UUID const & rhs
+    UUID  const & lhs,
+    UUID  const & rhs
 ) noexcept
 ```
 
@@ -579,8 +582,8 @@ inline bool endstone::operator< (
 
 ```C++
 inline bool endstone::operator<= (
-    UUID const & lhs,
-    UUID const & rhs
+    UUID  const & lhs,
+    UUID  const & rhs
 ) noexcept
 ```
 
@@ -595,8 +598,8 @@ inline bool endstone::operator<= (
 
 ```C++
 inline bool endstone::operator== (
-    UUID const & lhs,
-    UUID const & rhs
+    UUID  const & lhs,
+    UUID  const & rhs
 ) noexcept
 ```
 
@@ -611,8 +614,8 @@ inline bool endstone::operator== (
 
 ```C++
 inline bool endstone::operator> (
-    UUID const & lhs,
-    UUID const & rhs
+    UUID  const & lhs,
+    UUID  const & rhs
 ) noexcept
 ```
 
@@ -627,8 +630,8 @@ inline bool endstone::operator> (
 
 ```C++
 inline bool endstone::operator>= (
-    UUID const & lhs,
-    UUID const & rhs
+    UUID  const & lhs,
+    UUID  const & rhs
 ) noexcept
 ```
 

@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -868,6 +868,8 @@ For latest updates join the chat on
       
         
       
+        
+      
     
     
       
@@ -958,6 +960,27 @@ For latest updates join the chat on
   
   <span class="md-ellipsis">
     Actor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/ban/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ban
   </span>
   
 
@@ -1998,6 +2021,7 @@ For latest updates join the chat on
 <li><strong>class</strong> <a href="../classendstone_1_1ActorSpawnEvent/"><strong>ActorSpawnEvent</strong></a> <em>Called when an</em> <a href="../classendstone_1_1Actor/"><em><strong>Actor</strong></em></a> <em>is spawned into a world.</em>    </li>
 <li><strong>class</strong> <a href="../classendstone_1_1ActorTeleportEvent/"><strong>ActorTeleportEvent</strong></a> <em>Called when a non-player entity is teleported from one location to another.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1BanEntry/"><strong>BanEntry</strong></a> <em>A single entry from a ban list.</em>     </li>
+<li><strong>class</strong> <a href="../classendstone_1_1BanList/"><strong>BanList</strong></a> <em>Represents a ban list, containing bans.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Block/"><strong>Block</strong></a> <em>Represents a block.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1BlockBreakEvent/"><strong>BlockBreakEvent</strong></a> <em>Called when a block is broken by a player.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1BlockData/"><strong>BlockData</strong></a> <em>Represents the data related to a live block.</em>     </li>
@@ -2022,6 +2046,8 @@ For latest updates join the chat on
 <li><strong>class</strong> <a href="../classendstone_1_1Form/"><strong>Form</strong></a> <em>Represents a generic form.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1HandlerList/"><strong>HandlerList</strong></a> <em>A list of event handlers. Should be instantiated on a per-event basis.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Inventory/"><strong>Inventory</strong></a> <em>Interface to the various inventories.</em>     </li>
+<li><strong>class</strong> <a href="../classendstone_1_1IpBanEntry/"><strong>IpBanEntry</strong></a>     </li>
+<li><strong>class</strong> <a href="../classendstone_1_1IpBanList/"><strong>IpBanList</strong></a> <em>Represents a ban list, containing banned IP addresses.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1ItemStack/"><strong>ItemStack</strong></a> <em>Represents a stack of items.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Label/"><strong>Label</strong></a> <em>Represents a text label.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Language/"><strong>Language</strong></a> <em>Represents the interface for translating text into different languages.</em>     </li>
@@ -2098,9 +2124,9 @@ For latest updates join the chat on
 <li><strong>struct</strong> <a href="../structfmt_1_1formatter_3_01endstone_1_1BlockStates_01_4/"><strong>formatter&lt; endstone::BlockStates &gt;</strong></a>     </li>
 <li><strong>struct</strong> <a href="../structfmt_1_1formatter_3_01endstone_1_1BlockStates_1_1mapped__type_01_4/"><strong>formatter&lt; endstone::BlockStates::mapped_type &gt;</strong></a>     </li>
 <li><strong>struct</strong> <a href="../structfmt_1_1formatter_3_01endstone_1_1BlockStates_1_1value__type_01_4/"><strong>formatter&lt; endstone::BlockStates::value_type &gt;</strong></a>     </li>
-<li><strong>struct</strong> <a href="../structfmt_1_1formatter_3_01endstone_1_1ItemStack_01_4/"><strong>formatter&lt; endstone::ItemStack &gt;</strong></a>     </li>
 </ul>
 </li>
+<li><strong>struct</strong> <a href="../structfmt_1_1formatter_3_01endstone_1_1ItemStack_01_4/"><strong>formatter&lt; endstone::ItemStack &gt;</strong></a>     </li>
 <li><strong>namespace</strong> <a href="../namespacestd/"><strong>std</strong></a>     <ul>
 <li><strong>struct</strong> <a href="../structstd_1_1hash_3_01endstone_1_1UUID_01_4/"><strong>hash&lt; endstone::UUID &gt;</strong></a>     </li>
 </ul>
@@ -2266,7 +2292,7 @@ For latest updates join the chat on
     <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

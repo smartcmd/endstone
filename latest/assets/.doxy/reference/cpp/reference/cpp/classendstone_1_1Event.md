@@ -53,14 +53,14 @@ Inherited by the following classes: [endstone::ActorEvent](classendstone_1_1Acto
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Event**](#function-event-12) (bool async=false) <br> |
-|   | [**Event**](#function-event-22) (const [**Event**](classendstone_1_1Event.md) &) = delete<br> |
+|   | [**Event**](#function-event-12) ([**bool**](classendstone_1_1Vector.md) async=[**false**](classendstone_1_1Vector.md)) <br> |
+|   | [**Event**](#function-event-22) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
 | virtual std::string | [**getEventName**](#function-geteventname) () const = 0<br> |
-|  bool | [**isAsynchronous**](#function-isasynchronous) () const<br> |
-| virtual bool | [**isCancellable**](#function-iscancellable) () const = 0<br> |
-|  bool | [**isCancelled**](#function-iscancelled) () const<br> |
-|  [**Event**](classendstone_1_1Event.md) & | [**operator=**](#function-operator) (const [**Event**](classendstone_1_1Event.md) &) = delete<br> |
-|  void | [**setCancelled**](#function-setcancelled) (bool cancel) <br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**isAsynchronous**](#function-isasynchronous) () const<br> |
+| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](#function-iscancellable) () const = 0<br> |
+|  [**bool**](classendstone_1_1Vector.md) | [**isCancelled**](#function-iscancelled) () const<br> |
+|  [**Event**](classendstone_1_1Event.md) & | [**operator=**](#function-operator) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setCancelled**](#function-setcancelled) ([**bool**](classendstone_1_1Vector.md) cancel) <br> |
 | virtual  | [**~Event**](#function-event) () = default<br> |
 
 
@@ -114,7 +114,7 @@ inline explicit endstone::Event::Event (
 
 ```C++
 endstone::Event::Event (
-    const Event &
+    const  Event &
 ) = delete
 ```
 
@@ -237,7 +237,7 @@ true if this event is cancelled
 
 ```C++
 Event & endstone::Event::operator= (
-    const Event &
+    const  Event &
 ) = delete
 ```
 
