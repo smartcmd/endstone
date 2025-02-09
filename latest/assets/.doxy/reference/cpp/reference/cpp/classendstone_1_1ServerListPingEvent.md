@@ -14,7 +14,7 @@ _Called when a server ping is coming in._
 
 
 
-Inherits the following classes: [endstone::ServerEvent](classendstone_1_1ServerEvent.md)
+Inherits the following classes: [endstone::Cancellable](classendstone_1_1Cancellable.md)
 
 
 
@@ -51,7 +51,7 @@ Inherits the following classes: [endstone::ServerEvent](classendstone_1_1ServerE
 
 | Type | Name |
 | ---: | :--- |
-|  [**const**](classendstone_1_1Vector.md) std::string | [**NAME**](#variable-name)   = = "ServerListPingEvent"<br> |
+|  [**const**](classendstone_1_1Vector.md) std::string | [**NAME**](#variable-name)   = `"ServerListPingEvent"`<br> |
 
 
 
@@ -113,7 +113,6 @@ Inherits the following classes: [endstone::ServerEvent](classendstone_1_1ServerE
 |  std::string | [**getRemoteHost**](#function-getremotehost) () const<br> |
 |  [**int**](classendstone_1_1Vector.md) | [**getRemotePort**](#function-getremoteport) () const<br> |
 |  std::string | [**getServerGuid**](#function-getserverguid) () const<br> |
-| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](#function-iscancellable) () override const<br> |
 |  std::string | [**serialize**](#function-serialize) () <br> |
 |  [**void**](classendstone_1_1Vector.md) | [**setGameMode**](#function-setgamemode) (GameMode game\_mode) <br> |
 |  [**void**](classendstone_1_1Vector.md) | [**setLevelName**](#function-setlevelname) (std::string level\_name) <br> |
@@ -126,31 +125,27 @@ Inherits the following classes: [endstone::ServerEvent](classendstone_1_1ServerE
 |  [**void**](classendstone_1_1Vector.md) | [**setServerGuid**](#function-setserverguid) (std::string guid) <br> |
 
 
-## Public Functions inherited from endstone::ServerEvent
+## Public Functions inherited from endstone::Cancellable
 
-See [endstone::ServerEvent](classendstone_1_1ServerEvent.md)
-
-| Type | Name |
-| ---: | :--- |
-|   | [**Event**](classendstone_1_1ServerEvent.md#function-event-12) ([**bool**](classendstone_1_1Vector.md) async=[**false**](classendstone_1_1Vector.md)) <br> |
-|   | [**Event**](classendstone_1_1ServerEvent.md#function-event-22) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
-
-
-## Public Functions inherited from endstone::Event
-
-See [endstone::Event](classendstone_1_1Event.md)
+See [endstone::Cancellable](classendstone_1_1Cancellable.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Event**](classendstone_1_1Event.md#function-event-12) ([**bool**](classendstone_1_1Vector.md) async=[**false**](classendstone_1_1Vector.md)) <br> |
-|   | [**Event**](classendstone_1_1Event.md#function-event-22) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
-| virtual std::string | [**getEventName**](classendstone_1_1Event.md#function-geteventname) () const = 0<br> |
-|  [**bool**](classendstone_1_1Vector.md) | [**isAsynchronous**](classendstone_1_1Event.md#function-isasynchronous) () const<br> |
-| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](classendstone_1_1Event.md#function-iscancellable) () const = 0<br> |
-|  [**bool**](classendstone_1_1Vector.md) | [**isCancelled**](classendstone_1_1Event.md#function-iscancelled) () const<br> |
-|  [**Event**](classendstone_1_1Event.md) & | [**operator=**](classendstone_1_1Event.md#function-operator) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
-|  [**void**](classendstone_1_1Vector.md) | [**setCancelled**](classendstone_1_1Event.md#function-setcancelled) ([**bool**](classendstone_1_1Vector.md) cancel) <br> |
-| virtual  | [**~Event**](classendstone_1_1Event.md#function-event) () = default<br> |
+| virtual [**void**](classendstone_1_1Vector.md) | [**cancel**](classendstone_1_1Cancellable.md#function-cancel) () <br>_Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins._  |
+| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancelled**](classendstone_1_1Cancellable.md#function-iscancelled) () const<br>_Gets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins._  |
+| virtual [**void**](classendstone_1_1Vector.md) | [**setCancelled**](classendstone_1_1Cancellable.md#function-setcancelled) ([**bool**](classendstone_1_1Vector.md) cancel) <br>_Sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins._  |
+
+
+## Public Functions inherited from endstone::ICancellable
+
+See [endstone::ICancellable](classendstone_1_1ICancellable.md)
+
+| Type | Name |
+| ---: | :--- |
+| virtual [**void**](classendstone_1_1Vector.md) | [**cancel**](classendstone_1_1ICancellable.md#function-cancel) () = 0<br> |
+| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancelled**](classendstone_1_1ICancellable.md#function-iscancelled) () const = 0<br> |
+| virtual [**void**](classendstone_1_1Vector.md) | [**setCancelled**](classendstone_1_1ICancellable.md#function-setcancelled) ([**bool**](classendstone_1_1Vector.md) cancel) = 0<br> |
+| virtual  | [**~ICancellable**](classendstone_1_1ICancellable.md#function-icancellable) () = default<br> |
 
 
 
@@ -629,35 +624,6 @@ The server guid
 
 
         
-
-<hr>
-
-
-
-### function isCancellable 
-
-```C++
-inline virtual bool endstone::ServerListPingEvent::isCancellable () override const
-```
-
-
-
-Whether the event can be cancelled by a plugin or the server.
-
-
-
-
-**Returns:**
-
-true if this event can be cancelled 
-
-
-
-
-
-        
-Implements [*endstone::Event::isCancellable*](classendstone_1_1Event.md#function-iscancellable)
-
 
 <hr>
 

@@ -19,9 +19,9 @@
         </inbodydescription>
         <location file="include/endstone/block/block_state.h" line="34" column="13"/>
       </memberdef>
-      <memberdef kind="function" id="classendstone_1_1BlockState_1a2a634e2089e55b2be79531f2c2d18269" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type>Result&lt; std::unique_ptr&lt; <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> &gt; &gt;</type>
-        <definition>virtual Result&lt; std::unique_ptr&lt; Block &gt; &gt; endstone::BlockState::getBlock</definition>
+      <memberdef kind="function" id="classendstone_1_1BlockState_1ab60f046d1cf2dafcaa2155bc01ea5c89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>Result&lt; std::shared_ptr&lt; <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> &gt; &gt;</type>
+        <definition>virtual Result&lt; std::shared_ptr&lt; Block &gt; &gt; endstone::BlockState::getBlock</definition>
         <argsstring>() const =0</argsstring>
         <name>getBlock</name>
         <qualifiedname>endstone::BlockState::getBlock</qualifiedname>
@@ -349,7 +349,7 @@
     </collaborationgraph>
     <location file="include/endstone/block/block_state.h" line="32" column="1" bodyfile="include/endstone/block/block_state.h" bodystart="32" bodyend="138"/>
     <listofallmembers>
-      <member refid="classendstone_1_1BlockState_1a2a634e2089e55b2be79531f2c2d18269" prot="public" virt="pure-virtual"><scope>endstone::BlockState</scope><name>getBlock</name></member>
+      <member refid="classendstone_1_1BlockState_1ab60f046d1cf2dafcaa2155bc01ea5c89" prot="public" virt="pure-virtual"><scope>endstone::BlockState</scope><name>getBlock</name></member>
       <member refid="classendstone_1_1BlockState_1a0699ddcbb62c951ca592858a8759276d" prot="public" virt="pure-virtual"><scope>endstone::BlockState</scope><name>getData</name></member>
       <member refid="classendstone_1_1BlockState_1a0d30c01fe70f8e5b591a23fe36490738" prot="public" virt="pure-virtual"><scope>endstone::BlockState</scope><name>getDimension</name></member>
       <member refid="classendstone_1_1BlockState_1a6f8f4a475c2c955b1a883877d9b4baf5" prot="public" virt="pure-virtual"><scope>endstone::BlockState</scope><name>getLocation</name></member>

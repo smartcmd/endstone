@@ -17,7 +17,7 @@ _Represents a player related event._
 Inherits the following classes: [endstone::Event](classendstone_1_1Event.md)
 
 
-Inherited by the following classes: [endstone::PlayerChatEvent](classendstone_1_1PlayerChatEvent.md),  [endstone::PlayerCommandEvent](classendstone_1_1PlayerCommandEvent.md),  [endstone::PlayerDeathEvent](classendstone_1_1PlayerDeathEvent.md),  [endstone::PlayerInteractActorEvent](classendstone_1_1PlayerInteractActorEvent.md),  [endstone::PlayerInteractEvent](classendstone_1_1PlayerInteractEvent.md),  [endstone::PlayerJoinEvent](classendstone_1_1PlayerJoinEvent.md),  [endstone::PlayerKickEvent](classendstone_1_1PlayerKickEvent.md),  [endstone::PlayerLoginEvent](classendstone_1_1PlayerLoginEvent.md),  [endstone::PlayerQuitEvent](classendstone_1_1PlayerQuitEvent.md),  [endstone::PlayerTeleportEvent](classendstone_1_1PlayerTeleportEvent.md)
+Inherited by the following classes: [endstone::Cancellable](classendstone_1_1Cancellable.md),  [endstone::PlayerDeathEvent](classendstone_1_1PlayerDeathEvent.md),  [endstone::PlayerEmoteEvent](classendstone_1_1PlayerEmoteEvent.md),  [endstone::PlayerJoinEvent](classendstone_1_1PlayerJoinEvent.md),  [endstone::PlayerQuitEvent](classendstone_1_1PlayerQuitEvent.md),  [endstone::PlayerRespawnEvent](classendstone_1_1PlayerRespawnEvent.md)
 
 
 
@@ -89,10 +89,7 @@ See [endstone::Event](classendstone_1_1Event.md)
 |   | [**Event**](classendstone_1_1Event.md#function-event-22) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
 | virtual std::string | [**getEventName**](classendstone_1_1Event.md#function-geteventname) () const = 0<br> |
 |  [**bool**](classendstone_1_1Vector.md) | [**isAsynchronous**](classendstone_1_1Event.md#function-isasynchronous) () const<br> |
-| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](classendstone_1_1Event.md#function-iscancellable) () const = 0<br> |
-|  [**bool**](classendstone_1_1Vector.md) | [**isCancelled**](classendstone_1_1Event.md#function-iscancelled) () const<br> |
 |  [**Event**](classendstone_1_1Event.md) & | [**operator=**](classendstone_1_1Event.md#function-operator) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
-|  [**void**](classendstone_1_1Vector.md) | [**setCancelled**](classendstone_1_1Event.md#function-setcancelled) ([**bool**](classendstone_1_1Vector.md) cancel) <br> |
 | virtual  | [**~Event**](classendstone_1_1Event.md#function-event) () = default<br> |
 
 

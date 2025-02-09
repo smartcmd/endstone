@@ -26,16 +26,17 @@
 
 #include "endstone/block/block_state.h"
 #include "endstone/event/block/block_event.h"
+#include "endstone/event/cancellable.h"
 #include "endstone/player.h"
 
 namespace endstone {
 
-class BlockPlaceEvent : public BlockEvent {
+class BlockPlaceEvent : public Cancellable<BlockEvent> {
 public:
-    explicit BlockPlaceEvent(std::unique_ptr<BlockState> placed_block, Block &replaced_block, Block &placed_against,
-                             Player &player)
-        : BlockEvent(replaced_block), placed_block_(std::move(placed_block)), placed_against_(placed_against),
-          player_(player)
+    explicit BlockPlaceEvent(std::shared_ptr<BlockState> placed_block, std::shared_ptr<Block> replaced_block,
+                             std::shared_ptr<Block> placed_against, Player &player)
+        : Cancellable(replaced_block), placed_block_(std::move(placed_block)),
+          placed_against_(std::move(placed_against)), player_(player)
     {
     }
     ~BlockPlaceEvent() override = default;
@@ -44,11 +45,6 @@ public:
     [[nodiscard]] std::string getEventName() const override
     {
         return NAME;
-    }
-
-    [[nodiscard]] bool isCancellable() const override
-    {
-        return true;
     }
 
     [[nodiscard]] Player &getPlayer() const
@@ -68,12 +64,12 @@ public:
 
     [[nodiscard]] Block &getBlockAgainst() const
     {
-        return placed_against_;
+        return *placed_against_;
     }
 
 private:
-    std::unique_ptr<BlockState> placed_block_;
-    Block &placed_against_;
+    std::shared_ptr<BlockState> placed_block_;
+    std::shared_ptr<Block> placed_against_;
     Player &player_;
     // TODO(event): add ItemStack item
     // TODO(event): add BlockState placedBlockState

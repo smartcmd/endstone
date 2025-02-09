@@ -24,16 +24,17 @@
 
 #pragma once
 
+#include "endstone/event/cancellable.h"
 #include "endstone/event/player/player_event.h"
 #include "endstone/inventory/item_stack.h"
 
 namespace endstone {
 
-class PlayerInteractEvent : public PlayerEvent {
+class PlayerInteractEvent : public Cancellable<PlayerEvent> {
 public:
-    PlayerInteractEvent(Player &player, std::unique_ptr<ItemStack> item, std::unique_ptr<Block> block_clicked,
+    PlayerInteractEvent(Player &player, std::shared_ptr<ItemStack> item, std::shared_ptr<Block> block_clicked,
                         BlockFace block_face, const Vector<float> &clicked_position)
-        : PlayerEvent(player), item_(std::move(item)), block_clicked_(std::move(block_clicked)),
+        : Cancellable(player), item_(std::move(item)), block_clicked_(std::move(block_clicked)),
           block_face_(block_face), clicked_position_(clicked_position)
     {
     }
@@ -45,19 +46,14 @@ public:
         return NAME;
     }
 
-    [[nodiscard]] bool isCancellable() const override
-    {
-        return true;
-    }
-
     [[nodiscard]] bool hasItem() const
     {
         return item_ != nullptr;
     }
 
-    [[nodiscard]] ItemStack *getItem() const
+    [[nodiscard]] std::shared_ptr<ItemStack> getItem() const
     {
-        return item_.get();
+        return item_;
     }
 
     [[nodiscard]] bool hasBlock() const
@@ -65,9 +61,9 @@ public:
         return block_clicked_ != nullptr;
     }
 
-    [[nodiscard]] Block *getBlock() const
+    [[nodiscard]] std::shared_ptr<Block> getBlock() const
     {
-        return block_clicked_.get();
+        return block_clicked_;
     }
 
     [[nodiscard]] BlockFace getBlockFace() const
@@ -81,8 +77,8 @@ public:
     }
 
 private:
-    std::unique_ptr<ItemStack> item_;
-    std::unique_ptr<Block> block_clicked_;
+    std::shared_ptr<ItemStack> item_;
+    std::shared_ptr<Block> block_clicked_;
     BlockFace block_face_;
     Vector<float> clicked_position_;
 };

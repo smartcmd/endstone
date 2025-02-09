@@ -15,8 +15,7 @@
 * `#include <vector>`
 * `#include <fmt/format.h>`
 * `#include "endstone/command/command.h"`
-* `#include "endstone/detail/plugin/plugin_description_builder.h"`
-* `#include "endstone/endstone.h"`
+* `#include "endstone/detail/common.h"`
 * `#include "endstone/permissions/permission.h"`
 * `#include "endstone/plugin/plugin_load_order.h"`
 

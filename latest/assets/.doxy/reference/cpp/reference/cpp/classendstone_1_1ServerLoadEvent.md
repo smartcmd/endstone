@@ -56,7 +56,7 @@ Inherits the following classes: [endstone::ServerEvent](classendstone_1_1ServerE
 
 | Type | Name |
 | ---: | :--- |
-|  [**const**](classendstone_1_1Vector.md) std::string | [**NAME**](#variable-name)   = = "ServerLoadEvent"<br> |
+|  [**const**](classendstone_1_1Vector.md) std::string | [**NAME**](#variable-name)   = `"ServerLoadEvent"`<br> |
 
 
 
@@ -106,7 +106,6 @@ Inherits the following classes: [endstone::ServerEvent](classendstone_1_1ServerE
 |   | [**ServerLoadEvent**](#function-serverloadevent) (LoadType type) <br> |
 | virtual std::string | [**getEventName**](#function-geteventname) () override const<br> |
 |  LoadType | [**getType**](#function-gettype) () const<br> |
-| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](#function-iscancellable) () override const<br> |
 
 
 ## Public Functions inherited from endstone::ServerEvent
@@ -129,10 +128,7 @@ See [endstone::Event](classendstone_1_1Event.md)
 |   | [**Event**](classendstone_1_1Event.md#function-event-22) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
 | virtual std::string | [**getEventName**](classendstone_1_1Event.md#function-geteventname) () const = 0<br> |
 |  [**bool**](classendstone_1_1Vector.md) | [**isAsynchronous**](classendstone_1_1Event.md#function-isasynchronous) () const<br> |
-| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](classendstone_1_1Event.md#function-iscancellable) () const = 0<br> |
-|  [**bool**](classendstone_1_1Vector.md) | [**isCancelled**](classendstone_1_1Event.md#function-iscancelled) () const<br> |
 |  [**Event**](classendstone_1_1Event.md) & | [**operator=**](classendstone_1_1Event.md#function-operator) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
-|  [**void**](classendstone_1_1Vector.md) | [**setCancelled**](classendstone_1_1Event.md#function-setcancelled) ([**bool**](classendstone_1_1Vector.md) cancel) <br> |
 | virtual  | [**~Event**](classendstone_1_1Event.md#function-event) () = default<br> |
 
 
@@ -303,35 +299,6 @@ inline LoadType endstone::ServerLoadEvent::getType () const
 ```
 
 
-
-
-<hr>
-
-
-
-### function isCancellable 
-
-```C++
-inline virtual bool endstone::ServerLoadEvent::isCancellable () override const
-```
-
-
-
-Whether the event can be cancelled by a plugin or the server.
-
-
-
-
-**Returns:**
-
-true if this event can be cancelled 
-
-
-
-
-
-        
-Implements [*endstone::Event::isCancellable*](classendstone_1_1Event.md#function-iscancellable)
 
 
 <hr>

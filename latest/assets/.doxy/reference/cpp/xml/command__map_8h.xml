@@ -126,7 +126,7 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -156,30 +156,18 @@
       <node id="7">
         <label>include/endstone/event/handler_list.h</label>
         <link refid="handler__list_8h_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
+      </node>
+      <node id="8">
+        <label>include/endstone/event/server/plugin_disable_event.h</label>
+        <link refid="plugin__disable__event_8h_source"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>include/endstone/event/server/broadcast_message_event.h</label>
-        <link refid="broadcast__message__event_8h_source"/>
-      </node>
       <node id="10">
-        <label>include/endstone/event/server/plugin_disable_event.h</label>
-        <link refid="plugin__disable__event_8h_source"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
         <label>include/endstone/event/server/plugin_enable_event.h</label>
         <link refid="plugin__enable__event_8h_source"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-      </node>
-      <node id="9">
-        <label>include/endstone/event/server/server_command_event.h</label>
-        <link refid="server__command__event_8h_source"/>
       </node>
       <node id="5">
         <label>include/endstone/plugin/plugin.h</label>
@@ -188,33 +176,33 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
       </node>
-      <node id="15">
+      <node id="13">
         <label>include/endstone/plugin/plugin_description.h</label>
         <link refid="plugin__description_8h_source"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="9">
         <label>include/endstone/plugin/plugin_loader.h</label>
         <link refid="plugin__loader_8h_source"/>
       </node>
-      <node id="14">
+      <node id="12">
         <label>include/endstone/scheduler/scheduler.h</label>
         <link refid="scheduler_8h_source"/>
       </node>
-      <node id="13">
+      <node id="11">
         <label>include/endstone/scheduler/task.h</label>
         <link refid="task_8h_source"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -261,7 +249,7 @@
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1CommandMap" kindref="compound">~CommandMap</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="classendstone_1_1CommandMap_1a5b3beafddf2091946afee009ae1cf5de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1CommandMap_1a5b3beafddf2091946afee009ae1cf5de" kindref="member">registerCommand</ref>(std::shared_ptr&lt;Command&gt;<sp/><ref refid="classendstone_1_1Vector" kindref="compound">command</ref>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46" refid="classendstone_1_1CommandMap_1a5b3beafddf2091946afee009ae1cf5de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1CommandMap_1a5b3beafddf2091946afee009ae1cf5de" kindref="member">registerCommand</ref>(std::shared_ptr&lt;Command&gt;<sp/>command)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55" refid="classendstone_1_1CommandMap_1a4f06f0f67a32638079499c1b8bbc8dbc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1CommandMap_1a4f06f0f67a32638079499c1b8bbc8dbc" kindref="member">dispatch</ref>(<ref refid="classendstone_1_1CommandSender" kindref="compound">CommandSender</ref><sp/>&amp;<ref refid="classendstone_1_1Vector" kindref="compound">sender</ref>,<sp/>std::string<sp/><ref refid="classendstone_1_1Vector" kindref="compound">command_line</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>

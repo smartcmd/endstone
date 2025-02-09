@@ -13,10 +13,12 @@
       <node id="6">
         <label>endstone/event/event.h</label>
         <link refid="event_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>endstone/event/event_priority.h</label>
         <link refid="event__priority_8h_source"/>
       </node>
@@ -33,7 +35,7 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -41,6 +43,9 @@
       </node>
       <node id="3">
         <label>memory</label>
+      </node>
+      <node id="7">
+        <label>stdexcept</label>
       </node>
       <node id="4">
         <label>string</label>
@@ -63,30 +68,18 @@
       <node id="7">
         <label>include/endstone/event/handler_list.h</label>
         <link refid="handler__list_8h_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
+      </node>
+      <node id="8">
+        <label>include/endstone/event/server/plugin_disable_event.h</label>
+        <link refid="plugin__disable__event_8h_source"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>include/endstone/event/server/broadcast_message_event.h</label>
-        <link refid="broadcast__message__event_8h_source"/>
-      </node>
       <node id="10">
-        <label>include/endstone/event/server/plugin_disable_event.h</label>
-        <link refid="plugin__disable__event_8h_source"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
         <label>include/endstone/event/server/plugin_enable_event.h</label>
         <link refid="plugin__enable__event_8h_source"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-      </node>
-      <node id="9">
-        <label>include/endstone/event/server/server_command_event.h</label>
-        <link refid="server__command__event_8h_source"/>
       </node>
       <node id="2">
         <label>include/endstone/permissions/permission.h</label>
@@ -95,7 +88,7 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -109,22 +102,22 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
       </node>
-      <node id="15">
+      <node id="13">
         <label>include/endstone/plugin/plugin_description.h</label>
         <link refid="plugin__description_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="9">
         <label>include/endstone/plugin/plugin_loader.h</label>
         <link refid="plugin__loader_8h_source"/>
       </node>
@@ -134,14 +127,14 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="12">
         <label>include/endstone/scheduler/scheduler.h</label>
         <link refid="scheduler_8h_source"/>
       </node>
-      <node id="13">
+      <node id="11">
         <label>include/endstone/scheduler/task.h</label>
         <link refid="task_8h_source"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -233,12 +226,12 @@
 <codeline lineno="202"><highlight class="normal"></highlight></codeline>
 <codeline lineno="210" refid="classendstone_1_1PluginManager_1a6b871de71ea1884cf526b4c5880e732e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1PluginManager_1a6b871de71ea1884cf526b4c5880e732e" kindref="member">recalculatePermissionDefaults</ref>(<ref refid="classendstone_1_1Permission" kindref="compound">Permission</ref><sp/>&amp;<ref refid="classendstone_1_1Vector" kindref="compound">perm</ref>)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="211"><highlight class="normal"></highlight></codeline>
-<codeline lineno="219" refid="classendstone_1_1PluginManager_1a368d558addb19a455e0616a134a32e51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1PluginManager_1a368d558addb19a455e0616a134a32e51" kindref="member">subscribeToPermission</ref>(std::string<sp/><ref refid="classendstone_1_1Vector" kindref="compound">permission</ref>,<sp/><ref refid="classendstone_1_1Permissible" kindref="compound">Permissible</ref><sp/>&amp;<ref refid="classendstone_1_1Vector" kindref="compound">permissible</ref>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="219" refid="classendstone_1_1PluginManager_1a368d558addb19a455e0616a134a32e51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1PluginManager_1a368d558addb19a455e0616a134a32e51" kindref="member">subscribeToPermission</ref>(std::string<sp/>permission,<sp/><ref refid="classendstone_1_1Permissible" kindref="compound">Permissible</ref><sp/>&amp;<ref refid="classendstone_1_1Vector" kindref="compound">permissible</ref>)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"></highlight></codeline>
-<codeline lineno="227" refid="classendstone_1_1PluginManager_1a701f8e4b82cf233b04a0aeb5f9fba330" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1PluginManager_1a701f8e4b82cf233b04a0aeb5f9fba330" kindref="member">unsubscribeFromPermission</ref>(std::string<sp/><ref refid="classendstone_1_1Vector" kindref="compound">permission</ref>,<sp/><ref refid="classendstone_1_1Permissible" kindref="compound">Permissible</ref><sp/>&amp;<ref refid="classendstone_1_1Vector" kindref="compound">permissible</ref>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="227" refid="classendstone_1_1PluginManager_1a701f8e4b82cf233b04a0aeb5f9fba330" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1PluginManager_1a701f8e4b82cf233b04a0aeb5f9fba330" kindref="member">unsubscribeFromPermission</ref>(std::string<sp/>permission,<sp/><ref refid="classendstone_1_1Permissible" kindref="compound">Permissible</ref><sp/>&amp;<ref refid="classendstone_1_1Vector" kindref="compound">permissible</ref>)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="228"><highlight class="normal"></highlight></codeline>
 <codeline lineno="235" refid="classendstone_1_1PluginManager_1a51aaf24ca653d67c3ea010637ecca94d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="classendstone_1_1Vector" kindref="compound">nodiscard</ref>]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::unordered_set&lt;Permissible<sp/>*&gt;<sp/><ref refid="classendstone_1_1PluginManager_1a51aaf24ca653d67c3ea010637ecca94d" kindref="member">getPermissionSubscriptions</ref>(</highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classendstone_1_1Vector" kindref="compound">permission</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>permission)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="237"><highlight class="normal"></highlight></codeline>
 <codeline lineno="246" refid="classendstone_1_1PluginManager_1a2adbff6684c18d854c1b98f155380c8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1PluginManager_1a2adbff6684c18d854c1b98f155380c8c" kindref="member">subscribeToDefaultPerms</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1Vector" kindref="compound">op</ref>,<sp/><ref refid="classendstone_1_1Permissible" kindref="compound">Permissible</ref><sp/>&amp;<ref refid="classendstone_1_1Vector" kindref="compound">permissible</ref>)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="247"><highlight class="normal"></highlight></codeline>

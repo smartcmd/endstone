@@ -35,7 +35,7 @@ class BlockState : public std::enable_shared_from_this<BlockState> {
 public:
     virtual ~BlockState() = default;
 
-    [[nodiscard]] virtual Result<std::unique_ptr<Block>> getBlock() const = 0;
+    [[nodiscard]] virtual Result<std::shared_ptr<Block>> getBlock() const = 0;
 
     [[nodiscard]] virtual std::string getType() const = 0;
 
@@ -71,7 +71,7 @@ struct formatter<endstone::BlockState> : formatter<string_view> {
     template <typename FormatContext>
     auto format(const Type &val, FormatContext &ctx) const -> format_context::iterator
     {
-        return format_to(ctx.out(), "BlockState(pos=BlockPos(x={}, y={}, z={}), type={}, data={})", val.getX(),
+        return fmt::format_to(ctx.out(), "BlockState(pos=BlockPos(x={}, y={}, z={}), type={}, data={})", val.getX(),
                          val.getY(), val.getZ(), val.getType(), *val.getData());
     }
 };

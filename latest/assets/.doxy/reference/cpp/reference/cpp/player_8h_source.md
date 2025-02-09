@@ -34,6 +34,7 @@
 #include "endstone/game_mode.h"
 #include "endstone/inventory/player_inventory.h"
 #include "endstone/network/spawn_particle_effect_packet.h"
+#include "endstone/offline_player.h"
 #include "endstone/scoreboard/scoreboard.h"
 #include "endstone/skin.h"
 #include "endstone/util/socket_address.h"
@@ -41,7 +42,7 @@
 
 namespace endstone {
 
-class Player : public Mob {
+class Player : public Mob, public OfflinePlayer {
 protected:
     using FormVariant = std::variant<MessageForm, ActionForm, ModalForm>;
 
@@ -52,19 +53,37 @@ public:
         return const_cast<Player *>(this);
     }
 
-    [[nodiscard]] virtual UUID getUniqueId() const = 0;
+    [[nodiscard]] std::string getName() const override = 0;
 
     [[nodiscard]] virtual std::string getXuid() const = 0;
 
     [[nodiscard]] virtual const SocketAddress &getAddress() const = 0;
 
-    virtual void sendPopup(std::string message) const = 0;
-
-    virtual void sendTip(std::string message) const = 0;
-
-    virtual void sendToast(std::string title, std::string content) const = 0;
+    virtual void transfer(std::string host, int port) const = 0;
 
     virtual void kick(std::string message) const = 0;
+
+    // TODO: chat
+
+    virtual bool performCommand(std::string command) const = 0;  // NOLINT(*-use-nodiscard)
+
+    [[nodiscard]] virtual bool isSneaking() const = 0;
+
+    virtual void setSneaking(bool sneak) = 0;
+
+    [[nodiscard]] virtual bool isSprinting() const = 0;
+
+    virtual void setSprinting(bool sprinting) = 0;
+
+    // TODO: playNote
+
+    virtual void playSound(Location location, std::string sound, float volume, float pitch) = 0;
+
+    virtual void stopSound(std::string sound) = 0;
+
+    virtual void stopAllSounds() = 0;
+
+    // TODO: playEffect
 
     virtual void giveExp(int amount) = 0;
 
@@ -100,6 +119,12 @@ public:
 
     void virtual setScoreboard(Scoreboard &scoreboard) = 0;
 
+    virtual void sendPopup(std::string message) const = 0;
+
+    virtual void sendTip(std::string message) const = 0;
+
+    virtual void sendToast(std::string title, std::string content) const = 0;
+
     virtual void sendTitle(std::string title, std::string subtitle) const = 0;
 
     virtual void sendTitle(std::string title, std::string subtitle, int fade_in, int stay, int fade_out) const = 0;
@@ -116,19 +141,20 @@ public:
     virtual void spawnParticle(std::string name, float x, float y, float z,
                                std::optional<std::string> molang_variables_json) const = 0;
 
+    // TODO: getClientViewDistance
+
     [[nodiscard]] virtual std::chrono::milliseconds getPing() const = 0;
+
+    [[nodiscard]] virtual std::string getLocale() const = 0;
 
     virtual void updateCommands() const = 0;
 
-    virtual bool performCommand(std::string command) const = 0;  // NOLINT(*-use-nodiscard)
+    // === EntityHuman === //
+    [[nodiscard]] virtual PlayerInventory &getInventory() const = 0;
 
     [[nodiscard]] virtual GameMode getGameMode() const = 0;
 
     virtual void setGameMode(GameMode mode) = 0;
-
-    [[nodiscard]] virtual PlayerInventory &getInventory() const = 0;
-
-    [[nodiscard]] virtual std::string getLocale() const = 0;
 
     [[nodiscard]] virtual std::string getDeviceOS() const = 0;
 
@@ -137,8 +163,6 @@ public:
     [[nodiscard]] virtual std::string getGameVersion() const = 0;
 
     [[nodiscard]] virtual const Skin &getSkin() const = 0;
-
-    virtual void transfer(std::string host, int port) const = 0;
 
     virtual void sendForm(FormVariant form) = 0;
 

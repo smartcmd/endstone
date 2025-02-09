@@ -38,7 +38,7 @@ _Represents a unique permission that may be attached to a_ [_**Permissible**_](c
 
 | Type | Name |
 | ---: | :--- |
-|  [**const**](classendstone_1_1Vector.md) PermissionDefault | [**DefaultPermission**](#variable-defaultpermission)   = = PermissionDefault::Operator<br> |
+|  [**const**](classendstone_1_1Vector.md) PermissionDefault | [**DefaultPermission**](#variable-defaultpermission)   = `PermissionDefault::Operator`<br> |
 
 
 

@@ -52,7 +52,7 @@ Inherited by the following classes: [endstone::PlayerDeathEvent](classendstone_1
 
 | Type | Name |
 | ---: | :--- |
-|  [**const**](classendstone_1_1Vector.md) std::string | [**NAME**](#variable-name)   = = "ActorDeathEvent"<br> |
+|  [**const**](classendstone_1_1Vector.md) std::string | [**NAME**](#variable-name)   = `"ActorDeathEvent"`<br> |
 
 
 
@@ -99,10 +99,9 @@ Inherited by the following classes: [endstone::PlayerDeathEvent](classendstone_1
 
 | Type | Name |
 | ---: | :--- |
-|   | [**ActorDeathEvent**](#function-actordeathevent) ([**Actor**](classendstone_1_1Actor.md) & actor) <br> |
+|   | [**ActorDeathEvent**](#function-actordeathevent) ([**Mob**](classendstone_1_1Mob.md) & actor, std::unique\_ptr&lt; [**DamageSource**](classendstone_1_1DamageSource.md) &gt; damage\_source) <br> |
+|  [**DamageSource**](classendstone_1_1DamageSource.md) & | [**getDamageSource**](#function-getdamagesource) () const<br>_Gets the source of damage which caused the death._  |
 | virtual std::string | [**getEventName**](#function-geteventname) () override const<br> |
-| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](#function-iscancellable) () override const<br> |
-|   | [**~ActorDeathEvent**](#function-actordeathevent) () override<br> |
 
 
 ## Public Functions inherited from endstone::ActorEvent
@@ -111,8 +110,8 @@ See [endstone::ActorEvent](classendstone_1_1ActorEvent.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**ActorEvent**](classendstone_1_1ActorEvent.md#function-actorevent) ([**Actor**](classendstone_1_1Actor.md) & actor) <br> |
-|  [**Actor**](classendstone_1_1Actor.md) & | [**getActor**](classendstone_1_1ActorEvent.md#function-getactor) () const<br>_Returns the_ [_**Actor**_](classendstone_1_1Actor.md) _involved in this event._ |
+|   | [**ActorEvent**](classendstone_1_1ActorEvent.md#function-actorevent) ([**ActorType**](classendstone_1_1Vector.md) & actor) <br> |
+|  [**ActorType**](classendstone_1_1Vector.md) & | [**getActor**](classendstone_1_1ActorEvent.md#function-getactor) () const<br>_Returns the_ [_**Actor**_](classendstone_1_1Actor.md) _involved in this event._ |
 |   | [**~ActorEvent**](classendstone_1_1ActorEvent.md#function-actorevent) () override<br> |
 
 
@@ -126,10 +125,7 @@ See [endstone::Event](classendstone_1_1Event.md)
 |   | [**Event**](classendstone_1_1Event.md#function-event-22) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
 | virtual std::string | [**getEventName**](classendstone_1_1Event.md#function-geteventname) () const = 0<br> |
 |  [**bool**](classendstone_1_1Vector.md) | [**isAsynchronous**](classendstone_1_1Event.md#function-isasynchronous) () const<br> |
-| virtual [**bool**](classendstone_1_1Vector.md) | [**isCancellable**](classendstone_1_1Event.md#function-iscancellable) () const = 0<br> |
-|  [**bool**](classendstone_1_1Vector.md) | [**isCancelled**](classendstone_1_1Event.md#function-iscancelled) () const<br> |
 |  [**Event**](classendstone_1_1Event.md) & | [**operator=**](classendstone_1_1Event.md#function-operator) ([**const**](classendstone_1_1Vector.md) [**Event**](classendstone_1_1Event.md) &) = delete<br> |
-|  [**void**](classendstone_1_1Vector.md) | [**setCancelled**](classendstone_1_1Event.md#function-setcancelled) ([**bool**](classendstone_1_1Vector.md) cancel) <br> |
 | virtual  | [**~Event**](classendstone_1_1Event.md#function-event) () = default<br> |
 
 
@@ -234,13 +230,39 @@ const std::string endstone::ActorDeathEvent::NAME;
 ### function ActorDeathEvent 
 
 ```C++
-inline explicit endstone::ActorDeathEvent::ActorDeathEvent (
-    Actor & actor
+inline endstone::ActorDeathEvent::ActorDeathEvent (
+    Mob & actor,
+    std::unique_ptr< DamageSource > damage_source
 ) 
 ```
 
 
 
+
+<hr>
+
+
+
+### function getDamageSource 
+
+_Gets the source of damage which caused the death._ 
+```C++
+inline DamageSource & endstone::ActorDeathEvent::getDamageSource () const
+```
+
+
+
+
+
+**Returns:**
+
+a [**DamageSource**](classendstone_1_1DamageSource.md) detailing the source of the damage for the death. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -269,48 +291,6 @@ name of this event
 
         
 Implements [*endstone::Event::getEventName*](classendstone_1_1Event.md#function-geteventname)
-
-
-<hr>
-
-
-
-### function isCancellable 
-
-```C++
-inline virtual bool endstone::ActorDeathEvent::isCancellable () override const
-```
-
-
-
-Whether the event can be cancelled by a plugin or the server.
-
-
-
-
-**Returns:**
-
-true if this event can be cancelled 
-
-
-
-
-
-        
-Implements [*endstone::Event::isCancellable*](classendstone_1_1Event.md#function-iscancellable)
-
-
-<hr>
-
-
-
-### function ~ActorDeathEvent 
-
-```C++
-endstone::ActorDeathEvent::~ActorDeathEvent () override
-```
-
-
 
 
 <hr>

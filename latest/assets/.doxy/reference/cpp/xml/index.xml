@@ -45,18 +45,40 @@
     <member refid="classendstone_1_1Actor_1a29bb3fe504b2b2bffd749a0d9ef1ed92" kind="function"><name>getScoreTag</name></member>
     <member refid="classendstone_1_1Actor_1adeec376304cd5900f6c848f9e946320e" kind="function"><name>setScoreTag</name></member>
   </compound>
+  <compound refid="classendstone_1_1ActorDamageEvent" kind="class"><name>endstone::ActorDamageEvent</name>
+    <member refid="classendstone_1_1ActorDamageEvent_1a319f71e214cfbb92d77667fc03583b2a" kind="variable"><name>NAME</name></member>
+    <member refid="classendstone_1_1ActorDamageEvent_1ac7b9815258c9fed79e45b7b5544a590e" kind="variable"><name>damage_source_</name></member>
+    <member refid="classendstone_1_1ActorDamageEvent_1a867187c57a779cad0f19459222377320" kind="variable"><name>damage_</name></member>
+    <member refid="classendstone_1_1ActorDamageEvent_1a663583a9e7ec44a0b01a04dce342296f" kind="function"><name>ActorDamageEvent</name></member>
+    <member refid="classendstone_1_1ActorDamageEvent_1adc39392f2370363313d09e4dde688e08" kind="function"><name>getEventName</name></member>
+    <member refid="classendstone_1_1ActorDamageEvent_1a44564e018ef4caa37965500a468026e6" kind="function"><name>getDamage</name></member>
+    <member refid="classendstone_1_1ActorDamageEvent_1a077458e25c7329f2cb4c02a2b0ed0bde" kind="function"><name>setDamage</name></member>
+    <member refid="classendstone_1_1ActorDamageEvent_1a538c8cedc5f6f72088aaf4351d9e32f4" kind="function"><name>getDamageSource</name></member>
+  </compound>
   <compound refid="classendstone_1_1ActorDeathEvent" kind="class"><name>endstone::ActorDeathEvent</name>
     <member refid="classendstone_1_1ActorDeathEvent_1a18887864dc592fcce27965ceda143deb" kind="variable"><name>NAME</name></member>
-    <member refid="classendstone_1_1ActorDeathEvent_1ab6ba282a877e6725cd87f725d73aa81f" kind="function"><name>ActorDeathEvent</name></member>
-    <member refid="classendstone_1_1ActorDeathEvent_1ae058d993784b23cc32eedb37b1864611" kind="function"><name>~ActorDeathEvent</name></member>
+    <member refid="classendstone_1_1ActorDeathEvent_1ac6b8ca9f296013ab0943df44b763e4a3" kind="variable"><name>damage_source_</name></member>
+    <member refid="classendstone_1_1ActorDeathEvent_1a0a2ffc4f1aa535e3afd006a934114f1a" kind="function"><name>ActorDeathEvent</name></member>
     <member refid="classendstone_1_1ActorDeathEvent_1ad3572783702cd3e40447a3d6344a8094" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ActorDeathEvent_1a9844748807c4fd2b83fe9d8c3cfc892e" kind="function"><name>isCancellable</name></member>
+    <member refid="classendstone_1_1ActorDeathEvent_1ac269e4dac094cf1275a1fe60302872ed" kind="function"><name>getDamageSource</name></member>
   </compound>
   <compound refid="classendstone_1_1ActorEvent" kind="class"><name>endstone::ActorEvent</name>
-    <member refid="classendstone_1_1ActorEvent_1a64d37ca9b81a48ec1ec3d1fd6f0975cc" kind="variable"><name>actor_</name></member>
-    <member refid="classendstone_1_1ActorEvent_1a1d431f4b3c7cc2db417684a97029c386" kind="function"><name>ActorEvent</name></member>
-    <member refid="classendstone_1_1ActorEvent_1a3cf15029246f7add54e99e9e417b1c75" kind="function"><name>~ActorEvent</name></member>
-    <member refid="classendstone_1_1ActorEvent_1aeb9ea6c413f562e2ad4282fa4f695758" kind="function"><name>getActor</name></member>
+    <member refid="classendstone_1_1ActorEvent_1a5bda59f76a2df1a35f89d47c6ef2bcbf" kind="variable"><name>actor_</name></member>
+    <member refid="classendstone_1_1ActorEvent_1a07f53f59692095b4a31a6e3d95128015" kind="function"><name>ActorEvent</name></member>
+    <member refid="classendstone_1_1ActorEvent_1a9fff5524effc04e99bb28d49a9b37b6f" kind="function"><name>~ActorEvent</name></member>
+    <member refid="classendstone_1_1ActorEvent_1a49c459c96e831dbab2333ec2187ea552" kind="function"><name>getActor</name></member>
+  </compound>
+  <compound refid="classendstone_1_1ActorExplodeEvent" kind="class"><name>endstone::ActorExplodeEvent</name>
+    <member refid="classendstone_1_1ActorExplodeEvent_1ab8e17c9ea777879efdfc3e476b94a16e" kind="typedef"><name>BlockList</name></member>
+    <member refid="classendstone_1_1ActorExplodeEvent_1a538b328811580be48ba12a6e72d81f63" kind="variable"><name>NAME</name></member>
+    <member refid="classendstone_1_1ActorExplodeEvent_1a71dac852727c2b7fb8268622c43c0cc2" kind="variable"><name>location_</name></member>
+    <member refid="classendstone_1_1ActorExplodeEvent_1ada001326b186e0574ce6b17be5dc4e07" kind="variable"><name>blocks_</name></member>
+    <member refid="classendstone_1_1ActorExplodeEvent_1a6351fdf619ffc0dbdc147eab56f716a9" kind="function"><name>ActorExplodeEvent</name></member>
+    <member refid="classendstone_1_1ActorExplodeEvent_1aeb8f75b17f04f27c4e4e64cd1f56d2f2" kind="function"><name>~ActorExplodeEvent</name></member>
+    <member refid="classendstone_1_1ActorExplodeEvent_1a5cc3e0325db3f67173ae516314fae999" kind="function"><name>getEventName</name></member>
+    <member refid="classendstone_1_1ActorExplodeEvent_1a503cfca64807cacb36ca3c41de78be28" kind="function"><name>getLocation</name></member>
+    <member refid="classendstone_1_1ActorExplodeEvent_1a0b009ccfd36dbb770f245f1d30d4e348" kind="function"><name>getBlockList</name></member>
+    <member refid="classendstone_1_1ActorExplodeEvent_1a1a6ba8571a20ec1325ec4a9aa45a1a0a" kind="function"><name>getBlockList</name></member>
   </compound>
   <compound refid="classendstone_1_1ActorKnockbackEvent" kind="class"><name>endstone::ActorKnockbackEvent</name>
     <member refid="classendstone_1_1ActorKnockbackEvent_1a3612ace20ee9b1d15cc5d3f65aef90a0" kind="variable"><name>NAME</name></member>
@@ -67,25 +89,20 @@
     <member refid="classendstone_1_1ActorKnockbackEvent_1acd617a2d1ffb56c3b9a479d4ddb080a5" kind="function"><name>ActorKnockbackEvent</name></member>
     <member refid="classendstone_1_1ActorKnockbackEvent_1a2c59d36dbcf12d782d927acc211ef292" kind="function"><name>~ActorKnockbackEvent</name></member>
     <member refid="classendstone_1_1ActorKnockbackEvent_1a6b3eee184de0d29360031cf48680c25a" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ActorKnockbackEvent_1adef366cf60a09544042b34ecb11e761d" kind="function"><name>isCancellable</name></member>
-    <member refid="classendstone_1_1ActorKnockbackEvent_1ab9d97d11996902fd623cc4c50362be06" kind="function"><name>getActor</name></member>
     <member refid="classendstone_1_1ActorKnockbackEvent_1a4dc601b2fc54d46ef20821a75035cd2e" kind="function"><name>getSource</name></member>
     <member refid="classendstone_1_1ActorKnockbackEvent_1a7ec5c1018eb0c66d7143796837ebfff0" kind="function"><name>getKnockback</name></member>
     <member refid="classendstone_1_1ActorKnockbackEvent_1a17876ee6a06028878ff098bec3bb20f1" kind="function"><name>setKnockback</name></member>
   </compound>
   <compound refid="classendstone_1_1ActorRemoveEvent" kind="class"><name>endstone::ActorRemoveEvent</name>
     <member refid="classendstone_1_1ActorRemoveEvent_1a4d53a93b0651f115ce32b99dc5b0398d" kind="variable"><name>NAME</name></member>
-    <member refid="classendstone_1_1ActorRemoveEvent_1ab2b72e42268aee037949fa4d66cb429c" kind="function"><name>ActorRemoveEvent</name></member>
-    <member refid="classendstone_1_1ActorRemoveEvent_1a2b9327e02f470a6aeb6226de8ed2c041" kind="function"><name>~ActorRemoveEvent</name></member>
     <member refid="classendstone_1_1ActorRemoveEvent_1aba629c08862f2ce560791525abfc6037" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ActorRemoveEvent_1ae36fc6fe8e23e0ef63279f5449766342" kind="function"><name>isCancellable</name></member>
+    <member refid="classendstone_1_1ActorRemoveEvent_1a07f53f59692095b4a31a6e3d95128015" kind="function"><name>ActorEvent</name></member>
   </compound>
   <compound refid="classendstone_1_1ActorSpawnEvent" kind="class"><name>endstone::ActorSpawnEvent</name>
     <member refid="classendstone_1_1ActorSpawnEvent_1adf1259b01a63a9cf4453ec0f7c99b7db" kind="variable"><name>NAME</name></member>
     <member refid="classendstone_1_1ActorSpawnEvent_1a97220eb48dd782f724751748da0be5e6" kind="function"><name>ActorSpawnEvent</name></member>
     <member refid="classendstone_1_1ActorSpawnEvent_1ac524be66b9fb6427fec2fab4dca9c7c9" kind="function"><name>~ActorSpawnEvent</name></member>
     <member refid="classendstone_1_1ActorSpawnEvent_1a3121b34be728eb087186a20be395032f" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ActorSpawnEvent_1a4b36f15fe95c316b1589bbf5314c60d6" kind="function"><name>isCancellable</name></member>
   </compound>
   <compound refid="classendstone_1_1ActorTeleportEvent" kind="class"><name>endstone::ActorTeleportEvent</name>
     <member refid="classendstone_1_1ActorTeleportEvent_1a2f7ffbf56f181255a139b024ba509783" kind="variable"><name>NAME</name></member>
@@ -94,7 +111,6 @@
     <member refid="classendstone_1_1ActorTeleportEvent_1a6c419a38acb7baf7091376bac7bb44d7" kind="function"><name>ActorTeleportEvent</name></member>
     <member refid="classendstone_1_1ActorTeleportEvent_1a05d22c8898cc980d69767e36c70d2248" kind="function"><name>~ActorTeleportEvent</name></member>
     <member refid="classendstone_1_1ActorTeleportEvent_1a60979e7b5222885d3b072c8dde7185d2" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ActorTeleportEvent_1a66f845e674c7790e54896f66104b063c" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1ActorTeleportEvent_1a2d41334b6b7b8362cad60430d56febb2" kind="function"><name>getFrom</name></member>
     <member refid="classendstone_1_1ActorTeleportEvent_1ac71b31960417257ca1b2abaf7fc3e5e2" kind="function"><name>setFrom</name></member>
     <member refid="classendstone_1_1ActorTeleportEvent_1ab0bce5bf080702eb2808d46e7e1ab612" kind="function"><name>getTo</name></member>
@@ -136,9 +152,9 @@
     <member refid="classendstone_1_1Block_1a47447530f497ab18f735aa5fad6eea99" kind="function"><name>getData</name></member>
     <member refid="classendstone_1_1Block_1ae4ceaaa2365957b62e4741857259e1bb" kind="function"><name>setData</name></member>
     <member refid="classendstone_1_1Block_1a1f906bf290929643ec2092f199aeafeb" kind="function"><name>setData</name></member>
-    <member refid="classendstone_1_1Block_1ae64fe37c4f5aaaf44519ae0be5211add" kind="function"><name>getRelative</name></member>
-    <member refid="classendstone_1_1Block_1ab363acee502226f50d605404d0f6e466" kind="function"><name>getRelative</name></member>
-    <member refid="classendstone_1_1Block_1a40ecaa3f231ad91d5ee5964cbd39faa8" kind="function"><name>getRelative</name></member>
+    <member refid="classendstone_1_1Block_1a84a0f1e97ff3f35ddbbd05ebc830328c" kind="function"><name>getRelative</name></member>
+    <member refid="classendstone_1_1Block_1a349d0e4cd570e6e313ae4b1bc7ce099d" kind="function"><name>getRelative</name></member>
+    <member refid="classendstone_1_1Block_1a46c67c88d41daab7fa9772681e11085f" kind="function"><name>getRelative</name></member>
     <member refid="classendstone_1_1Block_1a8d18ed25f0fc34c51152ec0a1dd09854" kind="function"><name>getDimension</name></member>
     <member refid="classendstone_1_1Block_1a1ec1fc7c6fe1aab63db232b0f0684c76" kind="function"><name>getX</name></member>
     <member refid="classendstone_1_1Block_1a390b31ef485c4b5176842bd3a59b01bc" kind="function"><name>getY</name></member>
@@ -149,10 +165,9 @@
   <compound refid="classendstone_1_1BlockBreakEvent" kind="class"><name>endstone::BlockBreakEvent</name>
     <member refid="classendstone_1_1BlockBreakEvent_1a64ca48725564c7fe543234eb464e4cbe" kind="variable"><name>NAME</name></member>
     <member refid="classendstone_1_1BlockBreakEvent_1a327ccc0eed39d688459a71b8a6b809d9" kind="variable"><name>player_</name></member>
-    <member refid="classendstone_1_1BlockBreakEvent_1adde7a9bb793265f5b147190769dfaff8" kind="function"><name>BlockBreakEvent</name></member>
+    <member refid="classendstone_1_1BlockBreakEvent_1a09c6069dcd126c9571c4152dc074b21e" kind="function"><name>BlockBreakEvent</name></member>
     <member refid="classendstone_1_1BlockBreakEvent_1a0c013b5825d1ea1b75eaec4e2e076ee8" kind="function"><name>~BlockBreakEvent</name></member>
     <member refid="classendstone_1_1BlockBreakEvent_1a51513f05d20b347797c31be3fb6db1d2" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1BlockBreakEvent_1ac908a1470e2bcf4a767e5f9e9e327815" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1BlockBreakEvent_1aaa5791d3da729f993bf7cdcb07356ef5" kind="function"><name>getPlayer</name></member>
   </compound>
   <compound refid="classendstone_1_1BlockData" kind="class"><name>endstone::BlockData</name>
@@ -161,20 +176,26 @@
     <member refid="classendstone_1_1BlockData_1a5900334feb32d7de14feec816c40f023" kind="function"><name>getBlockStates</name></member>
   </compound>
   <compound refid="classendstone_1_1BlockEvent" kind="class"><name>endstone::BlockEvent</name>
-    <member refid="classendstone_1_1BlockEvent_1ad07edcfc653b930ee644fba64a42d68f" kind="variable"><name>block_</name></member>
-    <member refid="classendstone_1_1BlockEvent_1a4f881523c002923dd73bb4ebf4ad6fc0" kind="function"><name>BlockEvent</name></member>
+    <member refid="classendstone_1_1BlockEvent_1a734e9cce3b2662de97e536e36d8963a4" kind="variable"><name>block_</name></member>
+    <member refid="classendstone_1_1BlockEvent_1a1c590af92d4fec9db9cb218ad7654a82" kind="function"><name>BlockEvent</name></member>
     <member refid="classendstone_1_1BlockEvent_1a099e0f2a50354664de1e9f9bfc02d5d7" kind="function"><name>~BlockEvent</name></member>
     <member refid="classendstone_1_1BlockEvent_1ac9da7c79ee76c2145547c4b09eea46a0" kind="function"><name>getBlock</name></member>
   </compound>
+  <compound refid="classendstone_1_1BlockPistonEvent" kind="class"><name>endstone::BlockPistonEvent</name>
+    <member refid="classendstone_1_1BlockPistonEvent_1ab8569c094d15573abb55f975fa7f5577" kind="variable"><name>NAME</name></member>
+    <member refid="classendstone_1_1BlockPistonEvent_1a01a8530261f46c8affc9f69e0e00e172" kind="variable"><name>player_</name></member>
+    <member refid="classendstone_1_1BlockPistonEvent_1aa7dd79874ce053b709f8e3e35fe8df78" kind="function"><name>BlockPistonEvent</name></member>
+    <member refid="classendstone_1_1BlockPistonEvent_1ad6544a645c1ac2a2b61734d2b66423dc" kind="function"><name>~BlockPistonEvent</name></member>
+    <member refid="classendstone_1_1BlockPistonEvent_1a9580392256ddc38e3489dab492cf3ede" kind="function"><name>getEventName</name></member>
+  </compound>
   <compound refid="classendstone_1_1BlockPlaceEvent" kind="class"><name>endstone::BlockPlaceEvent</name>
     <member refid="classendstone_1_1BlockPlaceEvent_1ac4e2bdd1835d163b9eb5accdfbbd63c1" kind="variable"><name>NAME</name></member>
-    <member refid="classendstone_1_1BlockPlaceEvent_1a5ff8f8ed7c32f7d49f2cd81196fe0d93" kind="variable"><name>placed_block_</name></member>
-    <member refid="classendstone_1_1BlockPlaceEvent_1a28e206da4fec970a7b0a145bc42049a0" kind="variable"><name>placed_against_</name></member>
+    <member refid="classendstone_1_1BlockPlaceEvent_1abd8181f9d8977df00b325c5f9f33b4f9" kind="variable"><name>placed_block_</name></member>
+    <member refid="classendstone_1_1BlockPlaceEvent_1af60fc765d7207b63c3b128dfc1f44c66" kind="variable"><name>placed_against_</name></member>
     <member refid="classendstone_1_1BlockPlaceEvent_1a916d00309007668efdf242a1207e45e3" kind="variable"><name>player_</name></member>
-    <member refid="classendstone_1_1BlockPlaceEvent_1a70cf1d4cb49ebb406ba25039eef2e2cc" kind="function"><name>BlockPlaceEvent</name></member>
+    <member refid="classendstone_1_1BlockPlaceEvent_1a64c8782ea420a242a71fdd72863fcab2" kind="function"><name>BlockPlaceEvent</name></member>
     <member refid="classendstone_1_1BlockPlaceEvent_1ab1bb2ece0d15adb5704b90587d971bed" kind="function"><name>~BlockPlaceEvent</name></member>
     <member refid="classendstone_1_1BlockPlaceEvent_1ae9d0d87fc6e9e576202f755046851da5" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1BlockPlaceEvent_1a78251df1d2239d862a7d419b0d1e2fdf" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1BlockPlaceEvent_1aaa28353cb0631c1c63a84504abf7067e" kind="function"><name>getPlayer</name></member>
     <member refid="classendstone_1_1BlockPlaceEvent_1aaa914dd3891c83edd97b8e3cdaf3b3c5" kind="function"><name>getBlockPlacedState</name></member>
     <member refid="classendstone_1_1BlockPlaceEvent_1a5f25a2818f05265737b236b4568e2225" kind="function"><name>getBlockReplaced</name></member>
@@ -182,7 +203,7 @@
   </compound>
   <compound refid="classendstone_1_1BlockState" kind="class"><name>endstone::BlockState</name>
     <member refid="classendstone_1_1BlockState_1a7e3b8131f58cbb0ba1cd3338d8b90c12" kind="function"><name>~BlockState</name></member>
-    <member refid="classendstone_1_1BlockState_1a2a634e2089e55b2be79531f2c2d18269" kind="function"><name>getBlock</name></member>
+    <member refid="classendstone_1_1BlockState_1ab60f046d1cf2dafcaa2155bc01ea5c89" kind="function"><name>getBlock</name></member>
     <member refid="classendstone_1_1BlockState_1ae5c5fbb7989498006f3e7e48d76e10cf" kind="function"><name>getType</name></member>
     <member refid="classendstone_1_1BlockState_1a54629f4faa893e30d1ef4d4ac15bf147" kind="function"><name>setType</name></member>
     <member refid="classendstone_1_1BlockState_1a0699ddcbb62c951ca592858a8759276d" kind="function"><name>getData</name></member>
@@ -222,7 +243,6 @@
     <member refid="classendstone_1_1BroadcastMessageEvent_1a53004e13a08c5694d14b948528bf91a9" kind="variable"><name>recipients_</name></member>
     <member refid="classendstone_1_1BroadcastMessageEvent_1a77ff21bb94261df9a78b5e745c5d9652" kind="function"><name>BroadcastMessageEvent</name></member>
     <member refid="classendstone_1_1BroadcastMessageEvent_1aecff22889cac261fc45bc6126e32dbf4" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1BroadcastMessageEvent_1a059942b6bf79dd5e4ce35868fa159102" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1BroadcastMessageEvent_1a3af436d3c63cf1901bcb09bc7b4a32fd" kind="function"><name>getMessage</name></member>
     <member refid="classendstone_1_1BroadcastMessageEvent_1a7a73a014a95353346d4fb8b789c77998" kind="function"><name>setMessage</name></member>
     <member refid="classendstone_1_1BroadcastMessageEvent_1a32bd00d3d3836b81cef9852f7ace5a36" kind="function"><name>getRecipients</name></member>
@@ -240,6 +260,19 @@
     <member refid="classendstone_1_1ActionForm_1_1Button_1a1d30ed2b53c6bf3518c065495f19c37a" kind="function"><name>setIcon</name></member>
     <member refid="classendstone_1_1ActionForm_1_1Button_1a7f7e2a07239d36874eb4dc8282b0099b" kind="function"><name>getOnClick</name></member>
     <member refid="classendstone_1_1ActionForm_1_1Button_1acd4b1881548297c8b6a7351c75d29574" kind="function"><name>setOnClick</name></member>
+  </compound>
+  <compound refid="classendstone_1_1Cancellable" kind="class"><name>endstone::Cancellable</name>
+    <member refid="classendstone_1_1Cancellable_1a75cf54ed448c1aa27fed28b0e75b3057" kind="function"><name>isCancelled</name></member>
+    <member refid="classendstone_1_1Cancellable_1a27e3aa0086fb116acce6fa98aaa417e9" kind="function"><name>setCancelled</name></member>
+    <member refid="classendstone_1_1Cancellable_1a3512b47db69c6001f5c0450051308327" kind="function"><name>cancel</name></member>
+    <member refid="classendstone_1_1Cancellable_1abd816b263a239cdacef9ca3b9c549418" kind="function"><name>isCancellable</name></member>
+  </compound>
+  <compound refid="classendstone_1_1Chunk" kind="class"><name>endstone::Chunk</name>
+    <member refid="classendstone_1_1Chunk_1ac9753b865a92b8ce919a9a71d82b61d7" kind="function"><name>~Chunk</name></member>
+    <member refid="classendstone_1_1Chunk_1a8f8d55f6c6a9a27772da990c6aa533b1" kind="function"><name>getX</name></member>
+    <member refid="classendstone_1_1Chunk_1aa41c6ad331470b359dc503a9542f6637" kind="function"><name>getZ</name></member>
+    <member refid="classendstone_1_1Chunk_1ad6b110bcd41022ffbf923d732debbb93" kind="function"><name>getLevel</name></member>
+    <member refid="classendstone_1_1Chunk_1ab18bb55fcb0a26706f9cb59406bdf0cc" kind="function"><name>getDimension</name></member>
   </compound>
   <compound refid="structendstone_1_1ColorFormat" kind="struct"><name>endstone::ColorFormat</name>
     <member refid="structendstone_1_1ColorFormat_1ae88506debc45287385eae171aa061154" kind="variable"><name>Escape</name></member>
@@ -304,6 +337,19 @@
     <member refid="classendstone_1_1Command_1ae3f04d6fbd6fe48c29c1b2951f77a5c0" kind="function"><name>asPluginCommand</name></member>
     <member refid="classendstone_1_1Command_1adac361e9cc0668151e63edebe173a8af" kind="function"><name>allowChangesFrom</name></member>
   </compound>
+  <compound refid="classendstone_1_1detail_1_1CommandBuilder" kind="class"><name>endstone::detail::CommandBuilder</name>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a743a95f547b137b5c966eb97cc4bff20" kind="variable"><name>name_</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a5b6736d275eb7ac68093c00e767a335e" kind="variable"><name>description_</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a7f9b1bf8c6db40d62cb9638e13bb4c2c" kind="variable"><name>usages_</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a5225cadbb8961bab0f5807708df3a1a7" kind="variable"><name>aliases_</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a9dbe62d474febee24f93dce932c3e350" kind="variable"><name>permissions_</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1af521edee7ae7cce6c476430b71fbc570" kind="function"><name>CommandBuilder</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a9b560110d4bccb22c2c97a0b8f7e87f6" kind="function"><name>description</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a689a5e81fd2e146f27c55f48a24a28e2" kind="function"><name>usages</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a6b7e374143eed299d298e795182fd9db" kind="function"><name>aliases</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a30fe443a7e303392a0fd67150f96b99b" kind="function"><name>permissions</name></member>
+    <member refid="classendstone_1_1detail_1_1CommandBuilder_1a23eb482bf7b9baa80c637436c32e0245" kind="function"><name>build</name></member>
+  </compound>
   <compound refid="classendstone_1_1CommandExecutor" kind="class"><name>endstone::CommandExecutor</name>
     <member refid="classendstone_1_1CommandExecutor_1a9dfc0b1fe01086e280de0d8202f6482c" kind="function"><name>~CommandExecutor</name></member>
     <member refid="classendstone_1_1CommandExecutor_1abf189fa960c2e7f1fbc3f0366afc3d1f" kind="function"><name>onCommand</name></member>
@@ -324,6 +370,7 @@
     <member refid="classendstone_1_1CommandSender_1a4f5be88d28d49e1c7424acd1c30fc893" kind="function"><name>asCommandSender</name></member>
     <member refid="classendstone_1_1CommandSender_1ad52351f5219698ad2bb2fbd6509c80f5" kind="function"><name>asConsole</name></member>
     <member refid="classendstone_1_1CommandSender_1a981997682a69961a0cb5e92b7a70f4ff" kind="function"><name>asActor</name></member>
+    <member refid="classendstone_1_1CommandSender_1aacfc66c9c74e9f8419ada38a1beb6913" kind="function"><name>asMob</name></member>
     <member refid="classendstone_1_1CommandSender_1aef66d1ad6c2cbc924e51f02407f94fa3" kind="function"><name>asPlayer</name></member>
     <member refid="classendstone_1_1CommandSender_1a000782a076576822ea70b640f5f230ea" kind="function"><name>sendMessage</name></member>
     <member refid="classendstone_1_1CommandSender_1a991e541b0e30e75ab7f508d6fdb141ad" kind="function"><name>sendMessage</name></member>
@@ -354,6 +401,7 @@
     <member refid="classendstone_1_1CommandSenderWrapper_1a5fc91f3c240a91dc5a37d1e0345da2c6" kind="function"><name>asCommandSender</name></member>
     <member refid="classendstone_1_1CommandSenderWrapper_1a1ad4a226bbf1e73d89839d743585b678" kind="function"><name>asConsole</name></member>
     <member refid="classendstone_1_1CommandSenderWrapper_1a44729e5299e551a8058e457a60c64900" kind="function"><name>asActor</name></member>
+    <member refid="classendstone_1_1CommandSenderWrapper_1ad53fb2fc3c38f3d8add6b409eac0bdf4" kind="function"><name>asMob</name></member>
     <member refid="classendstone_1_1CommandSenderWrapper_1a367f090917a2dc9a34bfad1fb0fb29c2" kind="function"><name>asPlayer</name></member>
     <member refid="classendstone_1_1CommandSenderWrapper_1ae4c0dbf8ed831f306f660688e294dcce" kind="function"><name>getServer</name></member>
     <member refid="classendstone_1_1CommandSenderWrapper_1af7a2f45adfa1e55eda23bd39a16d3642" kind="function"><name>getName</name></member>
@@ -368,6 +416,13 @@
     <member refid="classendstone_1_1Criteria_1a41b262cc7d4029a58773d1fa1e5c0eab" kind="function"><name>isReadOnly</name></member>
     <member refid="classendstone_1_1Criteria_1a62d2a81d1b34cb0c271bdf470b0064de" kind="function"><name>getDefaultRenderType</name></member>
   </compound>
+  <compound refid="classendstone_1_1DamageSource" kind="class"><name>endstone::DamageSource</name>
+    <member refid="classendstone_1_1DamageSource_1ad7317c28b8853f400f518106f3f9d659" kind="function"><name>~DamageSource</name></member>
+    <member refid="classendstone_1_1DamageSource_1a545bb2e2d0cbf576bd70595194e88a74" kind="function"><name>getType</name></member>
+    <member refid="classendstone_1_1DamageSource_1aa918ccf5242cf6d8ed707457c227f9c5" kind="function"><name>getActor</name></member>
+    <member refid="classendstone_1_1DamageSource_1a022af0acc2aab4bd95e5ce916186a4ff" kind="function"><name>getDamagingActor</name></member>
+    <member refid="classendstone_1_1DamageSource_1ab078db3a18d08b41dd6c73de066c2b02" kind="function"><name>isIndirect</name></member>
+  </compound>
   <compound refid="classendstone_1_1Dimension" kind="class"><name>endstone::Dimension</name>
     <member refid="classendstone_1_1Dimension_1a5dbe2e9365112e8c0f883978fae1356b" kind="enum"><name>Type</name></member>
     <member refid="classendstone_1_1Dimension_1a5dbe2e9365112e8c0f883978fae1356ba50181b144eb2554dc2e45cd3d437e92f" kind="enumvalue"><name>Overworld</name></member>
@@ -378,8 +433,12 @@
     <member refid="classendstone_1_1Dimension_1a3cd59f6145706ead47d173255a10a39d" kind="function"><name>getName</name></member>
     <member refid="classendstone_1_1Dimension_1a9d9baf77525291924f80c682cc3d012c" kind="function"><name>getType</name></member>
     <member refid="classendstone_1_1Dimension_1a541fd7f166a3d746dde92b57e4843f6a" kind="function"><name>getLevel</name></member>
-    <member refid="classendstone_1_1Dimension_1a26deb2bd38092760aa9ff007cb87f831" kind="function"><name>getBlockAt</name></member>
-    <member refid="classendstone_1_1Dimension_1a6a2dd8a2fa5c2249ccc0aab565077c9b" kind="function"><name>getBlockAt</name></member>
+    <member refid="classendstone_1_1Dimension_1acd6ec833ad5093f9ed3b60f4bdf9ec81" kind="function"><name>getBlockAt</name></member>
+    <member refid="classendstone_1_1Dimension_1a3b3e5514a44790a32b7f711c2cd4563a" kind="function"><name>getBlockAt</name></member>
+    <member refid="classendstone_1_1Dimension_1a444efcebbf833e779384449f781a10c6" kind="function"><name>getHighestBlockYAt</name></member>
+    <member refid="classendstone_1_1Dimension_1a0571b542f85470787ddd64f7d5ac157b" kind="function"><name>getHighestBlockAt</name></member>
+    <member refid="classendstone_1_1Dimension_1a03197b02f3aebc7663c6f8a7deebaaaf" kind="function"><name>getHighestBlockAt</name></member>
+    <member refid="classendstone_1_1Dimension_1a065a2b1242a809b89dd1502b2ad828b6" kind="function"><name>getLoadedChunks</name></member>
   </compound>
   <compound refid="classendstone_1_1Dropdown" kind="class"><name>endstone::Dropdown</name>
     <member refid="classendstone_1_1Dropdown_1a63178f8424835d566da0e3d6d62bb2b1" kind="variable"><name>label_</name></member>
@@ -403,6 +462,8 @@
     <member refid="classendstone_1_1Error_1a5ecca04e37249d7e84266e24f96744b0" kind="function"><name>getStackTrace</name></member>
   </compound>
   <compound refid="classendstone_1_1Event" kind="class"><name>endstone::Event</name>
+    <member refid="classendstone_1_1Event_1a7f434d804d3d19ce4876be9b2a540fcf" kind="friend"><name>Cancellable</name></member>
+    <member refid="classendstone_1_1Event_1a0b257358246ba8f9c2f228c35e4f3e85" kind="friend"><name>EventHandler</name></member>
     <member refid="classendstone_1_1Event_1a17c460fb3a1fa2b8b8f60a0744c0ab89" kind="variable"><name>async_</name></member>
     <member refid="classendstone_1_1Event_1a5f9dfb12b76c9d6b46a42fb4238576f0" kind="variable"><name>cancelled_</name></member>
     <member refid="classendstone_1_1Event_1a28cca8d74920493b449d035540acf023" kind="function"><name>Event</name></member>
@@ -410,10 +471,8 @@
     <member refid="classendstone_1_1Event_1a44a4ff424a8b690c01a2afe10ae68d8f" kind="function"><name>operator=</name></member>
     <member refid="classendstone_1_1Event_1a6aeaa8096baba90f8ace94106e0e05f3" kind="function"><name>~Event</name></member>
     <member refid="classendstone_1_1Event_1a826fe74f9c4195a36a364b9aeeb321bb" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1Event_1a8e8cba21dd1527394f600dbf6769a0b9" kind="function"><name>isCancellable</name></member>
-    <member refid="classendstone_1_1Event_1a392163d87ff21752806523e050cd10bb" kind="function"><name>isCancelled</name></member>
-    <member refid="classendstone_1_1Event_1ad52e803ff719bd82e650f3cf06aae614" kind="function"><name>setCancelled</name></member>
     <member refid="classendstone_1_1Event_1ae89b54f63dc32b0c8797a59db69b6931" kind="function"><name>isAsynchronous</name></member>
+    <member refid="classendstone_1_1Event_1a262e0232aa1ac5f2db91298dc404c9ec" kind="function"><name>isCancellable</name></member>
   </compound>
   <compound refid="classendstone_1_1EventHandler" kind="class"><name>endstone::EventHandler</name>
     <member refid="classendstone_1_1EventHandler_1adb860867df4a0ec561d94c5861fd0546" kind="variable"><name>event_</name></member>
@@ -425,7 +484,7 @@
     <member refid="classendstone_1_1EventHandler_1a6347792cee5b002974bdf1f612d015aa" kind="function"><name>getPlugin</name></member>
     <member refid="classendstone_1_1EventHandler_1ae71bf36fa904b1810f5560cdc149b474" kind="function"><name>getPriority</name></member>
     <member refid="classendstone_1_1EventHandler_1a09736eece61298b452a850f687b9a8ff" kind="function"><name>isIgnoreCancelled</name></member>
-    <member refid="classendstone_1_1EventHandler_1a0bf540c4b132dbb5cac4cfc7e6c0dc3b" kind="function"><name>callEvent</name></member>
+    <member refid="classendstone_1_1EventHandler_1a9f180123779aa67ed32f51753a40290c" kind="function"><name>callEvent</name></member>
     <member refid="classendstone_1_1EventHandler_1aa8bc3d7f90a485cefdf0cbae3f95ffc0" kind="function"><name>getEventType</name></member>
   </compound>
   <compound refid="classendstone_1_1Form" kind="class"><name>endstone::Form</name>
@@ -437,6 +496,10 @@
     <member refid="classendstone_1_1Form_1a85daf37f20cdd2ce9e5eff9a2179a7e0" kind="function"><name>setTitle</name></member>
     <member refid="classendstone_1_1Form_1aff78b36d4798b8185ea1ff93f6260f63" kind="function"><name>setOnClose</name></member>
     <member refid="classendstone_1_1Form_1ad0a5721b99d2d9bd30eec414d9c218b6" kind="function"><name>getOnClose</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_01endstone_1_1Actor_01_4" kind="struct"><name>fmt::formatter&lt; endstone::Actor &gt;</name>
+    <member refid="structfmt_1_1formatter_3_01endstone_1_1Actor_01_4_1a0b7e438b7e84f8f70a411fbe0aea3175" kind="typedef"><name>Type</name></member>
+    <member refid="structfmt_1_1formatter_3_01endstone_1_1Actor_01_4_1a8e26093faffc87121ab193cb1e5757af" kind="function"><name>format</name></member>
   </compound>
   <compound refid="structfmt_1_1formatter_3_01endstone_1_1Block_01_4" kind="struct"><name>fmt::formatter&lt; endstone::Block &gt;</name>
     <member refid="structfmt_1_1formatter_3_01endstone_1_1Block_01_4_1a329e503a43a8c88c344787df53c06dfb" kind="typedef"><name>Type</name></member>
@@ -462,6 +525,10 @@
     <member refid="structfmt_1_1formatter_3_01endstone_1_1BlockStates_1_1value__type_01_4_1aad09b775459795e7252f362372b83072" kind="typedef"><name>Type</name></member>
     <member refid="structfmt_1_1formatter_3_01endstone_1_1BlockStates_1_1value__type_01_4_1adc0e1b7666aff1112b9b54564d09366d" kind="function"><name>format</name></member>
   </compound>
+  <compound refid="structfmt_1_1formatter_3_01endstone_1_1DamageSource_01_4" kind="struct"><name>fmt::formatter&lt; endstone::DamageSource &gt;</name>
+    <member refid="structfmt_1_1formatter_3_01endstone_1_1DamageSource_01_4_1a550a3ede03ae8cb3363f4506b352053a" kind="typedef"><name>Type</name></member>
+    <member refid="structfmt_1_1formatter_3_01endstone_1_1DamageSource_01_4_1a28a57016ce7ccd62f11a6a308793c01f" kind="function"><name>format</name></member>
+  </compound>
   <compound refid="structfmt_1_1formatter_3_01endstone_1_1ItemStack_01_4" kind="struct"><name>fmt::formatter&lt; endstone::ItemStack &gt;</name>
     <member refid="structfmt_1_1formatter_3_01endstone_1_1ItemStack_01_4_1ad78d75e07f93f63fc0413cee2954d7f0" kind="typedef"><name>Type</name></member>
     <member refid="structfmt_1_1formatter_3_01endstone_1_1ItemStack_01_4_1a6116802aa2eb42ae63921aa2f140c160" kind="function"><name>format</name></member>
@@ -481,6 +548,12 @@
   </compound>
   <compound refid="structstd_1_1hash_3_01endstone_1_1UUID_01_4" kind="struct"><name>std::hash&lt; endstone::UUID &gt;</name>
     <member refid="structstd_1_1hash_3_01endstone_1_1UUID_01_4_1aba2e224d81006d5f09afad62be9dfd1c" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="classendstone_1_1ICancellable" kind="class"><name>endstone::ICancellable</name>
+    <member refid="classendstone_1_1ICancellable_1ab6d311fcaa18971f69a1b23f5a856301" kind="function"><name>~ICancellable</name></member>
+    <member refid="classendstone_1_1ICancellable_1ad7d9998d26e5339233a01cf718a779ef" kind="function"><name>isCancelled</name></member>
+    <member refid="classendstone_1_1ICancellable_1a348a8d847632c98e42510134d82086ef" kind="function"><name>setCancelled</name></member>
+    <member refid="classendstone_1_1ICancellable_1a65036acf5f2520cb11d833b4a4daee29" kind="function"><name>cancel</name></member>
   </compound>
   <compound refid="structendstone_1_1Skin_1_1ImageData" kind="struct"><name>endstone::Skin::ImageData</name>
     <member refid="structendstone_1_1Skin_1_1ImageData_1a298bf3c3af3d88954ceed30f05ecdebd" kind="variable"><name>height</name></member>
@@ -516,7 +589,7 @@
     <member refid="classendstone_1_1IpBanList_1ac87901f151c53c57c5ae8267c7b7d601" kind="function"><name>removeBan</name></member>
   </compound>
   <compound refid="classendstone_1_1ItemStack" kind="class"><name>endstone::ItemStack</name>
-    <member refid="classendstone_1_1ItemStack_1a48f826c758828421a29e85e3f8c98126" kind="friend"><name>detail::EndstoneItemStack</name></member>
+    <member refid="classendstone_1_1ItemStack_1a71f2c93560b6bc5092a50098ceccd3fc" kind="friend"><name>core::EndstoneItemStack</name></member>
     <member refid="classendstone_1_1ItemStack_1a88b7ec0244561b1406e8229dc46dad3b" kind="variable"><name>type_</name></member>
     <member refid="classendstone_1_1ItemStack_1aca0b4d279429247412e0e0d0b37d46a9" kind="variable"><name>amount_</name></member>
     <member refid="classendstone_1_1ItemStack_1a7593f4108fb7f234050fd70abd7d2957" kind="function"><name>ItemStack</name></member>
@@ -526,8 +599,8 @@
     <member refid="classendstone_1_1ItemStack_1ad6432e26b2e4c2e32a97cfc5fee2555f" kind="function"><name>setType</name></member>
     <member refid="classendstone_1_1ItemStack_1a0dd7a79674dcefdf8255ed48bc88de4a" kind="function"><name>getAmount</name></member>
     <member refid="classendstone_1_1ItemStack_1a4eeac443885604ca40fbc64bc05ddb3b" kind="function"><name>setAmount</name></member>
-    <member refid="classendstone_1_1ItemStack_1ab059c079d9facd1fbbeb7cf11fb4c6c9" kind="function"><name>asEndstoneItemStack</name></member>
-    <member refid="classendstone_1_1ItemStack_1a4f6ae0e3414a745870a58924e56e9174" kind="function"><name>asEndstoneItemStack</name></member>
+    <member refid="classendstone_1_1ItemStack_1a62bebb1df1234d03ab77416e897c1fc5" kind="function"><name>asEndstoneItemStack</name></member>
+    <member refid="classendstone_1_1ItemStack_1a3f2fbe456de9e2762bc629e422f00469" kind="function"><name>asEndstoneItemStack</name></member>
   </compound>
   <compound refid="classendstone_1_1Label" kind="class"><name>endstone::Label</name>
     <member refid="classendstone_1_1Label_1ab06f2fe28f2fd41931cf10fa9810d2d4" kind="variable"><name>text_</name></member>
@@ -579,21 +652,21 @@
     <member refid="classendstone_1_1Logger_1a310b9bd648301066760d387ca2fe7e2a" kind="function"><name>setLevel</name></member>
     <member refid="classendstone_1_1Logger_1a6985fcd498c81e1cf5c68bebd6f41df3" kind="function"><name>isEnabledFor</name></member>
     <member refid="classendstone_1_1Logger_1a129515baf5eca9a21431973581919acb" kind="function"><name>getName</name></member>
-    <member refid="classendstone_1_1Logger_1a25fe8a9a8d7315e3ee8b91660bf2baeb" kind="function"><name>log</name></member>
-    <member refid="classendstone_1_1Logger_1a96b098cc55da3ea295ddaff73ee4fda5" kind="function"><name>log</name></member>
-    <member refid="classendstone_1_1Logger_1a12b20b30c71ad1a32750b1cf204eaed3" kind="function"><name>trace</name></member>
-    <member refid="classendstone_1_1Logger_1afece6f3acad16bfa812319bce8642cba" kind="function"><name>trace</name></member>
-    <member refid="classendstone_1_1Logger_1afd79f51c7869d41732ce5fa3378d4c2c" kind="function"><name>debug</name></member>
-    <member refid="classendstone_1_1Logger_1a871e42ad85f5730044b2cc983cc3384a" kind="function"><name>debug</name></member>
-    <member refid="classendstone_1_1Logger_1aa6e245e9c7704bbed956aaf3f8df94ae" kind="function"><name>info</name></member>
-    <member refid="classendstone_1_1Logger_1a138fae3e1cb2ea5c193f87cfcf31f122" kind="function"><name>info</name></member>
-    <member refid="classendstone_1_1Logger_1ac0c495a5be4a737d755be069ee2dcdbc" kind="function"><name>warning</name></member>
-    <member refid="classendstone_1_1Logger_1a4537b8cb4a086be29beed8e5a44292cf" kind="function"><name>warning</name></member>
-    <member refid="classendstone_1_1Logger_1aad6f17ce5b3438c9a8187d53a047e54d" kind="function"><name>error</name></member>
-    <member refid="classendstone_1_1Logger_1a86c1d62c9325ca51c41d12b2e94b0bdc" kind="function"><name>error</name></member>
-    <member refid="classendstone_1_1Logger_1ac0f6bd20f1b02e4f18eaedc6a87ee710" kind="function"><name>error</name></member>
-    <member refid="classendstone_1_1Logger_1afd2c58b50e57b84a57635278a535e2f2" kind="function"><name>critical</name></member>
-    <member refid="classendstone_1_1Logger_1aca507742a0f4d372c5ce0e56143e8fb3" kind="function"><name>critical</name></member>
+    <member refid="classendstone_1_1Logger_1a6e50e094bca4b5102bc61a41fe32195e" kind="function"><name>log</name></member>
+    <member refid="classendstone_1_1Logger_1a33cdaa9d51325eed160f1859284b6b31" kind="function"><name>log</name></member>
+    <member refid="classendstone_1_1Logger_1a1850152708633dc08fc18d605b19371e" kind="function"><name>trace</name></member>
+    <member refid="classendstone_1_1Logger_1a4fb072ea887b7b9f8b423477568176bd" kind="function"><name>trace</name></member>
+    <member refid="classendstone_1_1Logger_1ac1666731787d092e739d07b2807929e2" kind="function"><name>debug</name></member>
+    <member refid="classendstone_1_1Logger_1aa0310f46bc7bd059293f61551de8dfee" kind="function"><name>debug</name></member>
+    <member refid="classendstone_1_1Logger_1a1ec8137441e804605aab3bc15569ce92" kind="function"><name>info</name></member>
+    <member refid="classendstone_1_1Logger_1a703d225d19d4d328636283bfac36c09c" kind="function"><name>info</name></member>
+    <member refid="classendstone_1_1Logger_1a371caa58890632671d272beaffbd7bc6" kind="function"><name>warning</name></member>
+    <member refid="classendstone_1_1Logger_1ae936f35dee496e1ea3a893cf6eac1bab" kind="function"><name>warning</name></member>
+    <member refid="classendstone_1_1Logger_1a8537f43ecc79575866258125aa874394" kind="function"><name>error</name></member>
+    <member refid="classendstone_1_1Logger_1a60381ba750ad53b817e80acecfd7afac" kind="function"><name>error</name></member>
+    <member refid="classendstone_1_1Logger_1a4891f5589e8620186afb8022f93d38e2" kind="function"><name>error</name></member>
+    <member refid="classendstone_1_1Logger_1a799b52643e31638b0e9ea99ba238dc96" kind="function"><name>critical</name></member>
+    <member refid="classendstone_1_1Logger_1a25c768637a0f06c9fbdfc11454cc7c3c" kind="function"><name>critical</name></member>
   </compound>
   <compound refid="classendstone_1_1MessageForm" kind="class"><name>endstone::MessageForm</name>
     <member refid="classendstone_1_1MessageForm_1ae80b40d9e184bdb006df4227c18bc7a0" kind="typedef"><name>OnSubmitCallback</name></member>
@@ -611,6 +684,7 @@
     <member refid="classendstone_1_1MessageForm_1a32ad03e1b55f5a98009d34d5f442c248" kind="function"><name>setOnSubmit</name></member>
   </compound>
   <compound refid="classendstone_1_1Mob" kind="class"><name>endstone::Mob</name>
+    <member refid="classendstone_1_1Mob_1aefb6264f480587f4baaeb0eb23277760" kind="function"><name>asMob</name></member>
     <member refid="classendstone_1_1Mob_1a7903900a62a82e920230c7fc75ff5ac6" kind="function"><name>isGliding</name></member>
   </compound>
   <compound refid="classendstone_1_1ModalForm" kind="class"><name>endstone::ModalForm</name>
@@ -649,6 +723,11 @@
     <member refid="classendstone_1_1Objective_1a8b28c20b7099517ba2d12eefaf933a97" kind="function"><name>getScore</name></member>
     <member refid="classendstone_1_1Objective_1a8a41679213a22450c756fd1c14edbc36" kind="function"><name>operator==</name></member>
     <member refid="classendstone_1_1Objective_1abfd8c61ab066baec27ba92445cc6ce3b" kind="function"><name>operator!=</name></member>
+  </compound>
+  <compound refid="classendstone_1_1OfflinePlayer" kind="class"><name>endstone::OfflinePlayer</name>
+    <member refid="classendstone_1_1OfflinePlayer_1a9d4539d56917bc166121f2bb2919b288" kind="function"><name>~OfflinePlayer</name></member>
+    <member refid="classendstone_1_1OfflinePlayer_1a0135bdd81bed1caddebbab8deb91a32f" kind="function"><name>getName</name></member>
+    <member refid="classendstone_1_1OfflinePlayer_1aa1c48a8a74d2fcb7eefc8892f032ab99" kind="function"><name>getUniqueId</name></member>
   </compound>
   <compound refid="structendstone_1_1overloaded" kind="struct"><name>endstone::overloaded</name>
   </compound>
@@ -719,16 +798,33 @@
     <member refid="classendstone_1_1PermissionAttachmentInfo_1a1052981a67ade54aa639e382eaf21838" kind="function"><name>getAttachment</name></member>
     <member refid="classendstone_1_1PermissionAttachmentInfo_1a86e337719e9f2625f7a8a1760c630ecb" kind="function"><name>getValue</name></member>
   </compound>
+  <compound refid="classendstone_1_1detail_1_1PermissionBuilder" kind="class"><name>endstone::detail::PermissionBuilder</name>
+    <member refid="classendstone_1_1detail_1_1PermissionBuilder_1a18383984bb3a7867d8d764d51ed3ec2f" kind="variable"><name>name_</name></member>
+    <member refid="classendstone_1_1detail_1_1PermissionBuilder_1a63172ebb73a82e9850e42cfc927bef8b" kind="variable"><name>description_</name></member>
+    <member refid="classendstone_1_1detail_1_1PermissionBuilder_1a91cc8149845859848f85f27aa589aaea" kind="variable"><name>default_value_</name></member>
+    <member refid="classendstone_1_1detail_1_1PermissionBuilder_1aaea36e51d398fef9a6bbe851a2e6af71" kind="variable"><name>children_</name></member>
+    <member refid="classendstone_1_1detail_1_1PermissionBuilder_1a2cd08767e0a17368e821687b678653c9" kind="function"><name>PermissionBuilder</name></member>
+    <member refid="classendstone_1_1detail_1_1PermissionBuilder_1af0e532c4aea8b11975de6717f026b0bd" kind="function"><name>description</name></member>
+    <member refid="classendstone_1_1detail_1_1PermissionBuilder_1a14a16ef08f7006a3f37ab5ec9c5ac6dd" kind="function"><name>default_</name></member>
+    <member refid="classendstone_1_1detail_1_1PermissionBuilder_1a1b9872c5107f2494c43f46e4f7124d12" kind="function"><name>children</name></member>
+    <member refid="classendstone_1_1detail_1_1PermissionBuilder_1afe7346c555708ae3575b1f678b47850d" kind="function"><name>build</name></member>
+  </compound>
   <compound refid="classendstone_1_1Player" kind="class"><name>endstone::Player</name>
     <member refid="classendstone_1_1Player_1a03ceece6b2097f9219b3b5976f232041" kind="typedef"><name>FormVariant</name></member>
     <member refid="classendstone_1_1Player_1a9488f5cc958e803acdae2610fa4448aa" kind="function"><name>asPlayer</name></member>
-    <member refid="classendstone_1_1Player_1a2f6259d8ac07fb50c56757844786683b" kind="function"><name>getUniqueId</name></member>
+    <member refid="classendstone_1_1Player_1a03b944357fe64bdbb905d0b65695a9af" kind="function"><name>getName</name></member>
     <member refid="classendstone_1_1Player_1a47c04697994e74cdac0e8b7c4d6b09c7" kind="function"><name>getXuid</name></member>
     <member refid="classendstone_1_1Player_1a4bbd490a104f8b287c0beff7b1593ca5" kind="function"><name>getAddress</name></member>
-    <member refid="classendstone_1_1Player_1a57b35a3e8772c746590f3331bd41fab2" kind="function"><name>sendPopup</name></member>
-    <member refid="classendstone_1_1Player_1ace6a01c98934469d0d7a1d3c61f444be" kind="function"><name>sendTip</name></member>
-    <member refid="classendstone_1_1Player_1a2558a7cac1d76547e05eee61db8cc1ea" kind="function"><name>sendToast</name></member>
+    <member refid="classendstone_1_1Player_1a1eb6fe0de5da814e8d7467817e935603" kind="function"><name>transfer</name></member>
     <member refid="classendstone_1_1Player_1a6dbf34f6330cf0c9e17872426e1c2eb0" kind="function"><name>kick</name></member>
+    <member refid="classendstone_1_1Player_1a9484ec57ceb309acfcfe4b2d61026f56" kind="function"><name>performCommand</name></member>
+    <member refid="classendstone_1_1Player_1a5cdb79fdd152c6c6ed8f251bd1e31523" kind="function"><name>isSneaking</name></member>
+    <member refid="classendstone_1_1Player_1a23622b02f067bad332947a0b9459fd0a" kind="function"><name>setSneaking</name></member>
+    <member refid="classendstone_1_1Player_1abb2a1b9ae99b24fc1e80ed5f73d55646" kind="function"><name>isSprinting</name></member>
+    <member refid="classendstone_1_1Player_1a605f8e9b23c3d73b187c7eeb3959d8e4" kind="function"><name>setSprinting</name></member>
+    <member refid="classendstone_1_1Player_1aa1ceee8a331905251a258d2a81df0120" kind="function"><name>playSound</name></member>
+    <member refid="classendstone_1_1Player_1a3cb05d6341f6edc50f3fe6d519cc82d9" kind="function"><name>stopSound</name></member>
+    <member refid="classendstone_1_1Player_1a413039a8c159c88eb8d9aa4923a08521" kind="function"><name>stopAllSounds</name></member>
     <member refid="classendstone_1_1Player_1a1b4b6ce04b9dc31318a3d81144c85692" kind="function"><name>giveExp</name></member>
     <member refid="classendstone_1_1Player_1aed4057a9b18e9a6a6413acf3e6aa0d07" kind="function"><name>giveExpLevels</name></member>
     <member refid="classendstone_1_1Player_1aefef97a98e1c193a0eeaf710f417b835" kind="function"><name>getExpProgress</name></member>
@@ -746,6 +842,9 @@
     <member refid="classendstone_1_1Player_1ae06900ef1cc1453b40f6af3c8c22a28f" kind="function"><name>setWalkSpeed</name></member>
     <member refid="classendstone_1_1Player_1ae04868c49c3dc7236adea90083ab7351" kind="function"><name>getScoreboard</name></member>
     <member refid="classendstone_1_1Player_1a90d8066d7e5715f245ab270bac8cb3ce" kind="function"><name>setScoreboard</name></member>
+    <member refid="classendstone_1_1Player_1a57b35a3e8772c746590f3331bd41fab2" kind="function"><name>sendPopup</name></member>
+    <member refid="classendstone_1_1Player_1ace6a01c98934469d0d7a1d3c61f444be" kind="function"><name>sendTip</name></member>
+    <member refid="classendstone_1_1Player_1a2558a7cac1d76547e05eee61db8cc1ea" kind="function"><name>sendToast</name></member>
     <member refid="classendstone_1_1Player_1a8d5283dfea450c42458778ee059ccfe6" kind="function"><name>sendTitle</name></member>
     <member refid="classendstone_1_1Player_1a8294c943551a0e2fa0e31362d332f41e" kind="function"><name>sendTitle</name></member>
     <member refid="classendstone_1_1Player_1a95e6751b89ba7f4572997bf0d315c82a" kind="function"><name>resetTitle</name></member>
@@ -754,17 +853,15 @@
     <member refid="classendstone_1_1Player_1aa0489a19f104d571d9bc991c6a7b318c" kind="function"><name>spawnParticle</name></member>
     <member refid="classendstone_1_1Player_1a91fd4054da2dc306633023de123a94cf" kind="function"><name>spawnParticle</name></member>
     <member refid="classendstone_1_1Player_1ac05782597079f4b556eba2f0ef2d592f" kind="function"><name>getPing</name></member>
+    <member refid="classendstone_1_1Player_1a8ffda8f3cdcb8d689f55821a1006dc05" kind="function"><name>getLocale</name></member>
     <member refid="classendstone_1_1Player_1ae89a62a763f1109d05e7718ae7ff9750" kind="function"><name>updateCommands</name></member>
-    <member refid="classendstone_1_1Player_1a9484ec57ceb309acfcfe4b2d61026f56" kind="function"><name>performCommand</name></member>
+    <member refid="classendstone_1_1Player_1aad8a415455bf2fc1aff188329c311eea" kind="function"><name>getInventory</name></member>
     <member refid="classendstone_1_1Player_1a9e1a2ff2d70cb6595962047f17bcb798" kind="function"><name>getGameMode</name></member>
     <member refid="classendstone_1_1Player_1a7ba5aa570e0cf9e5c41dcc8b1602f76e" kind="function"><name>setGameMode</name></member>
-    <member refid="classendstone_1_1Player_1aad8a415455bf2fc1aff188329c311eea" kind="function"><name>getInventory</name></member>
-    <member refid="classendstone_1_1Player_1a8ffda8f3cdcb8d689f55821a1006dc05" kind="function"><name>getLocale</name></member>
     <member refid="classendstone_1_1Player_1a1113f3095eaadb6a4d207033d3eca8d5" kind="function"><name>getDeviceOS</name></member>
     <member refid="classendstone_1_1Player_1ab370677b653ca04c9c9bab16703521f8" kind="function"><name>getDeviceId</name></member>
     <member refid="classendstone_1_1Player_1af27fa164812bf2653148836631b98732" kind="function"><name>getGameVersion</name></member>
     <member refid="classendstone_1_1Player_1a65b1f5137a06cc2bd567241802ff2ec9" kind="function"><name>getSkin</name></member>
-    <member refid="classendstone_1_1Player_1a1eb6fe0de5da814e8d7467817e935603" kind="function"><name>transfer</name></member>
     <member refid="classendstone_1_1Player_1acfa7b2445c386d21b05ee441c614cf9e" kind="function"><name>sendForm</name></member>
     <member refid="classendstone_1_1Player_1a7487bdbd73d71e461239d377790d377c" kind="function"><name>closeForm</name></member>
     <member refid="classendstone_1_1Player_1aa28e46523502cc4d0c4975fa92cfc067" kind="function"><name>sendPacket</name></member>
@@ -801,7 +898,6 @@
     <member refid="classendstone_1_1PlayerChatEvent_1ae0ef119ee5dd4d80ba0db94d7927e011" kind="function"><name>PlayerChatEvent</name></member>
     <member refid="classendstone_1_1PlayerChatEvent_1a84de57a1184f0d6384f32ac95c21864e" kind="function"><name>~PlayerChatEvent</name></member>
     <member refid="classendstone_1_1PlayerChatEvent_1ac7473c18e7328d7fa402d49c143c152a" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerChatEvent_1a5ce9bf30002c4e0b2ca57a9d5fba9f8f" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerChatEvent_1a6aaa932d6bf8d004a1aa67f9332587e3" kind="function"><name>getMessage</name></member>
     <member refid="classendstone_1_1PlayerChatEvent_1a6911b50e5f63878d746bdda07d8fcd58" kind="function"><name>setMessage</name></member>
   </compound>
@@ -811,19 +907,25 @@
     <member refid="classendstone_1_1PlayerCommandEvent_1aab55ef626bb9b1d60352ce8d56c8703a" kind="function"><name>PlayerCommandEvent</name></member>
     <member refid="classendstone_1_1PlayerCommandEvent_1aceec4542ce0df6900c30921cfd78fe87" kind="function"><name>~PlayerCommandEvent</name></member>
     <member refid="classendstone_1_1PlayerCommandEvent_1a64066f629ce1473239141c71c1177010" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerCommandEvent_1a4e37eb524b310112fe13d174aaab874e" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerCommandEvent_1a4096e979a5e327ddecdd9328f087d57b" kind="function"><name>getCommand</name></member>
     <member refid="classendstone_1_1PlayerCommandEvent_1a6d2c4a174ce786fc8a1cd6cd8f9ca7c5" kind="function"><name>setCommand</name></member>
   </compound>
   <compound refid="classendstone_1_1PlayerDeathEvent" kind="class"><name>endstone::PlayerDeathEvent</name>
     <member refid="classendstone_1_1PlayerDeathEvent_1aa5ae502ac2f9ffe892efcf8f54d736ba" kind="variable"><name>NAME</name></member>
     <member refid="classendstone_1_1PlayerDeathEvent_1a8d43b4af4294e73278d0d88b27a8ad03" kind="variable"><name>death_message_</name></member>
-    <member refid="classendstone_1_1PlayerDeathEvent_1a6eb8acf00eac81ecc98168799fa32df1" kind="function"><name>PlayerDeathEvent</name></member>
+    <member refid="classendstone_1_1PlayerDeathEvent_1af523e0468d3f29577029c070abf498c4" kind="function"><name>PlayerDeathEvent</name></member>
     <member refid="classendstone_1_1PlayerDeathEvent_1a5babbc8a8524edf5b68b86c9e9d21380" kind="function"><name>~PlayerDeathEvent</name></member>
     <member refid="classendstone_1_1PlayerDeathEvent_1a0f3f1fecbc4c5677ccb0cc7e9a11e1b0" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerDeathEvent_1a36e03de2f0aa795bdf14438f73e4607d" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerDeathEvent_1ac76e5c152bc08891e8ecf76802c66682" kind="function"><name>getDeathMessage</name></member>
     <member refid="classendstone_1_1PlayerDeathEvent_1adc7d96225b2ea95e7ee70349209d69ff" kind="function"><name>setDeathMessage</name></member>
+  </compound>
+  <compound refid="classendstone_1_1PlayerEmoteEvent" kind="class"><name>endstone::PlayerEmoteEvent</name>
+    <member refid="classendstone_1_1PlayerEmoteEvent_1a74ecb4319b65d01b406f8c591d3aff18" kind="variable"><name>NAME</name></member>
+    <member refid="classendstone_1_1PlayerEmoteEvent_1a74fb29919f23124f944930495dccc486" kind="variable"><name>emote_id_</name></member>
+    <member refid="classendstone_1_1PlayerEmoteEvent_1a5b8cf2941e6759692eedcd1257b7a108" kind="function"><name>PlayerEmoteEvent</name></member>
+    <member refid="classendstone_1_1PlayerEmoteEvent_1a197c850f0d19456039fa2371f4476ff6" kind="function"><name>~PlayerEmoteEvent</name></member>
+    <member refid="classendstone_1_1PlayerEmoteEvent_1a79b81c6252a8a7036ddf04f4827edd40" kind="function"><name>getEventName</name></member>
+    <member refid="classendstone_1_1PlayerEmoteEvent_1a3cdd5e160ee7f361ee4dd23cd94bf709" kind="function"><name>getEmoteId</name></member>
   </compound>
   <compound refid="classendstone_1_1PlayerEvent" kind="class"><name>endstone::PlayerEvent</name>
     <member refid="classendstone_1_1PlayerEvent_1af4eb1d01665dafc47db34a43d7e96281" kind="variable"><name>player_</name></member>
@@ -831,29 +933,35 @@
     <member refid="classendstone_1_1PlayerEvent_1ab31b937251b8ccc1c72c275d1c7a522b" kind="function"><name>~PlayerEvent</name></member>
     <member refid="classendstone_1_1PlayerEvent_1a3ad904b05886ce30c7299500d9a57fdb" kind="function"><name>getPlayer</name></member>
   </compound>
+  <compound refid="classendstone_1_1PlayerGameModeChangeEvent" kind="class"><name>endstone::PlayerGameModeChangeEvent</name>
+    <member refid="classendstone_1_1PlayerGameModeChangeEvent_1a6c0edd9e6eac2347d03c35509b4c6404" kind="variable"><name>NAME</name></member>
+    <member refid="classendstone_1_1PlayerGameModeChangeEvent_1a04a813980762f492edc3db56907da5b5" kind="variable"><name>new_game_mode_</name></member>
+    <member refid="classendstone_1_1PlayerGameModeChangeEvent_1a5e4a9eaed65c0886aaf01610a8c5d4eb" kind="function"><name>PlayerGameModeChangeEvent</name></member>
+    <member refid="classendstone_1_1PlayerGameModeChangeEvent_1aef8569884e4cbdbabb945eef9c4ec9eb" kind="function"><name>~PlayerGameModeChangeEvent</name></member>
+    <member refid="classendstone_1_1PlayerGameModeChangeEvent_1a5a5181811c288a046aaf3b0648e96cab" kind="function"><name>getEventName</name></member>
+    <member refid="classendstone_1_1PlayerGameModeChangeEvent_1a422c30eafa2b703fd105138e45da4540" kind="function"><name>getNewGameMode</name></member>
+  </compound>
   <compound refid="classendstone_1_1PlayerInteractActorEvent" kind="class"><name>endstone::PlayerInteractActorEvent</name>
     <member refid="classendstone_1_1PlayerInteractActorEvent_1af02113ba1da41c5c5f0bbd22de0a09e7" kind="variable"><name>NAME</name></member>
     <member refid="classendstone_1_1PlayerInteractActorEvent_1a26c386e9a320b585013cd97d0ded093a" kind="variable"><name>actor_</name></member>
     <member refid="classendstone_1_1PlayerInteractActorEvent_1a1af16e0f6a9d70259c6befb7b873592c" kind="function"><name>PlayerInteractActorEvent</name></member>
     <member refid="classendstone_1_1PlayerInteractActorEvent_1a3223c9370df9d9354fd174dd1918cd07" kind="function"><name>~PlayerInteractActorEvent</name></member>
     <member refid="classendstone_1_1PlayerInteractActorEvent_1ab38b49eafd6046d3baf2d147d2dd6f29" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerInteractActorEvent_1a909cf29141d08ce11252b2ff09234f20" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerInteractActorEvent_1ac803fcee5b9b5980b8d1db566b1f3a29" kind="function"><name>getActor</name></member>
   </compound>
   <compound refid="classendstone_1_1PlayerInteractEvent" kind="class"><name>endstone::PlayerInteractEvent</name>
     <member refid="classendstone_1_1PlayerInteractEvent_1abac8921bf78c78354ff50a94cd9d25b1" kind="variable"><name>NAME</name></member>
-    <member refid="classendstone_1_1PlayerInteractEvent_1aa0155e6e15c31b165d0eebd9edb4c08f" kind="variable"><name>item_</name></member>
-    <member refid="classendstone_1_1PlayerInteractEvent_1ae64db9722300dfb44fb17e3836661bf7" kind="variable"><name>block_clicked_</name></member>
+    <member refid="classendstone_1_1PlayerInteractEvent_1ad0c64e0521987e5dae12809296a739bf" kind="variable"><name>item_</name></member>
+    <member refid="classendstone_1_1PlayerInteractEvent_1a71797286dbb58b39e92fb1803ef9cf3e" kind="variable"><name>block_clicked_</name></member>
     <member refid="classendstone_1_1PlayerInteractEvent_1a6eae7ed2b14249eeea133f6297d0a960" kind="variable"><name>block_face_</name></member>
     <member refid="classendstone_1_1PlayerInteractEvent_1a50a670a3475715ed0b2e8d7ca24320ea" kind="variable"><name>clicked_position_</name></member>
-    <member refid="classendstone_1_1PlayerInteractEvent_1aacb663da4d203650ae1a4cbd2ba5d483" kind="function"><name>PlayerInteractEvent</name></member>
+    <member refid="classendstone_1_1PlayerInteractEvent_1a24a9bd0065f02d7ce9bb62a43504f30d" kind="function"><name>PlayerInteractEvent</name></member>
     <member refid="classendstone_1_1PlayerInteractEvent_1a79542b22fedd19df03ea203e9c0cd9f7" kind="function"><name>~PlayerInteractEvent</name></member>
     <member refid="classendstone_1_1PlayerInteractEvent_1ad3cf6bffe4c85dd968febed54fb22e2e" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerInteractEvent_1a09cf28f7e1b1467aed92cb5039906105" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerInteractEvent_1a24de1e03d7c563bc8cddc7ee7e4c73c5" kind="function"><name>hasItem</name></member>
-    <member refid="classendstone_1_1PlayerInteractEvent_1a2d08f03d4f791c471a4bedc4ae0bf03b" kind="function"><name>getItem</name></member>
+    <member refid="classendstone_1_1PlayerInteractEvent_1aaccafaf7a7911a6737853a34fbc30dce" kind="function"><name>getItem</name></member>
     <member refid="classendstone_1_1PlayerInteractEvent_1a34e1b96ac0ad624c40e8877a4696111e" kind="function"><name>hasBlock</name></member>
-    <member refid="classendstone_1_1PlayerInteractEvent_1a4f26cb5a7a2306ab9c37aab371498bb2" kind="function"><name>getBlock</name></member>
+    <member refid="classendstone_1_1PlayerInteractEvent_1a81c8c9f27b65f2b9125fa9057605d7f8" kind="function"><name>getBlock</name></member>
     <member refid="classendstone_1_1PlayerInteractEvent_1ad38f34d2deabcbd5503b3ceaafd033c7" kind="function"><name>getBlockFace</name></member>
     <member refid="classendstone_1_1PlayerInteractEvent_1af320c80fe31afe89aeabe1f344e5a56d" kind="function"><name>getClickedPosition</name></member>
   </compound>
@@ -865,7 +973,6 @@
     <member refid="classendstone_1_1PlayerJoinEvent_1a477a8fb52e955542787d29647c2ca56b" kind="function"><name>PlayerJoinEvent</name></member>
     <member refid="classendstone_1_1PlayerJoinEvent_1ab2bf0af5f74f7be8fcbbcf4d436b387a" kind="function"><name>~PlayerJoinEvent</name></member>
     <member refid="classendstone_1_1PlayerJoinEvent_1a7eb6abb31fececc05830dc7d2fb0dc75" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerJoinEvent_1ad768f16bff5016fc14341264afb47680" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerJoinEvent_1a81c71ecd00651758cd7f2e31eebad892" kind="function"><name>getJoinMessage</name></member>
     <member refid="classendstone_1_1PlayerJoinEvent_1afa17a2324546ffd0cdeeb9d4ec259d6b" kind="function"><name>setJoinMessage</name></member>
   </compound>
@@ -875,7 +982,6 @@
     <member refid="classendstone_1_1PlayerKickEvent_1a26c23c662f6234317eda7faf454c8ff5" kind="function"><name>PlayerKickEvent</name></member>
     <member refid="classendstone_1_1PlayerKickEvent_1af46ef160d35cf3f8d0930a8077c68a00" kind="function"><name>~PlayerKickEvent</name></member>
     <member refid="classendstone_1_1PlayerKickEvent_1aa1641ce45a84ef3d8c2fbd9d36b9bd9d" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerKickEvent_1a7086ff2a3bbaddea8994c8c66a9dcf02" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerKickEvent_1a8421ba745037cb00ef5fc333d43a790b" kind="function"><name>getReason</name></member>
     <member refid="classendstone_1_1PlayerKickEvent_1a43bcc4f3ba93c059fc4e7f524c7d4888" kind="function"><name>setReason</name></member>
   </compound>
@@ -885,7 +991,6 @@
     <member refid="classendstone_1_1PlayerLoginEvent_1a409d08c3d2fde7d1814d0b7d63700fe6" kind="function"><name>PlayerLoginEvent</name></member>
     <member refid="classendstone_1_1PlayerLoginEvent_1aef505c2ab738b4126b68f20611f118dc" kind="function"><name>~PlayerLoginEvent</name></member>
     <member refid="classendstone_1_1PlayerLoginEvent_1a9593905e32bd292c3782ccc93190f92b" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerLoginEvent_1a6d680059c4fc879674e33aac4b4850c1" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerLoginEvent_1a25b7ba1f99219f7b07dc41a2aa36b840" kind="function"><name>getKickMessage</name></member>
     <member refid="classendstone_1_1PlayerLoginEvent_1a8f5b97ba68ebdaf921e4d9a9e6f8219e" kind="function"><name>setKickMessage</name></member>
   </compound>
@@ -895,9 +1000,14 @@
     <member refid="classendstone_1_1PlayerQuitEvent_1a3c2cb28b233b0b7f6ad92ffed7bb6752" kind="function"><name>PlayerQuitEvent</name></member>
     <member refid="classendstone_1_1PlayerQuitEvent_1a23ad697a0c345589396c5fc8c2ddbf18" kind="function"><name>~PlayerQuitEvent</name></member>
     <member refid="classendstone_1_1PlayerQuitEvent_1aa34fac241269914a9d141d4f8f1f362b" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerQuitEvent_1aa92fd31567b9d48f6ac2861f533871f2" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerQuitEvent_1a00b0ae58f2924784ed2e2ce0ca4ab8b4" kind="function"><name>getQuitMessage</name></member>
     <member refid="classendstone_1_1PlayerQuitEvent_1ae21d854c5df9d4a4631346a858356098" kind="function"><name>setQuitMessage</name></member>
+  </compound>
+  <compound refid="classendstone_1_1PlayerRespawnEvent" kind="class"><name>endstone::PlayerRespawnEvent</name>
+    <member refid="classendstone_1_1PlayerRespawnEvent_1ab47c1f5797bfb607b21b5fdbd1e35336" kind="variable"><name>NAME</name></member>
+    <member refid="classendstone_1_1PlayerRespawnEvent_1abb6a9abde0432b56b4ce24b1ebfdbcbb" kind="function"><name>PlayerRespawnEvent</name></member>
+    <member refid="classendstone_1_1PlayerRespawnEvent_1a6d85e0d878c46548c97daab6e89bad91" kind="function"><name>~PlayerRespawnEvent</name></member>
+    <member refid="classendstone_1_1PlayerRespawnEvent_1a0b74630548cc0c5d82b0ba24a915e8d8" kind="function"><name>getEventName</name></member>
   </compound>
   <compound refid="classendstone_1_1PlayerTeleportEvent" kind="class"><name>endstone::PlayerTeleportEvent</name>
     <member refid="classendstone_1_1PlayerTeleportEvent_1a65255877510836658e5cda1429403f91" kind="variable"><name>NAME</name></member>
@@ -906,7 +1016,6 @@
     <member refid="classendstone_1_1PlayerTeleportEvent_1a9ab9f29f3e3dcd10bff208b2eca850f9" kind="function"><name>PlayerTeleportEvent</name></member>
     <member refid="classendstone_1_1PlayerTeleportEvent_1ae9c8d32bfb9ddf9c5e7cdb98b82f81b1" kind="function"><name>~PlayerTeleportEvent</name></member>
     <member refid="classendstone_1_1PlayerTeleportEvent_1a58a064da0b7bad2f61d36937f3da9cae" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PlayerTeleportEvent_1a3362e25b083566d853ccddc64084babf" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1PlayerTeleportEvent_1a1b887891187b8979f3514ce86c4fda40" kind="function"><name>getFrom</name></member>
     <member refid="classendstone_1_1PlayerTeleportEvent_1aaa1f6fe464e73b5b9fc11e49c0d1e712" kind="function"><name>setFrom</name></member>
     <member refid="classendstone_1_1PlayerTeleportEvent_1a9d1e67e4a07e90e1d3e22fd514312102" kind="function"><name>getTo</name></member>
@@ -914,7 +1023,7 @@
   </compound>
   <compound refid="classendstone_1_1Plugin" kind="class"><name>endstone::Plugin</name>
     <member refid="classendstone_1_1Plugin_1a7935fed495dc747e3ee24e005a4439eb" kind="friend"><name>PluginLoader</name></member>
-    <member refid="classendstone_1_1Plugin_1ad9de0bdae1894ad40e33f0e12022cdbf" kind="friend"><name>detail::EndstonePluginManager</name></member>
+    <member refid="classendstone_1_1Plugin_1af89a58b391c1b932c5d3580fc2ccb764" kind="friend"><name>core::EndstonePluginManager</name></member>
     <member refid="classendstone_1_1Plugin_1aee2a3ea3a977bc44ea80f5a74ca5c454" kind="variable"><name>enabled_</name></member>
     <member refid="classendstone_1_1Plugin_1adfef6b28e088eeba9322262d6c4bab5b" kind="variable"><name>loader_</name></member>
     <member refid="classendstone_1_1Plugin_1abb783c24dd0a315c59a4c03e619779b3" kind="variable"><name>server_</name></member>
@@ -986,13 +1095,32 @@
     <member refid="classendstone_1_1PluginDescription_1ab72bcaae19692e3adc527205d91fcc53" kind="function"><name>getCommands</name></member>
     <member refid="classendstone_1_1PluginDescription_1aa26b0f59f99a7e56627213a8b001a4c8" kind="function"><name>getPermissions</name></member>
   </compound>
+  <compound refid="structendstone_1_1detail_1_1PluginDescriptionBuilder" kind="struct"><name>endstone::detail::PluginDescriptionBuilder</name>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a0db96dd45fceffa8c0005a1602a4a2ab" kind="variable"><name>description</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1adde71e03352151d967de543af50a99ec" kind="variable"><name>load</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a8eb373768ce82bd30b40d2323b5e4747" kind="variable"><name>authors</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1af359b32d95180c450c833f1c2a613f52" kind="variable"><name>contributors</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a8a1fecdffd0cef1ae40381a674ac386c" kind="variable"><name>website</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a55efe04d2fdefb11a3841a1d9408bddc" kind="variable"><name>prefix</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a20d4590caee1fb39c5c456b47cf6643e" kind="variable"><name>provides</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1ad9d28f0e0379e9b533ad4a2fca271f5e" kind="variable"><name>depend</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1aa9af4af5e1001e063077bad5eb96ca17" kind="variable"><name>soft_depend</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a83248bb532a1af1113d663fa7646f524" kind="variable"><name>load_before</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a792705cd59585b0d75ce982c15c63cce" kind="variable"><name>default_permission</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1acddfac13f3632912867ac1c39a35d8af" kind="variable"><name>commands</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a9eed110ec8553b4838800d0df4cdbba2" kind="variable"><name>permissions</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1ac94dc23d3e899ca9d63ad6f785c188a4" kind="function"><name>command</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a7a0a3a2fdc436f2cf37a7549504492db" kind="function"><name>permission</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a80472466bde213571daf3ba7e3644079" kind="function"><name>build</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a782fcda61234c0fa5b7f5df56091cfac" kind="function"><name>buildCommands</name></member>
+    <member refid="structendstone_1_1detail_1_1PluginDescriptionBuilder_1a5aea521dd4d859c086faa0f0293dd6ce" kind="function"><name>buildPermissions</name></member>
+  </compound>
   <compound refid="classendstone_1_1PluginDisableEvent" kind="class"><name>endstone::PluginDisableEvent</name>
     <member refid="classendstone_1_1PluginDisableEvent_1a995d4dc150131f31d6a0e3f70c684301" kind="variable"><name>NAME</name></member>
     <member refid="classendstone_1_1PluginDisableEvent_1a8ed2b8b47101e59de8bde89c9070c42e" kind="variable"><name>plugin_</name></member>
     <member refid="classendstone_1_1PluginDisableEvent_1acef2a95f3b8010556e99a6bef3ee215e" kind="function"><name>PluginDisableEvent</name></member>
     <member refid="classendstone_1_1PluginDisableEvent_1aeb2503ac0c2c35f22461753a4bbb78b7" kind="function"><name>getPlugin</name></member>
     <member refid="classendstone_1_1PluginDisableEvent_1a9083d88e6a5e47ed6307cc5f8ee12d4c" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PluginDisableEvent_1a1fdadca8f16440488b2069003b1b52f3" kind="function"><name>isCancellable</name></member>
   </compound>
   <compound refid="classendstone_1_1PluginEnableEvent" kind="class"><name>endstone::PluginEnableEvent</name>
     <member refid="classendstone_1_1PluginEnableEvent_1a6cb2f949961229f901d9a577fc1f7524" kind="variable"><name>NAME</name></member>
@@ -1000,7 +1128,6 @@
     <member refid="classendstone_1_1PluginEnableEvent_1a0a91fb81e3cba570f202ad1be08b323c" kind="function"><name>PluginEnableEvent</name></member>
     <member refid="classendstone_1_1PluginEnableEvent_1a52ae25a2b8f978fd31ccfde6b5fcd203" kind="function"><name>getPlugin</name></member>
     <member refid="classendstone_1_1PluginEnableEvent_1a80a2a76f95e0c011b04994475905d79b" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1PluginEnableEvent_1a921d98900c525ca71e7fc31d249fec42" kind="function"><name>isCancellable</name></member>
   </compound>
   <compound refid="classendstone_1_1PluginLoader" kind="class"><name>endstone::PluginLoader</name>
     <member refid="classendstone_1_1PluginLoader_1a6f6ba6e975ff05973806277763eda744" kind="variable"><name>server_</name></member>
@@ -1106,7 +1233,6 @@
     <member refid="classendstone_1_1ScriptMessageEvent_1a1947b8b1a29c49b0302268f093ca5506" kind="variable"><name>sender_</name></member>
     <member refid="classendstone_1_1ScriptMessageEvent_1a5ca8c894f05907c46541fdd1546ec1b7" kind="function"><name>ScriptMessageEvent</name></member>
     <member refid="classendstone_1_1ScriptMessageEvent_1a23b45d138202bb0494068a76a775d703" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ScriptMessageEvent_1a4ec1687443ac52edb1cf11b318bfa412" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1ScriptMessageEvent_1ab02541c1eb8d43ffb49c7a0fd11bd1bf" kind="function"><name>getMessageId</name></member>
     <member refid="classendstone_1_1ScriptMessageEvent_1a55b3bd04740ef0190905a76341117530" kind="function"><name>getMessage</name></member>
     <member refid="classendstone_1_1ScriptMessageEvent_1af4876c77b5ba5b1a898318cc2fd71fe9" kind="function"><name>getSender</name></member>
@@ -1164,7 +1290,6 @@
     <member refid="classendstone_1_1ServerCommandEvent_1a403198dc6dbe597662b617fdc88db4b3" kind="variable"><name>command_</name></member>
     <member refid="classendstone_1_1ServerCommandEvent_1a8c99c3360b322ea0d6fcf42b3b0ab4b0" kind="function"><name>ServerCommandEvent</name></member>
     <member refid="classendstone_1_1ServerCommandEvent_1af62a9d9bbc278b05dece09c1273e5b63" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ServerCommandEvent_1af535389f564d130ea29ad148b03eac04" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1ServerCommandEvent_1a93827eb1ca9e938792f2abcf9fd1a09c" kind="function"><name>getCommand</name></member>
     <member refid="classendstone_1_1ServerCommandEvent_1a738f83bdce175aed3493f4e15f7834a9" kind="function"><name>setCommand</name></member>
     <member refid="classendstone_1_1ServerCommandEvent_1a989fc72b2d7b7feb85a88dc3aa50bca7" kind="function"><name>getSender</name></member>
@@ -1211,7 +1336,6 @@
     <member refid="classendstone_1_1ServerListPingEvent_1a931195e8a6f00198331002fb62cbdea1" kind="function"><name>getGameMode</name></member>
     <member refid="classendstone_1_1ServerListPingEvent_1a49e07d699cfebca6d747c7e0b4495920" kind="function"><name>setGameMode</name></member>
     <member refid="classendstone_1_1ServerListPingEvent_1ad7a1dfe69b843c7b20cb52a4a3bea3e5" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ServerListPingEvent_1ad0a00ce2f9403eae549f7fb4063078db" kind="function"><name>isCancellable</name></member>
     <member refid="classendstone_1_1ServerListPingEvent_1ae265a4c31a93093c1b216e2bef2903b5" kind="function"><name>deserialize</name></member>
     <member refid="classendstone_1_1ServerListPingEvent_1a8f98acd60d3bc56c5bfec18ce06b9649" kind="function"><name>serialize</name></member>
   </compound>
@@ -1224,7 +1348,6 @@
     <member refid="classendstone_1_1ServerLoadEvent_1a6b655d60130ef5239ec7fb4b70b05670" kind="function"><name>ServerLoadEvent</name></member>
     <member refid="classendstone_1_1ServerLoadEvent_1ad6f8ab066b197a8175518ac9e8dcabae" kind="function"><name>getType</name></member>
     <member refid="classendstone_1_1ServerLoadEvent_1a662aec6d6e841b68e1d1fc269d7f184a" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ServerLoadEvent_1ae9bf0371dda434c3227c2b88c098fa22" kind="function"><name>isCancellable</name></member>
   </compound>
   <compound refid="classendstone_1_1Skin" kind="class"><name>endstone::Skin</name>
     <member refid="classendstone_1_1Skin_1aaa8acbed9e68495f28de0b06022fa61c" kind="variable"><name>skin_id_</name></member>
@@ -1305,7 +1428,6 @@
     <member refid="classendstone_1_1ThunderChangeEvent_1a1f20d7ce8209c6817797bca7b2e1db5c" kind="function"><name>~ThunderChangeEvent</name></member>
     <member refid="classendstone_1_1ThunderChangeEvent_1ae3e78b8cabe8c813b36f186c3573c476" kind="function"><name>toThunderState</name></member>
     <member refid="classendstone_1_1ThunderChangeEvent_1a65d8e1b242cf7929f5f56a7b625d1e83" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1ThunderChangeEvent_1a5418071ef24c08f489f42c11d2eeba10" kind="function"><name>isCancellable</name></member>
   </compound>
   <compound refid="classendstone_1_1Toggle" kind="class"><name>endstone::Toggle</name>
     <member refid="classendstone_1_1Toggle_1ab70b5d10613173b8cbe80b53c5f769a3" kind="variable"><name>label_</name></member>
@@ -1374,11 +1496,10 @@
   <compound refid="classendstone_1_1WeatherChangeEvent" kind="class"><name>endstone::WeatherChangeEvent</name>
     <member refid="classendstone_1_1WeatherChangeEvent_1af684c3b39e6a91f4453f14e46ade558e" kind="variable"><name>NAME</name></member>
     <member refid="classendstone_1_1WeatherChangeEvent_1a2bde9420885bad855573e4557f771a8d" kind="variable"><name>to_</name></member>
-    <member refid="classendstone_1_1WeatherChangeEvent_1a8da88cc7137935e95a8382598519dfba" kind="function"><name>WeatherChangeEvent</name></member>
+    <member refid="classendstone_1_1WeatherChangeEvent_1a70879686a9719e31e6bf74e78652f192" kind="function"><name>WeatherChangeEvent</name></member>
     <member refid="classendstone_1_1WeatherChangeEvent_1a2654b155b5ca461dd93f90348142c3f3" kind="function"><name>~WeatherChangeEvent</name></member>
     <member refid="classendstone_1_1WeatherChangeEvent_1a6f1a7f2b0be3478b85737c52f35da02e" kind="function"><name>toWeatherState</name></member>
     <member refid="classendstone_1_1WeatherChangeEvent_1aed5ffb1d7cab8026df5c6b2529f95f24" kind="function"><name>getEventName</name></member>
-    <member refid="classendstone_1_1WeatherChangeEvent_1a3064843c4e4f138266ca6c6028c8ef15" kind="function"><name>isCancellable</name></member>
   </compound>
   <compound refid="classendstone_1_1WeatherEvent" kind="class"><name>endstone::WeatherEvent</name>
     <member refid="classendstone_1_1WeatherEvent_1adb82c6d960c79dfe381ef94b8ef07b85" kind="variable"><name>level_</name></member>
@@ -1449,7 +1570,6 @@
     <member refid="task_8h_1ae2ff6d706eb4d7bdf8062917bb90ac29" kind="typedef"><name>TaskId</name></member>
     <member refid="score__entry_8h_1a6d9b2d7c129a48a5e7dea2125d37e94d" kind="typedef"><name>ScoreEntry</name></member>
     <member refid="result_8h_1a4af084d432127e336ffec03d016a299a" kind="typedef"><name>Result</name></member>
-    <member refid="endstone_8h_1a653e5211ad2fdddf9d08c7353381631d" kind="function"><name>overloaded</name></member>
     <member refid="uuid_8h_1ad7d0fbae7e1dd31cae1c84965a2f65a8" kind="function"><name>operator==</name></member>
     <member refid="uuid_8h_1ac40f4f96efb610d56f90c6541fc8b400" kind="function"><name>operator&lt;</name></member>
     <member refid="uuid_8h_1a96fb3e11970608db1df12feb7a3a829e" kind="function"><name>operator!=</name></member>
@@ -1458,6 +1578,9 @@
     <member refid="uuid_8h_1af337ccd795abe8d4ca38aeffcd6066e7" kind="function"><name>operator&gt;=</name></member>
     <member refid="uuid_8h_1af2cf5277faf4607f09dbd0060c401d53" kind="function"><name>swap</name></member>
     <member refid="uuid_8h_1a3d5bde372c0cb7aefcad787a85d1f551" kind="function"><name>hash_value</name></member>
+    <member refid="variant_8h_1a653e5211ad2fdddf9d08c7353381631d" kind="function"><name>overloaded</name></member>
+  </compound>
+  <compound refid="namespaceendstone_1_1core" kind="namespace"><name>endstone::core</name>
   </compound>
   <compound refid="namespaceendstone_1_1detail" kind="namespace"><name>endstone::detail</name>
   </compound>
@@ -1515,20 +1638,15 @@
   </compound>
   <compound refid="proxied__command__sender_8h" kind="file"><name>proxied_command_sender.h</name>
   </compound>
-  <compound refid="endstone_8h" kind="file"><name>endstone.h</name>
-    <member refid="endstone_8h_1a5293e6d0f7cb888f6ac099548191fc09" kind="define"><name>ENDSTONE_STRINGIFY</name></member>
-    <member refid="endstone_8h_1a8eef1a1b39f5be9d7fdb63f61f6e6f41" kind="define"><name>ENDSTONE_TOSTRING</name></member>
-    <member refid="endstone_8h_1ad775ac2522a4205f4c0defcd1015c422" kind="define"><name>ENDSTONE_VERSION_MAJOR</name></member>
-    <member refid="endstone_8h_1a47af324054528678a066e32d3b2c8d0c" kind="define"><name>ENDSTONE_VERSION_MINOR</name></member>
-    <member refid="endstone_8h_1a1a384214544c4bcb200df812e5ac2bc9" kind="define"><name>ENDSTONE_VERSION_PATCH</name></member>
-    <member refid="endstone_8h_1a4b2c4ab328be64dd58f83fcfca8cc2e0" kind="define"><name>ENDSTONE_API_VERSION</name></member>
-    <member refid="endstone_8h_1ae90efa410737021fd43a9673ae189994" kind="define"><name>ENDSTONE_MAX_PLAYERS</name></member>
-    <member refid="endstone_8h_1a730919a6d09c2036dc1159779092ee86" kind="define"><name>ENDSTONE_EXPORT</name></member>
-    <member refid="endstone_8h_1ab82ab1fabc0fdd70997b22e6526a8d19" kind="define"><name>ENDSTONE_NOINLINE</name></member>
+  <compound refid="damage__source_8h" kind="file"><name>damage_source.h</name>
+  </compound>
+  <compound refid="actor__damage__event_8h" kind="file"><name>actor_damage_event.h</name>
   </compound>
   <compound refid="actor__death__event_8h" kind="file"><name>actor_death_event.h</name>
   </compound>
   <compound refid="actor__event_8h" kind="file"><name>actor_event.h</name>
+  </compound>
+  <compound refid="actor__explode__event_8h" kind="file"><name>actor_explode_event.h</name>
   </compound>
   <compound refid="actor__knockback__event_8h" kind="file"><name>actor_knockback_event.h</name>
   </compound>
@@ -1542,7 +1660,11 @@
   </compound>
   <compound refid="block__event_8h" kind="file"><name>block_event.h</name>
   </compound>
+  <compound refid="block__piston__event_8h" kind="file"><name>block_piston_event.h</name>
+  </compound>
   <compound refid="block__place__event_8h" kind="file"><name>block_place_event.h</name>
+  </compound>
+  <compound refid="cancellable_8h" kind="file"><name>cancellable.h</name>
   </compound>
   <compound refid="event_8h" kind="file"><name>event.h</name>
   </compound>
@@ -1558,7 +1680,11 @@
   </compound>
   <compound refid="player__death__event_8h" kind="file"><name>player_death_event.h</name>
   </compound>
+  <compound refid="player__emote__event_8h" kind="file"><name>player_emote_event.h</name>
+  </compound>
   <compound refid="player__event_8h" kind="file"><name>player_event.h</name>
+  </compound>
+  <compound refid="player__game__mode__change__event_8h" kind="file"><name>player_game_mode_change_event.h</name>
   </compound>
   <compound refid="player__interact__actor__event_8h" kind="file"><name>player_interact_actor_event.h</name>
   </compound>
@@ -1571,6 +1697,8 @@
   <compound refid="player__login__event_8h" kind="file"><name>player_login_event.h</name>
   </compound>
   <compound refid="player__quit__event_8h" kind="file"><name>player_quit_event.h</name>
+  </compound>
+  <compound refid="player__respawn__event_8h" kind="file"><name>player_respawn_event.h</name>
   </compound>
   <compound refid="player__teleport__event_8h" kind="file"><name>player_teleport_event.h</name>
   </compound>
@@ -1628,6 +1756,8 @@
   </compound>
   <compound refid="translatable_8h" kind="file"><name>translatable.h</name>
   </compound>
+  <compound refid="chunk_8h" kind="file"><name>chunk.h</name>
+  </compound>
   <compound refid="dimension_8h" kind="file"><name>dimension.h</name>
   </compound>
   <compound refid="level_8h" kind="file"><name>level.h</name>
@@ -1646,6 +1776,8 @@
   </compound>
   <compound refid="spawn__particle__effect__packet_8h" kind="file"><name>spawn_particle_effect_packet.h</name>
   </compound>
+  <compound refid="offline__player_8h" kind="file"><name>offline_player.h</name>
+  </compound>
   <compound refid="permissible_8h" kind="file"><name>permissible.h</name>
   </compound>
   <compound refid="permission_8h" kind="file"><name>permission.h</name>
@@ -1659,6 +1791,7 @@
   <compound refid="player_8h" kind="file"><name>player.h</name>
   </compound>
   <compound refid="plugin_8h" kind="file"><name>plugin.h</name>
+    <member refid="plugin_8h_1a730919a6d09c2036dc1159779092ee86" kind="define"><name>ENDSTONE_EXPORT</name></member>
     <member refid="plugin_8h_1a99de7e16aa3fa996fb7a6d528bccb394" kind="define"><name>ENDSTONE_PLUGIN</name></member>
   </compound>
   <compound refid="plugin__description_8h" kind="file"><name>plugin_description.h</name>
@@ -1703,6 +1836,8 @@
   </compound>
   <compound refid="vector_8h" kind="file"><name>vector.h</name>
   </compound>
+  <compound refid="variant_8h" kind="file"><name>variant.h</name>
+  </compound>
   <compound refid="dir_dd7779a583e02d88c9a89a2c881c3946" kind="dir"><name>include/endstone/actor</name>
   </compound>
   <compound refid="dir_621c26b5fd4198aba66e7e31570ce44a" kind="dir"><name>include/endstone/event/actor</name>
@@ -1718,6 +1853,8 @@
   <compound refid="dir_5c7b2dbfabcd1115569d1e20a260545c" kind="dir"><name>include/endstone/command</name>
   </compound>
   <compound refid="dir_035306890ec6a3fa870e30b726ac5ffc" kind="dir"><name>include/endstone/form/controls</name>
+  </compound>
+  <compound refid="dir_d35032eb9ca22acb8eface5f2c8b6a35" kind="dir"><name>include/endstone/damage</name>
   </compound>
   <compound refid="dir_6cf277b678674f97c7a2b6b3b2447b33" kind="dir"><name>include/endstone</name>
   </compound>

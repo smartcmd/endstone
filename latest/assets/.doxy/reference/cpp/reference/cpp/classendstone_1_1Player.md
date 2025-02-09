@@ -14,7 +14,27 @@ _Represents a player._
 
 
 
-Inherits the following classes: [endstone::Mob](classendstone_1_1Mob.md)
+Inherits the following classes: [endstone::Mob](classendstone_1_1Mob.md),  [endstone::OfflinePlayer](classendstone_1_1OfflinePlayer.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -146,18 +166,21 @@ Inherits the following classes: [endstone::Mob](classendstone_1_1Mob.md)
 | virtual std::string | [**getGameVersion**](#function-getgameversion) () const = 0<br>_Gets the player's current game version._  |
 | virtual [**PlayerInventory**](classendstone_1_1PlayerInventory.md) & | [**getInventory**](#function-getinventory) () const = 0<br>_Get the player's inventory._  |
 | virtual std::string | [**getLocale**](#function-getlocale) () const = 0<br>_Gets the player's current locale._  |
+| virtual std::string | [**getName**](#function-getname) () override const = 0<br>_Returns the name of this player._  |
 | virtual std::chrono::milliseconds | [**getPing**](#function-getping) () const = 0<br>_Gets the player's average ping._  |
 | virtual [**Scoreboard**](classendstone_1_1Scoreboard.md) & | [**getScoreboard**](#function-getscoreboard) () const = 0<br>_Gets the_ [_**Scoreboard**_](classendstone_1_1Scoreboard.md) _displayed to this player._ |
 | virtual [**const**](classendstone_1_1Vector.md) [**Skin**](classendstone_1_1Skin.md) & | [**getSkin**](#function-getskin) () const = 0<br>_Gets the player's skin._  |
 | virtual [**int**](classendstone_1_1Vector.md) | [**getTotalExp**](#function-gettotalexp) () const = 0<br>_Gets the players total experience points._  |
-| virtual [**UUID**](classendstone_1_1UUID.md) | [**getUniqueId**](#function-getuniqueid) () const = 0<br>_Returns the_ [_**UUID**_](classendstone_1_1UUID.md) _of this player._ |
 | virtual [**float**](classendstone_1_1Vector.md) | [**getWalkSpeed**](#function-getwalkspeed) () const = 0<br>_Gets the current allowed speed that a client can walk._  |
 | virtual std::string | [**getXuid**](#function-getxuid) () const = 0<br>_Returns the Xbox User ID (XUID) of this player._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**giveExp**](#function-giveexp) ([**int**](classendstone_1_1Vector.md) amount) = 0<br>_Gives the player the amount of experience specified._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**giveExpLevels**](#function-giveexplevels) ([**int**](classendstone_1_1Vector.md) amount) = 0<br>_Gives the player the amount of experience levels specified._  |
 | virtual [**bool**](classendstone_1_1Vector.md) | [**isFlying**](#function-isflying) () const = 0<br>_Checks to see if this player is currently flying or not._  |
+| virtual [**bool**](classendstone_1_1Vector.md) | [**isSneaking**](#function-issneaking) () const = 0<br>_Returns if the player is in sneak mode._  |
+| virtual [**bool**](classendstone_1_1Vector.md) | [**isSprinting**](#function-issprinting) () const = 0<br>_Gets whether the player is sprinting or not._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**kick**](#function-kick) (std::string message) const = 0<br>_Kicks player with custom kick message._  |
 | virtual [**bool**](classendstone_1_1Vector.md) | [**performCommand**](#function-performcommand) (std::string command) const = 0<br>_Makes the player perform the given command._  |
+| virtual [**void**](classendstone_1_1Vector.md) | [**playSound**](#function-playsound) ([**Location**](classendstone_1_1Location.md) location, std::string sound, [**float**](classendstone_1_1Vector.md) volume, [**float**](classendstone_1_1Vector.md) pitch) = 0<br>_Play a sound for a player at the location._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**resetTitle**](#function-resettitle) () const = 0<br>_Resets the title displayed to the player. This will clear the displayed title / subtitle and reset timings to their default values._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**sendForm**](#function-sendform) (FormVariant form) = 0<br>_Sends a form to the player._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**sendPacket**](#function-sendpacket) ([**Packet**](classendstone_1_1Packet.md) & packet) const = 0<br>_Sends a packet to the player._  |
@@ -173,11 +196,15 @@ Inherits the following classes: [endstone::Mob](classendstone_1_1Mob.md)
 | virtual Result&lt; [**void**](classendstone_1_1Vector.md) &gt; | [**setFlying**](#function-setflying) ([**bool**](classendstone_1_1Vector.md) value) = 0<br>_Makes this player start or stop flying._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**setGameMode**](#function-setgamemode) (GameMode mode) = 0<br>_Sets this player's current GameMode._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**setScoreboard**](#function-setscoreboard) ([**Scoreboard**](classendstone_1_1Scoreboard.md) & scoreboard) = 0<br> |
+| virtual [**void**](classendstone_1_1Vector.md) | [**setSneaking**](#function-setsneaking) ([**bool**](classendstone_1_1Vector.md) sneak) = 0<br>_Sets the sneak mode of the player._  |
+| virtual [**void**](classendstone_1_1Vector.md) | [**setSprinting**](#function-setsprinting) ([**bool**](classendstone_1_1Vector.md) sprinting) = 0<br>_Sets whether the player is sprinting or not._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**setWalkSpeed**](#function-setwalkspeed) ([**float**](classendstone_1_1Vector.md) value) const = 0<br> |
 | virtual [**void**](classendstone_1_1Vector.md) | [**spawnParticle**](#function-spawnparticle-14) (std::string name, [**Location**](classendstone_1_1Location.md) location) const = 0<br>_Spawns the particle at the target location._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**spawnParticle**](#function-spawnparticle-24) (std::string name, [**float**](classendstone_1_1Vector.md) x, [**float**](classendstone_1_1Vector.md) y, [**float**](classendstone_1_1Vector.md) z) const = 0<br>_Spawns the particle at the target location._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**spawnParticle**](#function-spawnparticle-34) (std::string name, [**Location**](classendstone_1_1Location.md) location, std::optional&lt; std::string &gt; molang\_variables\_json) const = 0<br>_Spawns the particle at the target location._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**spawnParticle**](#function-spawnparticle-44) (std::string name, [**float**](classendstone_1_1Vector.md) x, [**float**](classendstone_1_1Vector.md) y, [**float**](classendstone_1_1Vector.md) z, std::optional&lt; std::string &gt; molang\_variables\_json) const = 0<br>_Spawns the particle at the target location._  |
+| virtual [**void**](classendstone_1_1Vector.md) | [**stopAllSounds**](#function-stopallsounds) () = 0<br>_Stop all sounds from playing._  |
+| virtual [**void**](classendstone_1_1Vector.md) | [**stopSound**](#function-stopsound) (std::string sound) = 0<br>_Stop the specified sound from playing._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**transfer**](#function-transfer) (std::string host, [**int**](classendstone_1_1Vector.md) port) const = 0<br>_Transfers the player to another server._  |
 | virtual [**void**](classendstone_1_1Vector.md) | [**updateCommands**](#function-updatecommands) () const = 0<br>_Send the list of commands to the client._  |
 
@@ -188,6 +215,7 @@ See [endstone::Mob](classendstone_1_1Mob.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual [**Mob**](classendstone_1_1Mob.md) \* | [**asMob**](classendstone_1_1Mob.md#function-asmob) () override const<br>_Gets a_ [_**CommandSender**_](classendstone_1_1CommandSender.md) _as_[_**Mob**_](classendstone_1_1Mob.md) _._ |
 | virtual [**bool**](classendstone_1_1Vector.md) | [**isGliding**](classendstone_1_1Mob.md#function-isgliding) () const = 0<br>_Checks to see if an actor is gliding, such as using an Elytra._  |
 
 
@@ -237,6 +265,7 @@ See [endstone::CommandSender](classendstone_1_1CommandSender.md)
 | virtual [**Actor**](classendstone_1_1Actor.md) \* | [**asActor**](classendstone_1_1CommandSender.md#function-asactor) () const<br>_Gets a_ [_**CommandSender**_](classendstone_1_1CommandSender.md) _as_[_**Actor**_](classendstone_1_1Actor.md) _._ |
 | virtual [**CommandSender**](classendstone_1_1CommandSender.md) \* | [**asCommandSender**](classendstone_1_1CommandSender.md#function-ascommandsender) () override const<br>_Casts a_ [_**Permissible**_](classendstone_1_1Permissible.md) _as_[_**CommandSender**_](classendstone_1_1CommandSender.md) _._ |
 | virtual [**ConsoleCommandSender**](classendstone_1_1ConsoleCommandSender.md) \* | [**asConsole**](classendstone_1_1CommandSender.md#function-asconsole) () const<br>_Gets a_ [_**CommandSender**_](classendstone_1_1CommandSender.md) _as Console._ |
+| virtual [**Mob**](classendstone_1_1Mob.md) \* | [**asMob**](classendstone_1_1CommandSender.md#function-asmob) () const<br>_Gets a_ [_**CommandSender**_](classendstone_1_1CommandSender.md) _as_[_**Mob**_](classendstone_1_1Mob.md) _._ |
 | virtual [**Player**](classendstone_1_1Player.md) \* | [**asPlayer**](classendstone_1_1CommandSender.md#function-asplayer) () const<br>_Gets a_ [_**CommandSender**_](classendstone_1_1CommandSender.md) _as_[_**Player**_](classendstone_1_1Player.md) _._ |
 | virtual std::string | [**getName**](classendstone_1_1CommandSender.md#function-getname) () const = 0<br>_Gets the name of this command sender._  |
 | virtual [**Server**](classendstone_1_1Server.md) & | [**getServer**](classendstone_1_1CommandSender.md#function-getserver) () const = 0<br>_Returns the server instance that this command is running on._  |
@@ -267,6 +296,19 @@ See [endstone::Permissible](classendstone_1_1Permissible.md)
 | virtual  | [**~Permissible**](classendstone_1_1Permissible.md#function-permissible) () = default<br> |
 
 
+## Public Functions inherited from endstone::OfflinePlayer
+
+See [endstone::OfflinePlayer](classendstone_1_1OfflinePlayer.md)
+
+| Type | Name |
+| ---: | :--- |
+| virtual std::string | [**getName**](classendstone_1_1OfflinePlayer.md#function-getname) () const = 0<br>_Returns the name of this player._  |
+| virtual [**UUID**](classendstone_1_1UUID.md) | [**getUniqueId**](classendstone_1_1OfflinePlayer.md#function-getuniqueid) () const = 0<br>_Returns the_ [_**UUID**_](classendstone_1_1UUID.md) _of this player._ |
+| virtual  | [**~OfflinePlayer**](classendstone_1_1OfflinePlayer.md#function-offlineplayer) () = default<br> |
+
+
+
+
 
 
 
@@ -282,6 +324,30 @@ See [endstone::Permissible](classendstone_1_1Permissible.md)
 | Type | Name |
 | ---: | :--- |
 | typedef std::variant&lt; [**MessageForm**](classendstone_1_1MessageForm.md), [**ActionForm**](classendstone_1_1ActionForm.md), [**ModalForm**](classendstone_1_1ModalForm.md) &gt; | [**FormVariant**](#typedef-formvariant)  <br> |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -726,6 +792,33 @@ the player's locale
 
 
 
+### function getName 
+
+_Returns the name of this player._ 
+```C++
+virtual std::string endstone::Player::getName () override const = 0
+```
+
+
+
+
+
+**Returns:**
+
+[**Player**](classendstone_1_1Player.md) name or null if we have not seen a name for this player yet 
+
+
+
+
+
+        
+Implements [*endstone::CommandSender::getName*](classendstone_1_1CommandSender.md#function-getname)
+
+
+<hr>
+
+
+
 ### function getPing 
 
 _Gets the player's average ping._ 
@@ -818,31 +911,6 @@ This refers to the total amount of experience the player has collected over time
 **Returns:**
 
 Current total experience points 
-
-
-
-
-
-        
-
-<hr>
-
-
-
-### function getUniqueId 
-
-_Returns the_ [_**UUID**_](classendstone_1_1UUID.md) _of this player._
-```C++
-virtual UUID endstone::Player::getUniqueId () const = 0
-```
-
-
-
-
-
-**Returns:**
-
-[**Player**](classendstone_1_1Player.md) [**UUID**](classendstone_1_1UUID.md) 
 
 
 
@@ -983,6 +1051,56 @@ True if the player is flying, else false.
 
 
 
+### function isSneaking 
+
+_Returns if the player is in sneak mode._ 
+```C++
+virtual bool endstone::Player::isSneaking () const = 0
+```
+
+
+
+
+
+**Returns:**
+
+true if player is in sneak mode 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function isSprinting 
+
+_Gets whether the player is sprinting or not._ 
+```C++
+virtual bool endstone::Player::isSprinting () const = 0
+```
+
+
+
+
+
+**Returns:**
+
+true if player is sprinting. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function kick 
 
 _Kicks player with custom kick message._ 
@@ -1034,6 +1152,39 @@ virtual bool endstone::Player::performCommand (
 
 true if the command was successful, otherwise false 
 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function playSound 
+
+_Play a sound for a player at the location._ 
+```C++
+virtual void endstone::Player::playSound (
+    Location location,
+    std::string sound,
+    float volume,
+    float pitch
+) = 0
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `location` The location to play the sound 
+* `sound` The internal sound name to play 
+* `volume` The volume of the sound 
+* `pitch` The pitch of the sound 
 
 
 
@@ -1455,6 +1606,60 @@ virtual void endstone::Player::setScoreboard (
 
 
 
+### function setSneaking 
+
+_Sets the sneak mode of the player._ 
+```C++
+virtual void endstone::Player::setSneaking (
+    bool sneak
+) = 0
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `sneak` true if player should appear sneaking 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setSprinting 
+
+_Sets whether the player is sprinting or not._ 
+```C++
+virtual void endstone::Player::setSprinting (
+    bool sprinting
+) = 0
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `sprinting` true if the player should be sprinting 
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function setWalkSpeed 
 
 ```C++
@@ -1602,6 +1807,47 @@ virtual void endstone::Player::spawnParticle (
 * `y` the position on the y axis to spawn at 
 * `z` the position on the z axis to spawn at 
 * `molang_variables_json` the customizable molang variables that can be adjusted for this particle, in json 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function stopAllSounds 
+
+_Stop all sounds from playing._ 
+```C++
+virtual void endstone::Player::stopAllSounds () = 0
+```
+
+
+
+
+<hr>
+
+
+
+### function stopSound 
+
+_Stop the specified sound from playing._ 
+```C++
+virtual void endstone::Player::stopSound (
+    std::string sound
+) = 0
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `sound` the sound to stop 
 
 
 

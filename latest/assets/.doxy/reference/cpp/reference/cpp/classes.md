@@ -8,9 +8,13 @@
 ([**endstone**](namespaceendstone.md))
 * [**Actor**](classendstone_1_1Actor.md)
 ([**endstone**](namespaceendstone.md))
+* [**ActorDamageEvent**](classendstone_1_1ActorDamageEvent.md)
+([**endstone**](namespaceendstone.md))
 * [**ActorDeathEvent**](classendstone_1_1ActorDeathEvent.md)
 ([**endstone**](namespaceendstone.md))
 * [**ActorEvent**](classendstone_1_1ActorEvent.md)
+([**endstone**](namespaceendstone.md))
+* [**ActorExplodeEvent**](classendstone_1_1ActorExplodeEvent.md)
 ([**endstone**](namespaceendstone.md))
 * [**ActorKnockbackEvent**](classendstone_1_1ActorKnockbackEvent.md)
 ([**endstone**](namespaceendstone.md))
@@ -36,6 +40,8 @@
 ([**endstone**](namespaceendstone.md))
 * [**BlockEvent**](classendstone_1_1BlockEvent.md)
 ([**endstone**](namespaceendstone.md))
+* [**BlockPistonEvent**](classendstone_1_1BlockPistonEvent.md)
+([**endstone**](namespaceendstone.md))
 * [**BlockPlaceEvent**](classendstone_1_1BlockPlaceEvent.md)
 ([**endstone**](namespaceendstone.md))
 * [**BlockState**](classendstone_1_1BlockState.md)
@@ -50,10 +56,15 @@
 
 ## c
 
+* [**Cancellable**](classendstone_1_1Cancellable.md)
+([**endstone**](namespaceendstone.md))
+* [**Chunk**](classendstone_1_1Chunk.md)
+([**endstone**](namespaceendstone.md))
 * [**ColorFormat**](structendstone_1_1ColorFormat.md)
 ([**endstone**](namespaceendstone.md))
 * [**Command**](classendstone_1_1Command.md)
 ([**endstone**](namespaceendstone.md))
+* [**CommandBuilder**](classendstone_1_1detail_1_1CommandBuilder.md)
 * [**CommandExecutor**](classendstone_1_1CommandExecutor.md)
 ([**endstone**](namespaceendstone.md))
 * [**CommandMap**](classendstone_1_1CommandMap.md)
@@ -70,6 +81,8 @@
 
 ## d
 
+* [**DamageSource**](classendstone_1_1DamageSource.md)
+([**endstone**](namespaceendstone.md))
 * [**Dimension**](classendstone_1_1Dimension.md)
 ([**endstone**](namespaceendstone.md))
 * [**Dropdown**](classendstone_1_1Dropdown.md)
@@ -90,6 +103,8 @@
 
 * [**Form**](classendstone_1_1Form.md)
 ([**endstone**](namespaceendstone.md))
+* [**formatter&lt; endstone::Actor &gt;**](structfmt_1_1formatter_3_01endstone_1_1Actor_01_4.md)
+([**fmt**](namespacefmt.md))
 * [**formatter&lt; endstone::Block &gt;**](structfmt_1_1formatter_3_01endstone_1_1Block_01_4.md)
 ([**fmt**](namespacefmt.md))
 * [**formatter&lt; endstone::BlockData &gt;**](structfmt_1_1formatter_3_01endstone_1_1BlockData_01_4.md)
@@ -101,6 +116,8 @@
 * [**formatter&lt; endstone::BlockStates::mapped\_type &gt;**](structfmt_1_1formatter_3_01endstone_1_1BlockStates_1_1mapped__type_01_4.md)
 ([**fmt**](namespacefmt.md))
 * [**formatter&lt; endstone::BlockStates::value\_type &gt;**](structfmt_1_1formatter_3_01endstone_1_1BlockStates_1_1value__type_01_4.md)
+([**fmt**](namespacefmt.md))
+* [**formatter&lt; endstone::DamageSource &gt;**](structfmt_1_1formatter_3_01endstone_1_1DamageSource_01_4.md)
 ([**fmt**](namespacefmt.md))
 * [**formatter&lt; endstone::ItemStack &gt;**](structfmt_1_1formatter_3_01endstone_1_1ItemStack_01_4.md)
 
@@ -115,6 +132,8 @@
 
 ## i
 
+* [**ICancellable**](classendstone_1_1ICancellable.md)
+([**endstone**](namespaceendstone.md))
 * [**ImageData**](structendstone_1_1Skin_1_1ImageData.md)
 ([**endstone::Skin**](classendstone_1_1Skin.md))
 * [**Inventory**](classendstone_1_1Inventory.md)
@@ -155,6 +174,8 @@
 
 * [**Objective**](classendstone_1_1Objective.md)
 ([**endstone**](namespaceendstone.md))
+* [**OfflinePlayer**](classendstone_1_1OfflinePlayer.md)
+([**endstone**](namespaceendstone.md))
 * [**overloaded**](structendstone_1_1overloaded.md)
 ([**endstone**](namespaceendstone.md))
 
@@ -171,6 +192,7 @@
 ([**endstone**](namespaceendstone.md))
 * [**PermissionAttachmentInfo**](classendstone_1_1PermissionAttachmentInfo.md)
 ([**endstone**](namespaceendstone.md))
+* [**PermissionBuilder**](classendstone_1_1detail_1_1PermissionBuilder.md)
 * [**Player**](classendstone_1_1Player.md)
 ([**endstone**](namespaceendstone.md))
 * [**PlayerBanEntry**](classendstone_1_1PlayerBanEntry.md)
@@ -183,7 +205,11 @@
 ([**endstone**](namespaceendstone.md))
 * [**PlayerDeathEvent**](classendstone_1_1PlayerDeathEvent.md)
 ([**endstone**](namespaceendstone.md))
+* [**PlayerEmoteEvent**](classendstone_1_1PlayerEmoteEvent.md)
+([**endstone**](namespaceendstone.md))
 * [**PlayerEvent**](classendstone_1_1PlayerEvent.md)
+([**endstone**](namespaceendstone.md))
+* [**PlayerGameModeChangeEvent**](classendstone_1_1PlayerGameModeChangeEvent.md)
 ([**endstone**](namespaceendstone.md))
 * [**PlayerInteractActorEvent**](classendstone_1_1PlayerInteractActorEvent.md)
 ([**endstone**](namespaceendstone.md))
@@ -199,6 +225,8 @@
 ([**endstone**](namespaceendstone.md))
 * [**PlayerQuitEvent**](classendstone_1_1PlayerQuitEvent.md)
 ([**endstone**](namespaceendstone.md))
+* [**PlayerRespawnEvent**](classendstone_1_1PlayerRespawnEvent.md)
+([**endstone**](namespaceendstone.md))
 * [**PlayerTeleportEvent**](classendstone_1_1PlayerTeleportEvent.md)
 ([**endstone**](namespaceendstone.md))
 * [**Plugin**](classendstone_1_1Plugin.md)
@@ -207,6 +235,7 @@
 ([**endstone**](namespaceendstone.md))
 * [**PluginDescription**](classendstone_1_1PluginDescription.md)
 ([**endstone**](namespaceendstone.md))
+* [**PluginDescriptionBuilder**](structendstone_1_1detail_1_1PluginDescriptionBuilder.md)
 * [**PluginDisableEvent**](classendstone_1_1PluginDisableEvent.md)
 ([**endstone**](namespaceendstone.md))
 * [**PluginEnableEvent**](classendstone_1_1PluginEnableEvent.md)

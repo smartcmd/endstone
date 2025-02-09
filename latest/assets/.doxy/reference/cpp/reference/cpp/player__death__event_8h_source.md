@@ -31,8 +31,9 @@ namespace endstone {
 
 class PlayerDeathEvent : public ActorDeathEvent, public PlayerEvent {
 public:
-    explicit PlayerDeathEvent(Player &player, std::string death_message)
-        : ActorDeathEvent(player), PlayerEvent(player), death_message_(std::move(death_message))
+    explicit PlayerDeathEvent(Player &player, std::unique_ptr<DamageSource> damage_source, std::string death_message)
+        : ActorDeathEvent(player, std::move(damage_source)), PlayerEvent(player),
+          death_message_(std::move(death_message))
     {
     }
     ~PlayerDeathEvent() override = default;
@@ -41,11 +42,6 @@ public:
     [[nodiscard]] std::string getEventName() const override
     {
         return NAME;
-    }
-
-    [[nodiscard]] bool isCancellable() const override
-    {
-        return false;
     }
 
     [[nodiscard]] const std::string &getDeathMessage() const

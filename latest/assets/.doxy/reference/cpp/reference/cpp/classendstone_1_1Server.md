@@ -38,8 +38,8 @@ _Represents a server implementation._
 
 | Type | Name |
 | ---: | :--- |
-|  [**const**](classendstone_1_1Vector.md) std::string | [**BroadcastChannelAdmin**](#variable-broadcastchanneladmin)   = = "endstone.broadcast.admin"<br>_Used for all administrative messages, such as an operator using a command._  |
-|  [**const**](classendstone_1_1Vector.md) std::string | [**BroadcastChannelUser**](#variable-broadcastchanneluser)   = = "endstone.broadcast.user"<br>_Used for all announcement messages, such as informing users that a player has joined._  |
+|  [**const**](classendstone_1_1Vector.md) std::string | [**BroadcastChannelAdmin**](#variable-broadcastchanneladmin)   = `"endstone.broadcast.admin"`<br>_Used for all administrative messages, such as an operator using a command._  |
+|  [**const**](classendstone_1_1Vector.md) std::string | [**BroadcastChannelUser**](#variable-broadcastchanneluser)   = `"endstone.broadcast.user"`<br>_Used for all announcement messages, such as informing users that a player has joined._  |
 
 
 

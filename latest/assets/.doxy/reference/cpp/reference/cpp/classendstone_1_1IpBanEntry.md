@@ -55,7 +55,7 @@ See [endstone::BanEntry](classendstone_1_1BanEntry.md)
 
 | Type | Name |
 | ---: | :--- |
-|  [**const**](classendstone_1_1Vector.md) std::string | [**DateFormat**](classendstone_1_1BanEntry.md#variable-dateformat)   = = "%FT%[**T**](classendstone_1_1Vector.md)%[**Ez"**](classendstone_1_1Vector.md)<br> |
+|  [**const**](classendstone_1_1Vector.md) std::string | [**DateFormat**](classendstone_1_1BanEntry.md#variable-dateformat)   = `"%FT%[**T**](classendstone_1_1Vector.md)%[**Ez"**](classendstone_1_1Vector.md)`<br> |
 
 
 

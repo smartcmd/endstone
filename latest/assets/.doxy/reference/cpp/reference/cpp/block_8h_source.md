@@ -38,7 +38,7 @@ class BlockState;
 
 class Dimension;
 
-class Block {
+class Block : public std::enable_shared_from_this<Block> {
 public:
     virtual ~Block() = default;
 
@@ -56,11 +56,11 @@ public:
 
     virtual Result<void> setData(std::shared_ptr<BlockData> data, bool apply_physics) = 0;
 
-    virtual Result<std::unique_ptr<Block>> getRelative(int offset_x, int offset_y, int offset_z) = 0;
+    virtual Result<std::shared_ptr<Block>> getRelative(int offset_x, int offset_y, int offset_z) = 0;
 
-    virtual Result<std::unique_ptr<Block>> getRelative(BlockFace face) = 0;
+    virtual Result<std::shared_ptr<Block>> getRelative(BlockFace face) = 0;
 
-    virtual Result<std::unique_ptr<Block>> getRelative(BlockFace face, int distance) = 0;
+    virtual Result<std::shared_ptr<Block>> getRelative(BlockFace face, int distance) = 0;
 
     [[nodiscard]] virtual Dimension &getDimension() const = 0;
 
@@ -86,15 +86,15 @@ struct formatter<endstone::Block> : formatter<string_view> {
     auto format(const Type &val, FormatContext &ctx) const -> format_context::iterator
     {
         auto it = ctx.out();
-        it = format_to(it, "Block(pos=BlockPos(x={}, y={}, z={}), type={}", val.getX(), val.getY(), val.getZ(),
-                       val.getType().value_or("INVALID"));
+        it = fmt::format_to(it, "Block(pos=BlockPos(x={}, y={}, z={}), type={}", val.getX(), val.getY(), val.getZ(),
+                            val.getType().value_or("INVALID"));
         if (auto data = val.getData()) {
-            it = format_to(it, ", data={}", *data.value());
+            it = fmt::format_to(it, ", data={}", *data.value());
         }
         else {
-            it = format_to(it, ", data=INVALID");
+            it = fmt::format_to(it, ", data=INVALID");
         }
-        it = format_to(it, ")");
+        it = fmt::format_to(it, ")");
         return it;
     }
 };

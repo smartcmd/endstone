@@ -44,7 +44,7 @@ Inherited by the following classes: [endstone::IpBanEntry](classendstone_1_1IpBa
 
 | Type | Name |
 | ---: | :--- |
-|  [**const**](classendstone_1_1Vector.md) std::string | [**DateFormat**](#variable-dateformat)   = = "%FT%[**T**](classendstone_1_1Vector.md)%[**Ez"**](classendstone_1_1Vector.md)<br> |
+|  [**const**](classendstone_1_1Vector.md) std::string | [**DateFormat**](#variable-dateformat)   = `"%FT%[**T**](classendstone_1_1Vector.md)%[**Ez"**](classendstone_1_1Vector.md)`<br> |
 
 
 

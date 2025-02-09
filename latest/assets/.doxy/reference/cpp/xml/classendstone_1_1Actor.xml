@@ -17,7 +17,7 @@
 <para>Gets a <ref refid="classendstone_1_1CommandSender" kindref="compound">CommandSender</ref> as <ref refid="classendstone_1_1Actor" kindref="compound">Actor</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para><ref refid="classendstone_1_1Player" kindref="compound">Player</ref>, nullptr if not an <ref refid="classendstone_1_1Actor" kindref="compound">Actor</ref> </para>
+<para><simplesect kind="return"><para><ref refid="classendstone_1_1Actor" kindref="compound">Actor</ref>, nullptr if not an <ref refid="classendstone_1_1Actor" kindref="compound">Actor</ref> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -721,6 +721,7 @@ Note that if the actor is affected by AI, it may override this rotation.</para>
       <member refid="classendstone_1_1Actor_1a80bcaa26d26b884d5435af9ca9aeb06c" prot="public" virt="virtual"><scope>endstone::Actor</scope><name>asActor</name></member>
       <member refid="classendstone_1_1CommandSender_1a4f5be88d28d49e1c7424acd1c30fc893" prot="public" virt="virtual"><scope>endstone::Actor</scope><name>asCommandSender</name></member>
       <member refid="classendstone_1_1CommandSender_1ad52351f5219698ad2bb2fbd6509c80f5" prot="public" virt="virtual"><scope>endstone::Actor</scope><name>asConsole</name></member>
+      <member refid="classendstone_1_1CommandSender_1aacfc66c9c74e9f8419ada38a1beb6913" prot="public" virt="virtual"><scope>endstone::Actor</scope><name>asMob</name></member>
       <member refid="classendstone_1_1CommandSender_1aef66d1ad6c2cbc924e51f02407f94fa3" prot="public" virt="virtual"><scope>endstone::Actor</scope><name>asPlayer</name></member>
       <member refid="classendstone_1_1Actor_1ab4562c41d071b945338d742ac8d1e639" prot="public" virt="pure-virtual"><scope>endstone::Actor</scope><name>getDimension</name></member>
       <member refid="classendstone_1_1Permissible_1ad9307f3eef07e6e03a55b4fe9aab9be6" prot="public" virt="pure-virtual"><scope>endstone::Actor</scope><name>getEffectivePermissions</name></member>
