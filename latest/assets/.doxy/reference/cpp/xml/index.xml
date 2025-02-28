@@ -29,7 +29,9 @@
     <member refid="classendstone_1_1Actor_1aa012c328995d90d51c31bb2116bf6eb5" kind="function"><name>teleport</name></member>
     <member refid="classendstone_1_1Actor_1a17192ce29b31550384e64a68e37e2af9" kind="function"><name>teleport</name></member>
     <member refid="classendstone_1_1Actor_1a78059bed5b1a6b23bfb2be9ac6ae81a3" kind="function"><name>getId</name></member>
+    <member refid="classendstone_1_1Actor_1a896dcb16d037d3591b0d39480521a193" kind="function"><name>remove</name></member>
     <member refid="classendstone_1_1Actor_1aa099af11ae3053289f31c65c9126b50a" kind="function"><name>isDead</name></member>
+    <member refid="classendstone_1_1Actor_1a5b744893654143e1d8a1f03b1d3cc459" kind="function"><name>isValid</name></member>
     <member refid="classendstone_1_1Actor_1a547e0f2ecb4be6edb82f909f48946031" kind="function"><name>getHealth</name></member>
     <member refid="classendstone_1_1Actor_1a39c0d4e763cafb181f1071de2c31b647" kind="function"><name>setHealth</name></member>
     <member refid="classendstone_1_1Actor_1a612dffb2563ce0535c0e2d7214c6254b" kind="function"><name>getMaxHealth</name></member>
@@ -422,6 +424,24 @@
     <member refid="classendstone_1_1DamageSource_1aa918ccf5242cf6d8ed707457c227f9c5" kind="function"><name>getActor</name></member>
     <member refid="classendstone_1_1DamageSource_1a022af0acc2aab4bd95e5ce916186a4ff" kind="function"><name>getDamagingActor</name></member>
     <member refid="classendstone_1_1DamageSource_1ab078db3a18d08b41dd6c73de066c2b02" kind="function"><name>isIndirect</name></member>
+  </compound>
+  <compound refid="classendstone_1_1DataPacketReceiveEvent" kind="class"><name>endstone::DataPacketReceiveEvent</name>
+    <member refid="classendstone_1_1DataPacketReceiveEvent_1aa489cc867db17d3c80372a44ecbc6880" kind="variable"><name>NAME</name></member>
+    <member refid="classendstone_1_1DataPacketReceiveEvent_1a71240afc45ae419e6e78ff80101cc5cf" kind="variable"><name>player_</name></member>
+    <member refid="classendstone_1_1DataPacketReceiveEvent_1a0254aea3e1ce866d88c8e3b70d22d901" kind="variable"><name>data_</name></member>
+    <member refid="classendstone_1_1DataPacketReceiveEvent_1aa9e5fab9f647b02b114076325c8900c5" kind="function"><name>DataPacketReceiveEvent</name></member>
+    <member refid="classendstone_1_1DataPacketReceiveEvent_1aa7a03379681888acd7519beeff14751d" kind="function"><name>getEventName</name></member>
+    <member refid="classendstone_1_1DataPacketReceiveEvent_1a9606fb993602867c3354761c1070211a" kind="function"><name>getData</name></member>
+    <member refid="classendstone_1_1DataPacketReceiveEvent_1a44cd72cab4d7bbf02ffc1b7bdbbfc2df" kind="function"><name>getPlayer</name></member>
+  </compound>
+  <compound refid="classendstone_1_1DataPacketSendEvent" kind="class"><name>endstone::DataPacketSendEvent</name>
+    <member refid="classendstone_1_1DataPacketSendEvent_1a5d7757d2edbc30cb24392255ad7d41c9" kind="variable"><name>NAME</name></member>
+    <member refid="classendstone_1_1DataPacketSendEvent_1ad38f94597f8cbbfa04e86a06b7aa5fc6" kind="variable"><name>player_</name></member>
+    <member refid="classendstone_1_1DataPacketSendEvent_1a5d2818dc97784db44ed12a999151490d" kind="variable"><name>data_</name></member>
+    <member refid="classendstone_1_1DataPacketSendEvent_1aa59b7aeaf22e39383c7c18abc57ab258" kind="function"><name>DataPacketSendEvent</name></member>
+    <member refid="classendstone_1_1DataPacketSendEvent_1ac2a9efbc32a8361dc741c58ad3c5ac56" kind="function"><name>getEventName</name></member>
+    <member refid="classendstone_1_1DataPacketSendEvent_1ad588b01274f3f896b8332d8dfe117f7f" kind="function"><name>getData</name></member>
+    <member refid="classendstone_1_1DataPacketSendEvent_1aa073af290df67949d16c4ba4a8b0b43d" kind="function"><name>getPlayer</name></member>
   </compound>
   <compound refid="classendstone_1_1Dimension" kind="class"><name>endstone::Dimension</name>
     <member refid="classendstone_1_1Dimension_1a5dbe2e9365112e8c0f883978fae1356b" kind="enum"><name>Type</name></member>
@@ -1704,6 +1724,10 @@
   <compound refid="player__teleport__event_8h" kind="file"><name>player_teleport_event.h</name>
   </compound>
   <compound refid="broadcast__message__event_8h" kind="file"><name>broadcast_message_event.h</name>
+  </compound>
+  <compound refid="data__packet__receive__event_8h" kind="file"><name>data_packet_receive_event.h</name>
+  </compound>
+  <compound refid="data__packet__send__event_8h" kind="file"><name>data_packet_send_event.h</name>
   </compound>
   <compound refid="plugin__disable__event_8h" kind="file"><name>plugin_disable_event.h</name>
   </compound>
