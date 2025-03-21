@@ -67,8 +67,6 @@
 | class | [**ConsoleCommandSender**](classendstone_1_1ConsoleCommandSender.md) <br>_Represents a console command sender._  |
 | class | [**Criteria**](classendstone_1_1Criteria.md) <br>_Represents a scoreboard criteria._  |
 | class | [**DamageSource**](classendstone_1_1DamageSource.md) <br>_Represents a source of damage._  |
-| class | [**DataPacketReceiveEvent**](classendstone_1_1DataPacketReceiveEvent.md) <br>_Called when the server receives a packet from a connected client._  |
-| class | [**DataPacketSendEvent**](classendstone_1_1DataPacketSendEvent.md) <br>_Called when the server sends a packet to a connected client._  |
 | class | [**Dimension**](classendstone_1_1Dimension.md) <br>_Represents a dimension within a_ [_**Level**_](classendstone_1_1Level.md) _._ |
 | class | [**Dropdown**](classendstone_1_1Dropdown.md) <br>_Represents a dropdown with a set of predefined options._  |
 | class | [**Error**](classendstone_1_1Error.md) <br>_Represents an error with a message and the stack trace._  |
@@ -80,6 +78,7 @@
 | class | [**Inventory**](classendstone_1_1Inventory.md) <br>_Interface to the various inventories._  |
 | class | [**IpBanEntry**](classendstone_1_1IpBanEntry.md) <br> |
 | class | [**IpBanList**](classendstone_1_1IpBanList.md) <br>_Represents a ban list, containing banned IP addresses._  |
+| class | [**ItemMeta**](classendstone_1_1ItemMeta.md) <br>_Represents the storage mechanism for auxiliary item data._  |
 | class | [**ItemStack**](classendstone_1_1ItemStack.md) <br>_Represents a stack of items._  |
 | class | [**Label**](classendstone_1_1Label.md) <br>_Represents a text label._  |
 | class | [**Language**](classendstone_1_1Language.md) <br>_Represents the interface for translating text into different languages._  |
@@ -91,7 +90,8 @@
 | class | [**ModalForm**](classendstone_1_1ModalForm.md) <br>_Represents a modal form with controls._  |
 | class | [**Objective**](classendstone_1_1Objective.md) <br>_Represents an objective on a scoreboard that can show scores specific to entries._  |
 | class | [**OfflinePlayer**](classendstone_1_1OfflinePlayer.md) <br>_Represents a reference to a player identity and the data belonging to a player that is stored on the disk and can, thus, be retrieved without the player needing to be online._  |
-| class | [**Packet**](classendstone_1_1Packet.md) <br>_Represents a packet._  |
+| class | [**PacketReceiveEvent**](classendstone_1_1PacketReceiveEvent.md) <br>_Called when the server receives a packet from a connected client._  |
+| class | [**PacketSendEvent**](classendstone_1_1PacketSendEvent.md) <br>_Called when the server sends a packet to a connected client._  |
 | class | [**Permissible**](classendstone_1_1Permissible.md) <br>_Represents an object that may become a server operator and can be assigned permissions._  |
 | class | [**Permission**](classendstone_1_1Permission.md) <br>_Represents a unique permission that may be attached to a_ [_**Permissible**_](classendstone_1_1Permissible.md) _._ |
 | class | [**PermissionAttachment**](classendstone_1_1PermissionAttachment.md) <br>_Holds information about a permission attachment on a_ [_**Permissible**_](classendstone_1_1Permissible.md) _object._ |
@@ -132,10 +132,11 @@
 | class | [**ServerEvent**](classendstone_1_1ServerEvent.md) <br>_Represents a Server-related event._  |
 | class | [**ServerListPingEvent**](classendstone_1_1ServerListPingEvent.md) <br>_Called when a server ping is coming in._  |
 | class | [**ServerLoadEvent**](classendstone_1_1ServerLoadEvent.md) <br>_Called when either the server startup or reload has completed._  |
+| class | [**Service**](classendstone_1_1Service.md) <br>_Services represent a list of methods._  |
+| class | [**ServiceManager**](classendstone_1_1ServiceManager.md) <br>_Represent a service manager that manages services and service providers._  |
 | class | [**Skin**](classendstone_1_1Skin.md) <br>_Represents a player skin._  |
 | class | [**Slider**](classendstone_1_1Slider.md) <br>_Represents a slider with a label._  |
 | class | [**SocketAddress**](classendstone_1_1SocketAddress.md) <br>_Represents an IP Socket Address (hostname + port number)._  |
-| class | [**SpawnParticleEffectPacket**](classendstone_1_1SpawnParticleEffectPacket.md) <br>_Represents a packet for spawning a particle effect._  |
 | class | [**StepSlider**](classendstone_1_1StepSlider.md) <br>_Represents a step slider with a set of predefined options._  |
 | class | [**Task**](classendstone_1_1Task.md) <br>_Represents a task being executed by the scheduler._  |
 | class | [**TextInput**](classendstone_1_1TextInput.md) <br>_Represents a text input field._  |
@@ -163,13 +164,13 @@
 | enum  | [**GameMode**](#enum-gamemode)  <br>_Represents the various type of game modes that Players may have._  |
 | typedef std::variant&lt; std::string, [**Translatable**](classendstone_1_1Translatable.md) &gt; | [**Message**](#typedef-message)  <br> |
 | enum  | [**ObjectiveSortOrder**](#enum-objectivesortorder)  <br>_Represents the sort order of objectives on a DisplaySlot._  |
-| enum  | [**PacketType**](#enum-packettype)  <br>_Represents the types of packets._  |
 | enum  | [**PermissionDefault**](#enum-permissiondefault)  <br>_Represents the possible default values for permissions._  |
 | typedef std::function&lt; [**void**](classendstone_1_1Vector.md)([**const**](classendstone_1_1Vector.md) [**PermissionAttachment**](classendstone_1_1PermissionAttachment.md) &)&gt; | [**PermissionRemovedExecutor**](#typedef-permissionremovedexecutor)  <br> |
 | enum  | [**PluginLoadOrder**](#enum-pluginloadorder)  <br>_Represents the order in which a plugin should be initialized and enabled._  |
 | enum std::uint8\_t | [**RenderType**](#enum-rendertype)  <br>_Controls the way in which an_ [_**Objective**_](classendstone_1_1Objective.md) _is rendered on the client side._ |
 | typedef nonstd::expected&lt; [**T**](classendstone_1_1Vector.md), [**Error**](classendstone_1_1Error.md) &gt; | [**Result**](#typedef-result)  <br> |
 | typedef std::variant&lt; [**Player**](classendstone_1_1Player.md) \*, [**Actor**](classendstone_1_1Actor.md) \*, std::string &gt; | [**ScoreEntry**](#typedef-scoreentry)  <br> |
+| enum  | [**ServicePriority**](#enum-servicepriority)  <br>_Represents various priorities of a provider._  |
 | typedef std::uint32\_t | [**TaskId**](#typedef-taskid)  <br> |
 
 
@@ -419,22 +420,6 @@ enum endstone::ObjectiveSortOrder {
 
 
 
-### enum PacketType 
-
-_Represents the types of packets._ 
-```C++
-enum endstone::PacketType {
-    SpawnParticleEffect = 118
-};
-```
-
-
-
-
-<hr>
-
-
-
 ### enum PermissionDefault 
 
 _Represents the possible default values for permissions._ 
@@ -525,6 +510,26 @@ An entry for a score.
 
 
         
+
+<hr>
+
+
+
+### enum ServicePriority 
+
+_Represents various priorities of a provider._ 
+```C++
+enum endstone::ServicePriority {
+    Lowest,
+    Low,
+    Normal,
+    High,
+    Highest
+};
+```
+
+
+
 
 <hr>
 

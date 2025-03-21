@@ -83,10 +83,6 @@
 
 * [**DamageSource**](classendstone_1_1DamageSource.md)
 ([**endstone**](namespaceendstone.md))
-* [**DataPacketReceiveEvent**](classendstone_1_1DataPacketReceiveEvent.md)
-([**endstone**](namespaceendstone.md))
-* [**DataPacketSendEvent**](classendstone_1_1DataPacketSendEvent.md)
-([**endstone**](namespaceendstone.md))
 * [**Dimension**](classendstone_1_1Dimension.md)
 ([**endstone**](namespaceendstone.md))
 * [**Dropdown**](classendstone_1_1Dropdown.md)
@@ -146,6 +142,8 @@
 ([**endstone**](namespaceendstone.md))
 * [**IpBanList**](classendstone_1_1IpBanList.md)
 ([**endstone**](namespaceendstone.md))
+* [**ItemMeta**](classendstone_1_1ItemMeta.md)
+([**endstone**](namespaceendstone.md))
 * [**ItemStack**](classendstone_1_1ItemStack.md)
 ([**endstone**](namespaceendstone.md))
 
@@ -186,7 +184,9 @@
 
 ## p
 
-* [**Packet**](classendstone_1_1Packet.md)
+* [**PacketReceiveEvent**](classendstone_1_1PacketReceiveEvent.md)
+([**endstone**](namespaceendstone.md))
+* [**PacketSendEvent**](classendstone_1_1PacketSendEvent.md)
 ([**endstone**](namespaceendstone.md))
 * [**Permissible**](classendstone_1_1Permissible.md)
 ([**endstone**](namespaceendstone.md))
@@ -274,13 +274,15 @@
 ([**endstone**](namespaceendstone.md))
 * [**ServerLoadEvent**](classendstone_1_1ServerLoadEvent.md)
 ([**endstone**](namespaceendstone.md))
+* [**Service**](classendstone_1_1Service.md)
+([**endstone**](namespaceendstone.md))
+* [**ServiceManager**](classendstone_1_1ServiceManager.md)
+([**endstone**](namespaceendstone.md))
 * [**Skin**](classendstone_1_1Skin.md)
 ([**endstone**](namespaceendstone.md))
 * [**Slider**](classendstone_1_1Slider.md)
 ([**endstone**](namespaceendstone.md))
 * [**SocketAddress**](classendstone_1_1SocketAddress.md)
-([**endstone**](namespaceendstone.md))
-* [**SpawnParticleEffectPacket**](classendstone_1_1SpawnParticleEffectPacket.md)
 ([**endstone**](namespaceendstone.md))
 * [**StepSlider**](classendstone_1_1StepSlider.md)
 ([**endstone**](namespaceendstone.md))

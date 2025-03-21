@@ -33,7 +33,6 @@
 
 ## p
 
-* **PacketType** ([**endstone**](namespaceendstone.md))
 * **PermissionDefault** ([**endstone**](namespaceendstone.md))
 * **PluginLoadOrder** ([**endstone**](namespaceendstone.md))
 
@@ -41,6 +40,11 @@
 ## r
 
 * **RenderType** ([**endstone**](namespaceendstone.md))
+
+
+## s
+
+* **ServicePriority** ([**endstone**](namespaceendstone.md))
 
 
 

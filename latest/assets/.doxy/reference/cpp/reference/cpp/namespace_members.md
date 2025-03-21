@@ -51,7 +51,6 @@
 
 ## p
 
-* **PacketType** ([**endstone**](namespaceendstone.md))
 * **PermissionDefault** ([**endstone**](namespaceendstone.md))
 * **PermissionRemovedExecutor** ([**endstone**](namespaceendstone.md))
 * **PluginLoadOrder** ([**endstone**](namespaceendstone.md))
@@ -66,6 +65,7 @@
 ## s
 
 * **ScoreEntry** ([**endstone**](namespaceendstone.md))
+* **ServicePriority** ([**endstone**](namespaceendstone.md))
 * **swap** ([**endstone**](namespaceendstone.md))
 
 

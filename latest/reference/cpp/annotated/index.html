@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2126,8 +2126,6 @@ For latest updates join the chat on
 <li><strong>class</strong> <a href="../classendstone_1_1ConsoleCommandSender/"><strong>ConsoleCommandSender</strong></a> <em>Represents a console command sender.</em> </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Criteria/"><strong>Criteria</strong></a> <em>Represents a scoreboard criteria.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1DamageSource/"><strong>DamageSource</strong></a> <em>Represents a source of damage.</em>     </li>
-<li><strong>class</strong> <a href="../classendstone_1_1DataPacketReceiveEvent/"><strong>DataPacketReceiveEvent</strong></a> <em>Called when the server receives a packet from a connected client.</em>     </li>
-<li><strong>class</strong> <a href="../classendstone_1_1DataPacketSendEvent/"><strong>DataPacketSendEvent</strong></a> <em>Called when the server sends a packet to a connected client.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Dimension/"><strong>Dimension</strong></a> <em>Represents a dimension within a</em> <a href="../classendstone_1_1Level/"><em><strong>Level</strong></em></a> <em>.</em>    </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Dropdown/"><strong>Dropdown</strong></a> <em>Represents a dropdown with a set of predefined options.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Error/"><strong>Error</strong></a> <em>Represents an error with a message and the stack trace.</em>     </li>
@@ -2139,6 +2137,7 @@ For latest updates join the chat on
 <li><strong>class</strong> <a href="../classendstone_1_1Inventory/"><strong>Inventory</strong></a> <em>Interface to the various inventories.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1IpBanEntry/"><strong>IpBanEntry</strong></a>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1IpBanList/"><strong>IpBanList</strong></a> <em>Represents a ban list, containing banned IP addresses.</em>     </li>
+<li><strong>class</strong> <a href="../classendstone_1_1ItemMeta/"><strong>ItemMeta</strong></a> <em>Represents the storage mechanism for auxiliary item data.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1ItemStack/"><strong>ItemStack</strong></a> <em>Represents a stack of items.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Label/"><strong>Label</strong></a> <em>Represents a text label.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Language/"><strong>Language</strong></a> <em>Represents the interface for translating text into different languages.</em>     </li>
@@ -2150,7 +2149,8 @@ For latest updates join the chat on
 <li><strong>class</strong> <a href="../classendstone_1_1ModalForm/"><strong>ModalForm</strong></a> <em>Represents a modal form with controls.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Objective/"><strong>Objective</strong></a> <em>Represents an objective on a scoreboard that can show scores specific to entries.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1OfflinePlayer/"><strong>OfflinePlayer</strong></a> <em>Represents a reference to a player identity and the data belonging to a player that is stored on the disk and can, thus, be retrieved without the player needing to be online.</em>     </li>
-<li><strong>class</strong> <a href="../classendstone_1_1Packet/"><strong>Packet</strong></a> <em>Represents a packet.</em>     </li>
+<li><strong>class</strong> <a href="../classendstone_1_1PacketReceiveEvent/"><strong>PacketReceiveEvent</strong></a> <em>Called when the server receives a packet from a connected client.</em>     </li>
+<li><strong>class</strong> <a href="../classendstone_1_1PacketSendEvent/"><strong>PacketSendEvent</strong></a> <em>Called when the server sends a packet to a connected client.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Permissible/"><strong>Permissible</strong></a> <em>Represents an object that may become a server operator and can be assigned permissions.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Permission/"><strong>Permission</strong></a> <em>Represents a unique permission that may be attached to a</em> <a href="../classendstone_1_1Permissible/"><em><strong>Permissible</strong></em></a> <em>.</em>    </li>
 <li><strong>class</strong> <a href="../classendstone_1_1PermissionAttachment/"><strong>PermissionAttachment</strong></a> <em>Holds information about a permission attachment on a</em> <a href="../classendstone_1_1Permissible/"><em><strong>Permissible</strong></em></a> <em>object.</em>    </li>
@@ -2191,13 +2191,14 @@ For latest updates join the chat on
 <li><strong>class</strong> <a href="../classendstone_1_1ServerEvent/"><strong>ServerEvent</strong></a> <em>Represents a Server-related event.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1ServerListPingEvent/"><strong>ServerListPingEvent</strong></a> <em>Called when a server ping is coming in.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1ServerLoadEvent/"><strong>ServerLoadEvent</strong></a> <em>Called when either the server startup or reload has completed.</em>     </li>
+<li><strong>class</strong> <a href="../classendstone_1_1Service/"><strong>Service</strong></a> <em>Services represent a list of methods.</em>     </li>
+<li><strong>class</strong> <a href="../classendstone_1_1ServiceManager/"><strong>ServiceManager</strong></a> <em>Represent a service manager that manages services and service providers.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Skin/"><strong>Skin</strong></a> <em>Represents a player skin.</em>     <ul>
 <li><strong>struct</strong> <a href="../structendstone_1_1Skin_1_1ImageData/"><strong>ImageData</strong></a>     </li>
 </ul>
 </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Slider/"><strong>Slider</strong></a> <em>Represents a slider with a label.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1SocketAddress/"><strong>SocketAddress</strong></a> <em>Represents an IP Socket Address (hostname + port number).</em>     </li>
-<li><strong>class</strong> <a href="../classendstone_1_1SpawnParticleEffectPacket/"><strong>SpawnParticleEffectPacket</strong></a> <em>Represents a packet for spawning a particle effect.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1StepSlider/"><strong>StepSlider</strong></a> <em>Represents a step slider with a set of predefined options.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1Task/"><strong>Task</strong></a> <em>Represents a task being executed by the scheduler.</em>     </li>
 <li><strong>class</strong> <a href="../classendstone_1_1TextInput/"><strong>TextInput</strong></a> <em>Represents a text input field.</em>     </li>
