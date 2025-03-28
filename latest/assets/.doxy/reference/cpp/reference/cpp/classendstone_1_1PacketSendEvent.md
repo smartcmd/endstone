@@ -103,6 +103,7 @@ Inherits the following classes: [endstone::Cancellable](classendstone_1_1Cancell
 |  [**int**](classendstone_1_1Vector.md) | [**getPacketId**](#function-getpacketid) () const<br>_Gets the ID of the packet._  |
 |  std::string\_view | [**getPayload**](#function-getpayload) () const<br>_Gets the raw packet data_ **excluding** _the header._ |
 |  [**Player**](classendstone_1_1Player.md) & | [**getPlayer**](#function-getplayer) () const<br> |
+|  [**void**](classendstone_1_1Vector.md) | [**setPayload**](#function-setpayload) (std::string\_view payload) <br>_Sets the raw packet data_ **excluding** _the header._ |
 
 
 ## Public Functions inherited from endstone::Cancellable
@@ -338,6 +339,33 @@ Returns the player involved in this event
 **Returns:**
 
 [**Player**](classendstone_1_1Player.md) who is involved in this event 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setPayload 
+
+_Sets the raw packet data_ **excluding** _the header._
+```C++
+inline void endstone::PacketSendEvent::setPayload (
+    std::string_view payload
+) 
+```
+
+
+
+
+
+**Returns:**
+
+The packet payload data. 
 
 
 

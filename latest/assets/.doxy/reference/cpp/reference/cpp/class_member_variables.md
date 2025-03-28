@@ -54,7 +54,7 @@
 
 ## d
 
-* **damage\_** ([**endstone::ActorDamageEvent**](classendstone_1_1ActorDamageEvent.md))
+* **damage\_** ([**endstone::ActorDamageEvent**](classendstone_1_1ActorDamageEvent.md), [**endstone::ItemMeta**](classendstone_1_1ItemMeta.md))
 * **damage\_source\_** ([**endstone::ActorDamageEvent**](classendstone_1_1ActorDamageEvent.md), [**endstone::ActorDeathEvent**](classendstone_1_1ActorDeathEvent.md))
 * **DateFormat** ([**endstone::BanEntry**](classendstone_1_1BanEntry.md))
 * **DarkAqua** ([**endstone::ColorFormat**](structendstone_1_1ColorFormat.md))
@@ -65,6 +65,7 @@
 * **DarkRed** ([**endstone::ColorFormat**](structendstone_1_1ColorFormat.md))
 * **description\_** ([**endstone::Command**](classendstone_1_1Command.md), [**endstone::Permission**](classendstone_1_1Permission.md), [**endstone::PluginDescription**](classendstone_1_1PluginDescription.md), [**endstone::detail::CommandBuilder**](classendstone_1_1detail_1_1CommandBuilder.md), [**endstone::detail::PermissionBuilder**](classendstone_1_1detail_1_1PermissionBuilder.md))
 * **default\_index\_** ([**endstone::Dropdown**](classendstone_1_1Dropdown.md))
+* **display\_name\_** ([**endstone::ItemMeta**](classendstone_1_1ItemMeta.md))
 * **DefaultPermission** ([**endstone::Permission**](classendstone_1_1Permission.md))
 * **default\_value\_** ([**endstone::Permission**](classendstone_1_1Permission.md), [**endstone::Slider**](classendstone_1_1Slider.md), [**endstone::Toggle**](classendstone_1_1Toggle.md), [**endstone::detail::PermissionBuilder**](classendstone_1_1detail_1_1PermissionBuilder.md))
 * **death\_message\_** ([**endstone::PlayerDeathEvent**](classendstone_1_1PlayerDeathEvent.md))
@@ -85,6 +86,7 @@
 * **Escape** ([**endstone::ColorFormat**](structendstone_1_1ColorFormat.md))
 * **event\_** ([**endstone::EventHandler**](classendstone_1_1EventHandler.md), [**endstone::HandlerList**](classendstone_1_1HandlerList.md))
 * **executor\_** ([**endstone::EventHandler**](classendstone_1_1EventHandler.md), [**endstone::PluginCommand**](classendstone_1_1PluginCommand.md))
+* **EMPTY** ([**endstone::ItemMeta**](classendstone_1_1ItemMeta.md))
 * **emote\_id\_** ([**endstone::PlayerEmoteEvent**](classendstone_1_1PlayerEmoteEvent.md))
 * **enabled\_** ([**endstone::Plugin**](classendstone_1_1Plugin.md))
 
@@ -133,6 +135,7 @@
 * **location\_** ([**endstone::ActorExplodeEvent**](classendstone_1_1ActorExplodeEvent.md))
 * **LightPurple** ([**endstone::ColorFormat**](structendstone_1_1ColorFormat.md))
 * **label\_** ([**endstone::Dropdown**](classendstone_1_1Dropdown.md), [**endstone::Slider**](classendstone_1_1Slider.md), [**endstone::TextInput**](classendstone_1_1TextInput.md), [**endstone::Toggle**](classendstone_1_1Toggle.md))
+* **lore\_** ([**endstone::ItemMeta**](classendstone_1_1ItemMeta.md))
 * **loader\_** ([**endstone::Plugin**](classendstone_1_1Plugin.md))
 * **logger\_** ([**endstone::Plugin**](classendstone_1_1Plugin.md))
 * **load\_** ([**endstone::PluginDescription**](classendstone_1_1PluginDescription.md))
@@ -162,6 +165,7 @@
 * **MaterialResin** ([**endstone::ColorFormat**](structendstone_1_1ColorFormat.md))
 * **MinecoinGold** ([**endstone::ColorFormat**](structendstone_1_1ColorFormat.md))
 * **mtx\_** ([**endstone::HandlerList**](classendstone_1_1HandlerList.md))
+* **meta\_** ([**endstone::ItemStack**](classendstone_1_1ItemStack.md))
 * **message\_id\_** ([**endstone::ScriptMessageEvent**](classendstone_1_1ScriptMessageEvent.md))
 * **max\_players\_** ([**endstone::ServerListPingEvent**](classendstone_1_1ServerListPingEvent.md))
 * **minecraft\_version\_network\_** ([**endstone::ServerListPingEvent**](classendstone_1_1ServerListPingEvent.md))
@@ -188,6 +192,7 @@
 * **on\_message\_** ([**endstone::CommandSenderWrapper**](classendstone_1_1CommandSenderWrapper.md))
 * **options\_** ([**endstone::Dropdown**](classendstone_1_1Dropdown.md))
 * **on\_close\_** ([**endstone::Form**](classendstone_1_1Form.md))
+* **owned\_payload\_** ([**endstone::PacketReceiveEvent**](classendstone_1_1PacketReceiveEvent.md), [**endstone::PacketSendEvent**](classendstone_1_1PacketSendEvent.md))
 * **owner\_** ([**endstone::PluginCommand**](classendstone_1_1PluginCommand.md))
 
 

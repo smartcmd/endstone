@@ -28,7 +28,36 @@
 
 namespace endstone {
 
-class PlayerInventory : public Inventory {};
+class PlayerInventory : public Inventory {
+public:
+    [[nodiscard]] virtual std::unique_ptr<ItemStack> getHelmet() const = 0;
+
+    [[nodiscard]] virtual std::unique_ptr<ItemStack> getChestplate() const = 0;
+
+    [[nodiscard]] virtual std::unique_ptr<ItemStack> getLeggings() const = 0;
+
+    [[nodiscard]] virtual std::unique_ptr<ItemStack> getBoots() const = 0;
+
+    virtual void setHelmet(const ItemStack *helmet) = 0;
+
+    virtual void setChestplate(const ItemStack *chestplate) = 0;
+
+    virtual void setLeggings(const ItemStack *leggings) = 0;
+
+    virtual void setBoots(const ItemStack *boots) = 0;
+
+    [[nodiscard]] virtual std::unique_ptr<ItemStack> getItemInMainHand() const = 0;
+
+    virtual void setItemInMainHand(const ItemStack *item) = 0;
+
+    [[nodiscard]] virtual std::unique_ptr<ItemStack> getItemInOffHand() const = 0;
+
+    virtual void setItemInOffHand(const ItemStack *item) = 0;
+
+    [[nodiscard]] virtual int getHeldItemSlot() const = 0;
+
+    virtual void setHeldItemSlot(int slot) = 0;
+};
 
 }  // namespace endstone
 ```

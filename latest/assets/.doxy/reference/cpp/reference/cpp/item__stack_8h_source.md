@@ -31,6 +31,7 @@
 #include <memory>
 
 #include "endstone/inventory/meta/item_meta.h"
+#include "item_factory.h"
 
 namespace endstone {
 
@@ -38,7 +39,7 @@ namespace core {
 class EndstoneItemStack;
 }
 
-class ItemStack : public std::enable_shared_from_this<ItemStack> {
+class ItemStack {
 public:
     ItemStack() = default;
     explicit ItemStack(std::string type, int amount = 1) : type_(std::move(type)), amount_(amount) {}
@@ -47,14 +48,9 @@ public:
 
 protected:
     friend class core::EndstoneItemStack;
-    virtual const core::EndstoneItemStack *asEndstoneItemStack() const
+    virtual bool isEndstoneItemStack() const
     {
-        return nullptr;
-    }
-
-    virtual core::EndstoneItemStack *asEndstoneItemStack()
-    {
-        return nullptr;
+        return false;
     }
 
 public:
@@ -79,17 +75,34 @@ public:
         amount_ = amount;
     }
 
-    virtual std::shared_ptr<ItemMeta> getItemMeta() const
+    virtual std::unique_ptr<ItemMeta> getItemMeta() const
     {
-        // TODO(item): return the actual item meta
-        return nullptr;
+        return meta_ == nullptr ? ItemFactory::getItemMeta(type_) : meta_->clone();
     }
 
-    // TODO(item): setItemMeta
+    virtual bool hasItemMeta() const
+    {
+        return meta_ != nullptr;
+    }
+
+    virtual bool setItemMeta(ItemMeta *meta)
+    {
+        if (!meta) {
+            meta_ = nullptr;
+            return true;
+        }
+        // TODO(item): applicability check, support type-specific meta
+        meta_ = ItemFactory::asMetaFor(type_, meta);
+        if (meta_.get() == meta) {
+            meta_ = meta->clone();
+        }
+        return true;
+    }
 
 private:
     std::string type_ = "minecraft:air";
     int amount_ = 0;
+    std::unique_ptr<ItemMeta> meta_ = nullptr;
 };
 
 }  // namespace endstone

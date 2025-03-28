@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classendstone_1_1Block" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>endstone::Block</compoundname>
-    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; Block &gt;</basecompoundref>
     <includes refid="block_8h" local="no">endstone/block/block.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classendstone_1_1Block_1a8a7ea0b990c4c610f75cf53bd5c6647b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -108,9 +107,9 @@
         </inbodydescription>
         <location file="include/endstone/block/block.h" line="63" column="20"/>
       </memberdef>
-      <memberdef kind="function" id="classendstone_1_1Block_1ae65e640442d36d5dbbbf8374cc9a996e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type>std::shared_ptr&lt; <ref refid="classendstone_1_1BlockData" kindref="compound">BlockData</ref> &gt;</type>
-        <definition>virtual std::shared_ptr&lt; BlockData &gt; endstone::Block::getData</definition>
+      <memberdef kind="function" id="classendstone_1_1Block_1a5293fd07d6c423a5a7132944eec13282" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classendstone_1_1BlockData" kindref="compound">BlockData</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; BlockData &gt; endstone::Block::getData</definition>
         <argsstring>() const =0</argsstring>
         <name>getData</name>
         <qualifiedname>endstone::Block::getData</qualifiedname>
@@ -126,14 +125,14 @@
         </inbodydescription>
         <location file="include/endstone/block/block.h" line="70" column="30"/>
       </memberdef>
-      <memberdef kind="function" id="classendstone_1_1Block_1ae4ceaaa2365957b62e4741857259e1bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="classendstone_1_1Block_1a7f24c60e47c3bcd49f0b1122b80b7b47" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>Result&lt; <ref refid="classendstone_1_1Vector" kindref="compound">void</ref> &gt;</type>
         <definition>virtual Result&lt; void &gt; endstone::Block::setData</definition>
-        <argsstring>(std::shared_ptr&lt; BlockData &gt; data)=0</argsstring>
+        <argsstring>(const BlockData &amp;data)=0</argsstring>
         <name>setData</name>
         <qualifiedname>endstone::Block::setData</qualifiedname>
         <param>
-          <type>std::shared_ptr&lt; <ref refid="classendstone_1_1BlockData" kindref="compound">BlockData</ref> &gt;</type>
+          <type><ref refid="classendstone_1_1Vector" kindref="compound">const</ref> <ref refid="classendstone_1_1BlockData" kindref="compound">BlockData</ref> &amp;</type>
           <declname>data</declname>
         </param>
         <briefdescription>
@@ -155,14 +154,14 @@
         </inbodydescription>
         <location file="include/endstone/block/block.h" line="77" column="20"/>
       </memberdef>
-      <memberdef kind="function" id="classendstone_1_1Block_1a1f906bf290929643ec2092f199aeafeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="classendstone_1_1Block_1a4dbd6ae72829e456925cc5a86d93ea42" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>Result&lt; <ref refid="classendstone_1_1Vector" kindref="compound">void</ref> &gt;</type>
         <definition>virtual Result&lt; void &gt; endstone::Block::setData</definition>
-        <argsstring>(std::shared_ptr&lt; BlockData &gt; data, bool apply_physics)=0</argsstring>
+        <argsstring>(const BlockData &amp;data, bool apply_physics)=0</argsstring>
         <name>setData</name>
         <qualifiedname>endstone::Block::setData</qualifiedname>
         <param>
-          <type>std::shared_ptr&lt; <ref refid="classendstone_1_1BlockData" kindref="compound">BlockData</ref> &gt;</type>
+          <type><ref refid="classendstone_1_1Vector" kindref="compound">const</ref> <ref refid="classendstone_1_1BlockData" kindref="compound">BlockData</ref> &amp;</type>
           <declname>data</declname>
         </param>
         <param>
@@ -196,9 +195,9 @@
         </inbodydescription>
         <location file="include/endstone/block/block.h" line="85" column="20"/>
       </memberdef>
-      <memberdef kind="function" id="classendstone_1_1Block_1a6828b845f5185a270ff161814cd06c2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>std::shared_ptr&lt; <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> &gt;</type>
-        <definition>virtual std::shared_ptr&lt; Block &gt; endstone::Block::getRelative</definition>
+      <memberdef kind="function" id="classendstone_1_1Block_1ade7ede2f68266c797efbb8b5a237304b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; Block &gt; endstone::Block::getRelative</definition>
         <argsstring>(int offset_x, int offset_y, int offset_z)=0</argsstring>
         <name>getRelative</name>
         <qualifiedname>endstone::Block::getRelative</qualifiedname>
@@ -251,9 +250,9 @@
         </inbodydescription>
         <location file="include/endstone/block/block.h" line="95" column="29"/>
       </memberdef>
-      <memberdef kind="function" id="classendstone_1_1Block_1a9933cd9e4480095575f89a641be24839" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>std::shared_ptr&lt; <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> &gt;</type>
-        <definition>virtual std::shared_ptr&lt; Block &gt; endstone::Block::getRelative</definition>
+      <memberdef kind="function" id="classendstone_1_1Block_1ae60ad017cb35887e0cad09c2d76b354b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; Block &gt; endstone::Block::getRelative</definition>
         <argsstring>(BlockFace face)=0</argsstring>
         <name>getRelative</name>
         <qualifiedname>endstone::Block::getRelative</qualifiedname>
@@ -283,9 +282,9 @@
         </inbodydescription>
         <location file="include/endstone/block/block.h" line="105" column="29"/>
       </memberdef>
-      <memberdef kind="function" id="classendstone_1_1Block_1adc765e1a8d248f78975be6ee5494349f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>std::shared_ptr&lt; <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> &gt;</type>
-        <definition>virtual std::shared_ptr&lt; Block &gt; endstone::Block::getRelative</definition>
+      <memberdef kind="function" id="classendstone_1_1Block_1a360bc161449ffdd18506c4775408af14" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; Block &gt; endstone::Block::getRelative</definition>
         <argsstring>(BlockFace face, int distance)=0</argsstring>
         <name>getRelative</name>
         <qualifiedname>endstone::Block::getRelative</qualifiedname>
@@ -423,9 +422,9 @@
         <name>captureState</name>
         <qualifiedname>endstone::Block::captureState</qualifiedname>
         <briefdescription>
+<para>Captures the current state of this block. </para>
         </briefdescription>
         <detaileddescription>
-<para>Captures the current state of this block. </para>
 <para>The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.</para>
 <para><simplesect kind="return"><para><ref refid="classendstone_1_1BlockState" kindref="compound">BlockState</ref> with the current state of this block. </para>
 </simplesect>
@@ -435,6 +434,24 @@
         </inbodydescription>
         <location file="include/endstone/block/block.h" line="159" column="30"/>
       </memberdef>
+      <memberdef kind="function" id="classendstone_1_1Block_1acf80e005f3032354d7cd7ed0057be6e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; Block &gt; endstone::Block::clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>clone</name>
+        <qualifiedname>endstone::Block::clone</qualifiedname>
+        <briefdescription>
+<para>Creates a copy of the current block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classendstone_1_1Block" kindref="compound">Block</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/endstone/block/block.h" line="166" column="30"/>
+      </memberdef>
     </sectiondef>
     <briefdescription>
 <para>Represents a block. </para>
@@ -442,43 +459,22 @@
     <detaileddescription>
 <para>This is a live object, and only one <ref refid="classendstone_1_1Block" kindref="compound">Block</ref> may exist for any given location in a dimension. </para>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="1">
-        <label>endstone::Block</label>
-        <link refid="classendstone_1_1Block"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>std::enable_shared_from_this&lt; Block &gt;</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="1">
-        <label>endstone::Block</label>
-        <link refid="classendstone_1_1Block"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>std::enable_shared_from_this&lt; Block &gt;</label>
-      </node>
-    </collaborationgraph>
-    <location file="include/endstone/block/block.h" line="37" column="1" bodyfile="include/endstone/block/block.h" bodystart="37" bodyend="160"/>
+    <location file="include/endstone/block/block.h" line="37" column="1" bodyfile="include/endstone/block/block.h" bodystart="37" bodyend="167"/>
     <listofallmembers>
       <member refid="classendstone_1_1Block_1a95bac5d6f459fcfe924ba470d9b9da81" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>captureState</name></member>
-      <member refid="classendstone_1_1Block_1ae65e640442d36d5dbbbf8374cc9a996e" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getData</name></member>
+      <member refid="classendstone_1_1Block_1acf80e005f3032354d7cd7ed0057be6e7" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>clone</name></member>
+      <member refid="classendstone_1_1Block_1a5293fd07d6c423a5a7132944eec13282" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getData</name></member>
       <member refid="classendstone_1_1Block_1a8d18ed25f0fc34c51152ec0a1dd09854" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getDimension</name></member>
       <member refid="classendstone_1_1Block_1a19e164bc3cf23481d01886dfeda41c85" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getLocation</name></member>
-      <member refid="classendstone_1_1Block_1a6828b845f5185a270ff161814cd06c2f" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getRelative</name></member>
-      <member refid="classendstone_1_1Block_1a9933cd9e4480095575f89a641be24839" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getRelative</name></member>
-      <member refid="classendstone_1_1Block_1adc765e1a8d248f78975be6ee5494349f" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getRelative</name></member>
+      <member refid="classendstone_1_1Block_1ade7ede2f68266c797efbb8b5a237304b" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getRelative</name></member>
+      <member refid="classendstone_1_1Block_1ae60ad017cb35887e0cad09c2d76b354b" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getRelative</name></member>
+      <member refid="classendstone_1_1Block_1a360bc161449ffdd18506c4775408af14" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getRelative</name></member>
       <member refid="classendstone_1_1Block_1a990361ef55dd7f6c01bf463d0c4206ef" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getType</name></member>
       <member refid="classendstone_1_1Block_1a1ec1fc7c6fe1aab63db232b0f0684c76" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getX</name></member>
       <member refid="classendstone_1_1Block_1a390b31ef485c4b5176842bd3a59b01bc" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getY</name></member>
       <member refid="classendstone_1_1Block_1a9509b72c86339e30a4b50567f6d5279c" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>getZ</name></member>
-      <member refid="classendstone_1_1Block_1ae4ceaaa2365957b62e4741857259e1bb" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>setData</name></member>
-      <member refid="classendstone_1_1Block_1a1f906bf290929643ec2092f199aeafeb" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>setData</name></member>
+      <member refid="classendstone_1_1Block_1a7f24c60e47c3bcd49f0b1122b80b7b47" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>setData</name></member>
+      <member refid="classendstone_1_1Block_1a4dbd6ae72829e456925cc5a86d93ea42" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>setData</name></member>
       <member refid="classendstone_1_1Block_1afc6493c7fae9703684a17ebcc6c92a32" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>setType</name></member>
       <member refid="classendstone_1_1Block_1a6235d565c41138ea5ed584250d84617f" prot="public" virt="pure-virtual"><scope>endstone::Block</scope><name>setType</name></member>
       <member refid="classendstone_1_1Block_1a8a7ea0b990c4c610f75cf53bd5c6647b" prot="public" virt="virtual"><scope>endstone::Block</scope><name>~Block</name></member>

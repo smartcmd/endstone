@@ -24,6 +24,9 @@
 
 #pragma once
 
+#include "endstone/event/cancellable.h"
+#include "endstone/event/server/server_event.h"
+
 namespace endstone {
 
 class PacketReceiveEvent : public Cancellable<ServerEvent> {
@@ -49,6 +52,12 @@ public:
         return payload_;
     }
 
+    void setPayload(std::string_view payload)
+    {
+        owned_payload_ = payload;
+        payload_ = owned_payload_;
+    }
+
     [[nodiscard]] Player &getPlayer() const
     {
         return player_;
@@ -58,6 +67,7 @@ private:
     Player &player_;
     int packet_id_;
     std::string_view payload_;
+    std::string owned_payload_;
 };
 
 }  // namespace endstone
