@@ -34,6 +34,7 @@
 #include "endstone/ban/player_ban_list.h"
 #include "endstone/block/block_data.h"
 #include "endstone/boss/boss_bar.h"
+#include "endstone/inventory/item_factory.h"
 #include "endstone/lang/language.h"
 #include "endstone/level/level.h"
 #include "endstone/logger.h"
@@ -46,9 +47,13 @@
 namespace endstone {
 
 class ConsoleCommandSender;
+class Enchantment;
 class Scheduler;
 class PluginCommand;
 class PluginManager;
+
+template <typename T>
+class Registry;
 
 class Server {
 public:
@@ -115,6 +120,8 @@ public:
 
     [[nodiscard]] virtual bool isPrimaryThread() const = 0;
 
+    [[nodiscard]] virtual ItemFactory &getItemFactory() const = 0;
+
     [[nodiscard]] virtual Scoreboard *getScoreboard() const = 0;
 
     [[nodiscard]] virtual std::shared_ptr<Scoreboard> createScoreboard() = 0;
@@ -148,6 +155,8 @@ public:
     [[nodiscard]] virtual IpBanList &getIpBanList() const = 0;
 
     [[nodiscard]] virtual ServiceManager &getServiceManager() const = 0;
+
+    [[nodiscard]] virtual Registry<Enchantment> &getEnchantmentRegistry() const = 0;
 
     inline static const std::string BroadcastChannelAdmin = "endstone.broadcast.admin";
 

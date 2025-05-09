@@ -27,114 +27,69 @@
 #include <memory>
 #include <optional>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 namespace endstone {
 class ItemMeta {
 public:
-    static ItemMeta EMPTY;
     enum class Type {
         Item = 0,
         Map = 1,
-        Count = 2,
+        Count,
         None = Item,
     };
 
-    ItemMeta() = default;
-    explicit ItemMeta(const ItemMeta *meta)
-    {
-        if (meta == nullptr) {
-            return;
-        }
-        *this = *meta;
-    }
-
     virtual ~ItemMeta() = default;
 
-    [[nodiscard]] virtual Type getType() const
-    {
-        return Type::Item;
-    }
+    [[nodiscard]] virtual Type getType() const = 0;
 
-    [[nodiscard]] virtual bool isEmpty() const
-    {
-        // TODO(item): more checks here
-        return !(hasDisplayName() || hasLore() || hasDamage());
-    }
+    [[nodiscard]] virtual bool isEmpty() const = 0;
 
-    [[nodiscard]] virtual std::unique_ptr<ItemMeta> clone() const
-    {
-        return std::make_unique<ItemMeta>(*this);
-    }
+    [[nodiscard]] virtual std::unique_ptr<ItemMeta> clone() const = 0;
 
-    [[nodiscard]] virtual bool hasDisplayName() const
-    {
-        return display_name_.has_value() && !display_name_.value().empty();
-    }
+    [[nodiscard]] virtual bool hasDisplayName() const = 0;
 
-    [[nodiscard]] virtual std::optional<std::string> getDisplayName() const
-    {
-        if (!hasDisplayName()) {
-            return std::nullopt;
-        }
-        return display_name_;
-    }
+    [[nodiscard]] virtual std::optional<std::string> getDisplayName() const = 0;
 
-    virtual void setDisplayName(std::optional<std::string> name)
-    {
-        if (!name.has_value() || name.value().empty()) {
-            display_name_ = std::nullopt;
-        }
-        else {
-            display_name_ = std::move(name);
-        }
-    }
+    virtual void setDisplayName(std::optional<std::string> name) = 0;
 
-    [[nodiscard]] virtual bool hasLore() const
-    {
-        return lore_.has_value() && !lore_.value().empty();
-    }
+    [[nodiscard]] virtual bool hasLore() const = 0;
 
-    [[nodiscard]] virtual std::optional<std::vector<std::string>> getLore() const
-    {
-        if (!hasLore()) {
-            return std::nullopt;
-        }
-        return lore_;
-    }
+    [[nodiscard]] virtual std::optional<std::vector<std::string>> getLore() const = 0;
 
-    virtual void setLore(std::optional<std::vector<std::string>> lore)
-    {
-        if (!lore.has_value() || lore.value().empty()) {
-            lore_ = std::nullopt;
-        }
-        else {
-            lore_ = std::move(lore);
-        }
-    }
+    virtual void setLore(std::optional<std::vector<std::string>> lore) = 0;
 
-    [[nodiscard]] virtual bool hasDamage() const
-    {
-        return damage_ > 0;
-    }
+    [[nodiscard]] virtual bool hasDamage() const = 0;
 
-    [[nodiscard]] virtual int getDamage() const
-    {
-        return damage_;
-    }
+    [[nodiscard]] virtual int getDamage() const = 0;
 
-    virtual void setDamage(int damage)
-    {
-        damage_ = damage;
-    }
+    virtual void setDamage(int damage) = 0;
 
-private:
-    std::optional<std::string> display_name_;
-    std::optional<std::vector<std::string>> lore_;
-    int damage_ = 0;
+    [[nodiscard]] virtual bool hasEnchants() const = 0;
+
+    [[nodiscard]] virtual bool hasEnchant(const std::string &id) const = 0;
+
+    [[nodiscard]] virtual int getEnchantLevel(const std::string &id) const = 0;
+
+    [[nodiscard]] virtual std::unordered_map<std::string, int> getEnchants() const = 0;
+
+    virtual bool addEnchant(const std::string &id, int level, bool force) = 0;
+
+    virtual bool removeEnchant(const std::string &id) = 0;
+
+    virtual void removeEnchants() = 0;
+
+    [[nodiscard]] virtual bool hasRepairCost() const = 0;
+
+    [[nodiscard]] virtual int getRepairCost() const = 0;
+
+    virtual void setRepairCost(int cost) = 0;
+
+    [[nodiscard]] virtual bool isUnbreakable() const = 0;
+
+    virtual void setUnbreakable(bool unbreakable) = 0;
 };
-
-inline ItemMeta ItemMeta::EMPTY;
 }  // namespace endstone
 ```
 

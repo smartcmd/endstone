@@ -77,7 +77,9 @@ _Represents a server implementation._
 | virtual [**float**](classendstone_1_1Vector.md) | [**getCurrentMillisecondsPerTick**](#function-getcurrentmillisecondspertick) () = 0<br>_Gets the current milliseconds per tick (MSPT)._  |
 | virtual [**float**](classendstone_1_1Vector.md) | [**getCurrentTickUsage**](#function-getcurrenttickusage) () = 0<br>_Gets the current tick usage of the server._  |
 | virtual [**float**](classendstone_1_1Vector.md) | [**getCurrentTicksPerSecond**](#function-getcurrenttickspersecond) () = 0<br>_Gets the current ticks per second (TPS)._  |
+| virtual [**Registry**](classendstone_1_1Registry.md)&lt; [**Enchantment**](classendstone_1_1Enchantment.md) &gt; & | [**getEnchantmentRegistry**](#function-getenchantmentregistry) () const = 0<br> |
 | virtual [**IpBanList**](classendstone_1_1IpBanList.md) & | [**getIpBanList**](#function-getipbanlist) () const = 0<br> |
+| virtual [**ItemFactory**](classendstone_1_1ItemFactory.md) & | [**getItemFactory**](#function-getitemfactory) () const = 0<br> |
 | virtual [**Language**](classendstone_1_1Language.md) & | [**getLanguage**](#function-getlanguage) () const = 0<br>_Gets the current language interface used by the server._  |
 | virtual [**Level**](classendstone_1_1Level.md) \* | [**getLevel**](#function-getlevel) () const = 0<br>_Gets the server level._  |
 | virtual [**Logger**](classendstone_1_1Logger.md) & | [**getLogger**](#function-getlogger) () const = 0<br>_Returns the primary logger associated with this server instance._  |
@@ -680,6 +682,33 @@ The current ticks per second
 
 
 
+### function getEnchantmentRegistry 
+
+```C++
+virtual Registry < Enchantment > & endstone::Server::getEnchantmentRegistry () const = 0
+```
+
+
+
+Returns the registry for all the enchantments.
+
+
+
+
+**Returns:**
+
+the enchantment registry. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function getIpBanList 
 
 ```C++
@@ -698,6 +727,36 @@ Gets the IP ban list.
 The IP ban list 
 
 
+
+
+
+        
+
+<hr>
+
+
+
+### function getItemFactory 
+
+```C++
+virtual ItemFactory & endstone::Server::getItemFactory () const = 0
+```
+
+
+
+Gets the instance of the item factory (for [**ItemMeta**](classendstone_1_1ItemMeta.md)).
+
+
+
+
+**Returns:**
+
+the item factory 
+
+
+
+
+**See also:** [**ItemFactory**](classendstone_1_1ItemFactory.md) 
 
 
 
