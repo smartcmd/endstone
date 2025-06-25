@@ -13,7 +13,9 @@
 * `#include <memory>`
 * `#include "endstone/detail/endstone.h"`
 * `#include "endstone/inventory/item_factory.h"`
+* `#include "endstone/inventory/item_type.h"`
 * `#include "endstone/inventory/meta/item_meta.h"`
+* `#include "endstone/registry.h"`
 
 
 
@@ -33,7 +35,6 @@
 | ---: | :--- |
 | namespace | [**endstone**](namespaceendstone.md) <br>_Represents a button with text and an optional icon._  |
 | namespace | [**core**](namespaceendstone_1_1core.md) <br> |
-| namespace | [**fmt**](namespacefmt.md) <br> |
 
 
 ## Classes
@@ -41,6 +42,7 @@
 | Type | Name |
 | ---: | :--- |
 | class | [**ItemStack**](classendstone_1_1ItemStack.md) <br>_Represents a stack of items._  |
+| struct | [**formatter&lt; endstone::ItemStack &gt;**](structfmt_1_1formatter_3_01endstone_1_1ItemStack_01_4.md) &lt;&gt;<br> |
 
 
 

@@ -21,10 +21,13 @@
 
 | Type | Name |
 | ---: | :--- |
+| file | [**equipment\_slot.h**](equipment__slot_8h.md) <br> |
 | file | [**inventory.h**](inventory_8h.md) <br> |
 | file | [**item\_factory.h**](item__factory_8h.md) <br> |
 | file | [**item\_stack.h**](item__stack_8h.md) <br> |
+| file | [**item\_type.h**](item__type_8h.md) <br> |
 | file | [**player\_inventory.h**](player__inventory_8h.md) <br> |
+| file | [**recipe.h**](recipe_8h.md) <br> |
 
 
 ## Directories

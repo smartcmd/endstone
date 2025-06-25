@@ -11,12 +11,15 @@
     <includedby refid="block__place__event_8h" local="yes">include/endstone/event/block/block_place_event.h</includedby>
     <includedby refid="player__chat__event_8h" local="yes">include/endstone/event/player/player_chat_event.h</includedby>
     <includedby refid="player__command__event_8h" local="yes">include/endstone/event/player/player_command_event.h</includedby>
+    <includedby refid="player__drop__item__event_8h" local="yes">include/endstone/event/player/player_drop_item_event.h</includedby>
     <includedby refid="player__game__mode__change__event_8h" local="yes">include/endstone/event/player/player_game_mode_change_event.h</includedby>
     <includedby refid="player__interact__actor__event_8h" local="yes">include/endstone/event/player/player_interact_actor_event.h</includedby>
     <includedby refid="player__interact__event_8h" local="yes">include/endstone/event/player/player_interact_event.h</includedby>
+    <includedby refid="player__item__consume__event_8h" local="yes">include/endstone/event/player/player_item_consume_event.h</includedby>
     <includedby refid="player__kick__event_8h" local="yes">include/endstone/event/player/player_kick_event.h</includedby>
     <includedby refid="player__login__event_8h" local="yes">include/endstone/event/player/player_login_event.h</includedby>
-    <includedby refid="player__teleport__event_8h" local="yes">include/endstone/event/player/player_teleport_event.h</includedby>
+    <includedby refid="player__move__event_8h" local="yes">include/endstone/event/player/player_move_event.h</includedby>
+    <includedby refid="player__pickup__item__event_8h" local="yes">include/endstone/event/player/player_pickup_item_event.h</includedby>
     <includedby refid="broadcast__message__event_8h" local="yes">include/endstone/event/server/broadcast_message_event.h</includedby>
     <includedby refid="packet__receive__event_8h" local="yes">include/endstone/event/server/packet_receive_event.h</includedby>
     <includedby refid="packet__send__event_8h" local="yes">include/endstone/event/server/packet_send_event.h</includedby>
@@ -91,10 +94,6 @@
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
         <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
@@ -102,6 +101,16 @@
         <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -113,58 +122,82 @@
         <link refid="player__command__event_8h_source"/>
       </node>
       <node id="11">
+        <label>include/endstone/event/player/player_drop_item_event.h</label>
+        <link refid="player__drop__item__event_8h_source"/>
+      </node>
+      <node id="12">
         <label>include/endstone/event/player/player_game_mode_change_event.h</label>
         <link refid="player__game__mode__change__event_8h_source"/>
       </node>
-      <node id="12">
+      <node id="13">
         <label>include/endstone/event/player/player_interact_actor_event.h</label>
         <link refid="player__interact__actor__event_8h_source"/>
       </node>
-      <node id="13">
+      <node id="14">
         <label>include/endstone/event/player/player_interact_event.h</label>
         <link refid="player__interact__event_8h_source"/>
       </node>
-      <node id="14">
+      <node id="15">
+        <label>include/endstone/event/player/player_item_consume_event.h</label>
+        <link refid="player__item__consume__event_8h_source"/>
+      </node>
+      <node id="19">
+        <label>include/endstone/event/player/player_jump_event.h</label>
+        <link refid="player__jump__event_8h_source"/>
+      </node>
+      <node id="16">
         <label>include/endstone/event/player/player_kick_event.h</label>
         <link refid="player__kick__event_8h_source"/>
       </node>
-      <node id="15">
+      <node id="17">
         <label>include/endstone/event/player/player_login_event.h</label>
         <link refid="player__login__event_8h_source"/>
       </node>
-      <node id="16">
+      <node id="18">
+        <label>include/endstone/event/player/player_move_event.h</label>
+        <link refid="player__move__event_8h_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>include/endstone/event/player/player_pickup_item_event.h</label>
+        <link refid="player__pickup__item__event_8h_source"/>
+      </node>
+      <node id="20">
         <label>include/endstone/event/player/player_teleport_event.h</label>
         <link refid="player__teleport__event_8h_source"/>
       </node>
-      <node id="17">
+      <node id="22">
         <label>include/endstone/event/server/broadcast_message_event.h</label>
         <link refid="broadcast__message__event_8h_source"/>
       </node>
-      <node id="18">
+      <node id="23">
         <label>include/endstone/event/server/packet_receive_event.h</label>
         <link refid="packet__receive__event_8h_source"/>
       </node>
-      <node id="19">
+      <node id="24">
         <label>include/endstone/event/server/packet_send_event.h</label>
         <link refid="packet__send__event_8h_source"/>
       </node>
-      <node id="20">
+      <node id="25">
         <label>include/endstone/event/server/script_message_event.h</label>
         <link refid="script__message__event_8h_source"/>
       </node>
-      <node id="21">
+      <node id="26">
         <label>include/endstone/event/server/server_command_event.h</label>
         <link refid="server__command__event_8h_source"/>
       </node>
-      <node id="22">
+      <node id="27">
         <label>include/endstone/event/server/server_list_ping_event.h</label>
         <link refid="server__list__ping__event_8h_source"/>
       </node>
-      <node id="23">
+      <node id="28">
         <label>include/endstone/event/weather/thunder_change_event.h</label>
         <link refid="thunder__change__event_8h_source"/>
       </node>
-      <node id="24">
+      <node id="29">
         <label>include/endstone/event/weather/weather_change_event.h</label>
         <link refid="weather__change__event_8h_source"/>
       </node>
@@ -198,7 +231,7 @@
 <codeline lineno="19" refid="classendstone_1_1ICancellable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classendstone_1_1ICancellable" kindref="compound">ICancellable</ref><sp/>{</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1ICancellable" kindref="compound">~ICancellable</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="classendstone_1_1Vector" kindref="compound">nodiscard</ref>]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isCancelled()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isCancelled()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setCancelled(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cancel)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cancel()<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">};</highlight></codeline>
@@ -208,7 +241,7 @@
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">EventType::EventType;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="classendstone_1_1Cancellable_1a75cf54ed448c1aa27fed28b0e75b3057" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="classendstone_1_1Vector" kindref="compound">nodiscard</ref>]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1Cancellable_1a75cf54ed448c1aa27fed28b0e75b3057" kindref="member">isCancelled</ref>()<sp/><ref refid="classendstone_1_1Vector" kindref="compound">const</ref><sp/><ref refid="classendstone_1_1Vector" kindref="compound">final</ref></highlight></codeline>
+<codeline lineno="41" refid="classendstone_1_1Cancellable_1a75cf54ed448c1aa27fed28b0e75b3057" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1Cancellable_1a75cf54ed448c1aa27fed28b0e75b3057" kindref="member">isCancelled</ref>()<sp/>const<sp/>final</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EventType::cancelled_;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -218,13 +251,13 @@
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EventType::cancelled_<sp/>=<sp/><ref refid="classendstone_1_1Cancellable_1a3512b47db69c6001f5c0450051308327" kindref="member">cancel</ref>;</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="classendstone_1_1Cancellable_1a3512b47db69c6001f5c0450051308327" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1Cancellable_1a3512b47db69c6001f5c0450051308327" kindref="member">cancel</ref>()<sp/><ref refid="classendstone_1_1Vector" kindref="compound">final</ref></highlight></codeline>
+<codeline lineno="61" refid="classendstone_1_1Cancellable_1a3512b47db69c6001f5c0450051308327" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1Cancellable_1a3512b47db69c6001f5c0450051308327" kindref="member">cancel</ref>()<sp/>final</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classendstone_1_1Cancellable_1a27e3aa0086fb116acce6fa98aaa417e9" kindref="member">setCancelled</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="classendstone_1_1Vector" kindref="compound">nodiscard</ref>]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isCancellable()<sp/><ref refid="classendstone_1_1Vector" kindref="compound">const</ref><sp/><ref refid="classendstone_1_1Vector" kindref="compound">final</ref></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isCancellable()<sp/>const<sp/>final</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>

@@ -28,7 +28,9 @@
 
 #include "endstone/detail/endstone.h"
 #include "endstone/inventory/item_factory.h"
+#include "endstone/inventory/item_type.h"
 #include "endstone/inventory/meta/item_meta.h"
+#include "endstone/registry.h"
 
 namespace endstone {
 
@@ -38,28 +40,54 @@ class EndstoneItemStack;
 
 class ItemStack {
 public:
-    ItemStack() = default;
-    explicit ItemStack(std::string type, const int amount = 1) : type_(std::move(type)), amount_(amount) {}
+    explicit ItemStack(const std::string &type, const int amount = 1, const int data = 0)
+    {
+        if (const auto *item_type = ItemType::get(type)) {
+            type_ = *item_type;
+            amount_ = amount;
+            data_ = data;
+        }
+    }
+
+    explicit ItemStack(const ItemType &type, const int amount = 1, const int data = 0)
+        : type_(type), amount_(amount), data_(data)
+    {
+    }
+
+    ItemStack(const ItemStack &stack) : type_(stack.getType()), amount_(stack.getAmount()), data_(stack.getData())
+    {
+        if (stack.hasItemMeta()) {
+            ItemStack::setItemMeta(stack.getItemMeta().get());
+        }
+    }
 
     virtual ~ItemStack() = default;
 
 protected:
     friend class core::EndstoneItemStack;
-    virtual bool isEndstoneItemStack() const
+    [[nodiscard]] virtual bool isEndstoneItemStack() const
     {
         return false;
     }
 
 public:
-    [[nodiscard]] virtual std::string getType() const
+    [[nodiscard]] virtual const ItemType &getType() const
     {
         return type_;
     }
 
-    virtual void setType(std::string type)
+    virtual Result<void> setType(const std::string &type)
+    {
+        const auto *item_type = ItemType::get(type);
+        ENDSTONE_CHECKF(item_type != nullptr, "Unknown item type: {}", type);
+        setType(*item_type);
+        return {};
+    }
+
+    virtual void setType(const ItemType &type)
     {
         // TODO(item): clear item components when the type is changed
-        type_ = std::move(type);
+        type_ = type;
     }
 
     [[nodiscard]] virtual int getAmount() const
@@ -67,17 +95,56 @@ public:
         return amount_;
     }
 
-    virtual void setAmount(int amount)
+    virtual void setAmount(const int amount)
     {
         amount_ = amount;
     }
 
-    virtual std::unique_ptr<ItemMeta> getItemMeta() const
+    [[nodiscard]] virtual int getData() const
+    {
+        return data_;
+    }
+
+    virtual void setData(const int data)
+    {
+        data_ = data;
+    }
+
+    [[nodiscard]] virtual int getMaxStackSize() const
+    {
+        return getType().getMaxStackSize();
+    }
+
+    bool operator==(const ItemStack &other) const
+    {
+        if (&other == this) {
+            return true;
+        }
+        return getAmount() == other.getAmount() && isSimilar(other);
+    }
+
+    bool operator!=(const ItemStack &other) const
+    {
+        return !(*this == other);
+    }
+
+    [[nodiscard]] virtual bool isSimilar(const ItemStack &other) const
+    {
+        if (&other == this) {
+            return true;
+        }
+        return getType() == other.getType() && hasItemMeta() == other.hasItemMeta() &&
+               (hasItemMeta()
+                    ? Endstone::getServer().getItemFactory().equals(getItemMeta().get(), other.getItemMeta().get())
+                    : true);
+    }
+
+    [[nodiscard]] virtual std::unique_ptr<ItemMeta> getItemMeta() const
     {
         return meta_ == nullptr ? Endstone::getServer().getItemFactory().getItemMeta(type_) : meta_->clone();
     }
 
-    virtual bool hasItemMeta() const
+    [[nodiscard]] virtual bool hasItemMeta() const
     {
         return !Endstone::getServer().getItemFactory().equals(meta_.get(), nullptr);
     }
@@ -87,8 +154,26 @@ public:
         return setItemMeta0(meta, type_);
     }
 
+    [[nodiscard]] virtual std::unique_ptr<ItemStack> clone() const
+    {
+        return std::make_unique<ItemStack>(*this);
+    }
+
+    static Result<ItemStack> create(const ItemType &type, const int amount = 1, const int data = 0)
+    {
+        ENDSTONE_CHECKF(amount >= 1 && amount <= 255, "Item stack amount must be between 1 to 255, got {}.", amount);
+        return ItemStack(type, amount, data);
+    }
+
+    static Result<ItemStack> create(const std::string &type, const int amount = 1, const int data = 0)
+    {
+        const auto *item_type = ItemType::get(type);
+        ENDSTONE_CHECKF(item_type != nullptr, "Unknown item type: {}", type);
+        return create(*item_type, amount, data);
+    }
+
 private:
-    bool setItemMeta0(ItemMeta *meta, const std::string_view type)
+    bool setItemMeta0(const ItemMeta *meta, const ItemType &type)
     {
         if (!meta) {
             meta_ = nullptr;
@@ -104,16 +189,16 @@ private:
         return true;
     }
 
-    std::string type_ = "minecraft:air";
+    std::reference_wrapper<const ItemType> type_ = *ItemType::get("minecraft:air");
     int amount_ = 0;
+    int data_ = 0;
     std::unique_ptr<ItemMeta> meta_ = nullptr;
 };
 
 }  // namespace endstone
 
-namespace fmt {
 template <>
-struct formatter<endstone::ItemStack> : formatter<string_view> {
+struct fmt::formatter<endstone::ItemStack> : formatter<string_view> {
     using Type = endstone::ItemStack;
 
     template <typename FormatContext>
@@ -121,8 +206,7 @@ struct formatter<endstone::ItemStack> : formatter<string_view> {
     {
         return fmt::format_to(ctx.out(), "ItemStack({} x {})", val.getType(), val.getAmount());
     }
-};
-}  // namespace fmt
+};  // namespace fmt
 ```
 
 

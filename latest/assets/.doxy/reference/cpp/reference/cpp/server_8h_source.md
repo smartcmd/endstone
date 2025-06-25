@@ -34,7 +34,6 @@
 #include "endstone/ban/player_ban_list.h"
 #include "endstone/block/block_data.h"
 #include "endstone/boss/boss_bar.h"
-#include "endstone/inventory/item_factory.h"
 #include "endstone/lang/language.h"
 #include "endstone/level/level.h"
 #include "endstone/logger.h"
@@ -48,6 +47,8 @@ namespace endstone {
 
 class ConsoleCommandSender;
 class Enchantment;
+class ItemFactory;
+class ItemType;
 class Scheduler;
 class PluginCommand;
 class PluginManager;
@@ -92,6 +93,10 @@ public:
     virtual Result<void> setMaxPlayers(int max_players) = 0;
 
     [[nodiscard]] virtual Player *getPlayer(endstone::UUID id) const = 0;
+
+    [[nodiscard]] virtual int getPort() const = 0;
+
+    [[nodiscard]] virtual int getPortV6() const = 0;
 
     [[nodiscard]] virtual bool getOnlineMode() const = 0;
 
@@ -157,6 +162,8 @@ public:
     [[nodiscard]] virtual ServiceManager &getServiceManager() const = 0;
 
     [[nodiscard]] virtual Registry<Enchantment> &getEnchantmentRegistry() const = 0;
+
+    [[nodiscard]] virtual Registry<ItemType> &getItemRegistry() const = 0;
 
     inline static const std::string BroadcastChannelAdmin = "endstone.broadcast.admin";
 

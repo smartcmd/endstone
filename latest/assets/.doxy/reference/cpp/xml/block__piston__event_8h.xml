@@ -13,11 +13,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -33,8 +33,10 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
-      <node id="11">
+      <node id="12">
         <label>endstone/block/block_face.h</label>
         <link refid="block__face_8h_source"/>
       </node>
@@ -43,7 +45,7 @@
         <link refid="block__event_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -52,66 +54,69 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>endstone/event/event.h</label>
         <link refid="event_8h_source"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="13">
         <label>endstone/level/location.h</label>
         <link refid="location_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="14">
         <label>endstone/level/position.h</label>
         <link refid="position_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-      </node>
-      <node id="17">
-        <label>endstone/util/result.h</label>
-        <link refid="result_8h_source"/>
-        <childnode refid="18" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>endstone/util/vector.h</label>
-        <link refid="vector_8h_source"/>
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="18">
+        <label>endstone/util/result.h</label>
+        <link refid="result_8h_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>endstone/util/vector.h</label>
+        <link refid="vector_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
         <label>endstone/variant.h</label>
         <link refid="variant_8h_source"/>
       </node>
-      <node id="16">
+      <node id="17">
         <label>cmath</label>
       </node>
       <node id="9">
         <label>fmt/format.h</label>
       </node>
+      <node id="10">
+        <label>fmt/ranges.h</label>
+      </node>
       <node id="4">
         <label>memory</label>
       </node>
-      <node id="18">
+      <node id="19">
         <label>nonstd/expected.hpp</label>
       </node>
-      <node id="14">
+      <node id="15">
         <label>optional</label>
       </node>
-      <node id="20">
+      <node id="21">
         <label>stdexcept</label>
       </node>
       <node id="5">
@@ -153,11 +158,11 @@
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24" refid="classendstone_1_1BlockPistonEvent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classendstone_1_1BlockPistonEvent" kindref="compound">BlockPistonEvent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1BlockEvent" kindref="compound">BlockEvent</ref><sp/>{</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1BlockPistonEvent" kindref="compound">BlockPistonEvent</ref>(<ref refid="classendstone_1_1Block" kindref="compound">Block</ref><sp/>&amp;<ref refid="classendstone_1_1Vector" kindref="compound">block</ref>,<sp/><ref refid="classendstone_1_1Player" kindref="compound">Player</ref><sp/>&amp;<ref refid="classendstone_1_1Vector" kindref="compound">player</ref>)<sp/>:<sp/><ref refid="classendstone_1_1BlockEvent" kindref="compound">BlockEvent</ref>(<ref refid="classendstone_1_1Vector" kindref="compound">block</ref>),<sp/>player_(<ref refid="classendstone_1_1Vector" kindref="compound">player</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classendstone_1_1BlockPistonEvent" kindref="compound">BlockPistonEvent</ref>(<ref refid="classendstone_1_1Block" kindref="compound">Block</ref><sp/>&amp;block,<sp/><ref refid="classendstone_1_1Player" kindref="compound">Player</ref><sp/>&amp;player)<sp/>:<sp/><ref refid="classendstone_1_1BlockEvent" kindref="compound">BlockEvent</ref>(block),<sp/>player_(player)<sp/>{}</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classendstone_1_1BlockPistonEvent" kindref="compound">~BlockPistonEvent</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>NAME<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;BlockPistonEvent&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="30" refid="classendstone_1_1BlockPistonEvent_1a9580392256ddc38e3489dab492cf3ede" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="classendstone_1_1Vector" kindref="compound">nodiscard</ref>]]<sp/>std::string<sp/><ref refid="classendstone_1_1BlockPistonEvent_1a9580392256ddc38e3489dab492cf3ede" kindref="member">getEventName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override</highlight></codeline>
+<codeline lineno="30" refid="classendstone_1_1BlockPistonEvent_1a9580392256ddc38e3489dab492cf3ede" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>std::string<sp/><ref refid="classendstone_1_1BlockPistonEvent_1a9580392256ddc38e3489dab492cf3ede" kindref="member">getEventName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override</highlight></codeline>
 <codeline lineno="31"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NAME;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>

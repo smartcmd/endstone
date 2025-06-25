@@ -18,6 +18,7 @@
 
 ## e
 
+* **EquipmentSlot** ([**endstone**](namespaceendstone.md))
 * **EventPriority** ([**endstone**](namespaceendstone.md))
 
 
@@ -34,6 +35,7 @@
 ## p
 
 * **PermissionDefault** ([**endstone**](namespaceendstone.md))
+* **PermissionLevel** ([**endstone**](namespaceendstone.md))
 * **PluginLoadOrder** ([**endstone**](namespaceendstone.md))
 
 
